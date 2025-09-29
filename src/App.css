@@ -1,15 +1,9 @@
 /* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .app {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-  color: #ffffff;
-  font-family: 'Outfit', 'Poppins', 'Inter', system-ui, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
   width: 100vw;
   position: relative;
@@ -27,61 +21,62 @@ html {
 
 /* Section titles */
 .section-title {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #64b3f4 0%, #c2e59c 50%, #64b3f4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
-  color: #b0b0b0;
-  margin-bottom: 3rem;
+  color: var(--text-muted);
+  margin-bottom: 4rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 400;
 }
 
 /* Button styles */
 .btn {
-  padding: 12px 24px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-family: 'Inter', sans-serif;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--accent-primary);
   color: white;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  background: #1d4ed8;
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #64b3f4;
-  border: 2px solid #64b3f4;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-accent);
 }
 
 .btn-secondary:hover {
-  background: #64b3f4;
-  color: #0f0f23;
-  transform: translateY(-2px);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
 }
 
 /* Responsive design */

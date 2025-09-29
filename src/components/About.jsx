@@ -65,9 +65,7 @@ const About = () => {
           <div className="about-visual">
             <div className="profile-card">
               <div className="profile-image">
-                <div className="avatar-placeholder">
-                  <span>🎮</span>
-                </div>
+                <img src="/src/assets/profile_photo.jpg" alt="Trisha Gupta" className="profile-img" />
               </div>
               <div className="stats">
                 <div className="stat">

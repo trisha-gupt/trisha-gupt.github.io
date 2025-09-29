@@ -12,7 +12,7 @@ const Projects = () => {
       technologies: ["Unity", "C#", "3D Modeling"],
       status: "Community Award Winner",
       platforms: ["PC"],
-      image: "/api/placeholder/400/250",
+      image: "/src/assets/games-pictures/buds_oasis.jpeg",
       demoLink: "#",
       githubLink: "#",
       playLink: "#"
@@ -26,7 +26,7 @@ const Projects = () => {
       technologies: ["Unity", "C#", "Team Leadership"],
       status: "In Development",
       platforms: ["PC"],
-      image: "/api/placeholder/400/250",
+      image: "/src/assets/games-pictures/concept_art_first_lvl.png",
       demoLink: "#",
       githubLink: "#",
       playLink: "#"
@@ -40,7 +40,7 @@ const Projects = () => {
       technologies: ["Unity", "C#", "Game Design"],
       status: "Completed",
       platforms: ["PC"],
-      image: "/api/placeholder/400/250",
+      image: "/src/assets/games-pictures/shoppers_havoc.png",
       demoLink: "#",
       githubLink: "#",
       playLink: "#"
