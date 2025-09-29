@@ -11,8 +11,8 @@ function App() {
       <Navigation />
       <main className="main-content">
         <Hero />
-        <About />
         <Projects />
+        <About />
       </main>
     </div>
   )
