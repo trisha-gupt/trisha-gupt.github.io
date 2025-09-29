@@ -1,5 +1,6 @@
 /* About Section Styles */
 .about {
+  width: 100vw;
   padding: 100px 2rem;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
   position: relative;

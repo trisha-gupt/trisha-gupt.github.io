@@ -39,8 +39,8 @@ const Navigation = () => {
     <nav className={`navigation ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <span className="logo-text">Trisha</span>
-          <span className="logo-subtitle">Game Dev</span>
+          <span className="logo-text">Trisha Gupta</span>
+          <span className="logo-subtitle">Game Designer</span>
         </div>
         
         <ul className="nav-menu">

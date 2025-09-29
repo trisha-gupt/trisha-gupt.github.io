@@ -9,38 +9,43 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p className="about-intro">
-              I'm a passionate game developer with a love for creating immersive digital experiences. 
-              My journey in game development started with a fascination for interactive storytelling 
-              and has evolved into a career focused on bringing creative visions to life.
+              Hi, I'm Trisha Gupta! A final-year Independent Game Production student at Howest's Digital Arts and Entertainment program. I've studied game design, gameplay programming, and game art, which gave me a strong foundation in building and playtesting games from the ground up.
+            </p>
+            <p className="about-intro">
+              I mostly develop in Unity using C#, and am also experienced with Blender, Maya, and Substance Painter for basic modeling and texturing.
+            </p>
+            <p className="about-intro">
+              Currently, I'm leading a team of six developers as both Game Designer and Programmer on our upcoming title, Sombre. I'm passionate about crafting engaging gameplay experiences and seeing ideas come to life through collaboration.
             </p>
             
             <div className="skills-section">
               <h3>Skills & Technologies</h3>
               <div className="skills-grid">
                 <div className="skill-category">
-                  <h4>Game Engines</h4>
+                  <h4>Game Development</h4>
                   <ul>
-                    <li>Unity</li>
-                    <li>Unreal Engine</li>
-                    <li>Godot</li>
+                    <li>Unity Engine</li>
+                    <li>Game Design</li>
+                    <li>Gameplay Programming</li>
+                    <li>Playtesting</li>
                   </ul>
                 </div>
                 <div className="skill-category">
                   <h4>Programming</h4>
                   <ul>
                     <li>C#</li>
-                    <li>C++</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
+                    <li>Unity Scripting</li>
+                    <li>Game Logic</li>
+                    <li>Team Leadership</li>
                   </ul>
                 </div>
                 <div className="skill-category">
-                  <h4>Design Tools</h4>
+                  <h4>3D Art & Design</h4>
                   <ul>
-                    <li>Photoshop</li>
                     <li>Blender</li>
                     <li>Maya</li>
-                    <li>Figma</li>
+                    <li>Substance Painter</li>
+                    <li>Game Art</li>
                   </ul>
                 </div>
               </div>
@@ -49,10 +54,10 @@ const About = () => {
             <div className="experience-section">
               <h3>Experience Highlights</h3>
               <ul className="experience-list">
-                <li>3+ years of indie game development</li>
-                <li>Published multiple games across different platforms</li>
-                <li>Specialized in 2D/3D game mechanics and UI/UX design</li>
-                <li>Experience with multiplayer and single-player game development</li>
+                <li>Final-year student at Howest Digital Arts and Entertainment</li>
+                <li>Leading a team of six developers on collaborative project 'Sombre'</li>
+                <li>Community Award winner at Franco-Belge Game Jam for 'Bud's Oasis'</li>
+                <li>Strong foundation in game design, programming, and 3D art</li>
               </ul>
             </div>
           </div>

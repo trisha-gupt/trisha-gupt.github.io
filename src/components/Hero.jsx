@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Hero-fixed.css';
+import '../styles/Hero.css';
 
 const Hero = () => {
   return (
@@ -7,14 +7,12 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            <span className="greeting">Hi, I'm</span>
-            <span className="name">Trisha</span>
-            <span className="role">Game Developer</span>
+            <span className="name">TRISHA GUPTA</span>
+            <span className="role">GAME DESIGNER</span>
           </h1>
           <p className="hero-description">
-            Passionate about creating immersive gaming experiences through innovative 
-            game design, storytelling, and cutting-edge technology. I bring worlds 
-            to life one pixel at a time.
+            Hello! I'm Trisha - I specialize in game design and game art, with a focus on creating experiences that spark emotions and tell meaningful stories to players.
+            I'm currently seeking an end-of-study internship where I can bring my creativity and skills to an inspiring team.
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>

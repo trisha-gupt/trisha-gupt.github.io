@@ -5,18 +5,13 @@ const Projects = () => {
   const games = [
     {
       id: 1,
-      title: "Mystic Realms",
-      genre: "RPG Adventure",
-      description: "An immersive fantasy RPG featuring rich storytelling, complex character progression, and stunning magical environments. Players embark on an epic quest through multiple realms.",
-      technologies: ["Unity", "C#", "Photoshop"],
-      features: [
-        "Open-world exploration",
-        "Character customization",
-        "Magic system with 50+ spells",
-        "20+ hours of gameplay"
-      ],
-      status: "Released",
-      platforms: ["PC", "Steam"],
+      title: "BUD'S OASIS",
+      role: "DESIGNER / ARTIST",
+      genre: "CO-OP COUCH GAME",
+      description: "Developed during the Franco-Belge Game Jam, this project earned the Community Award and was later livestreamed on Twitch. I contributed as the Game Designer and modelled Game assets.",
+      technologies: ["Unity", "C#", "3D Modeling"],
+      status: "Community Award Winner",
+      platforms: ["PC"],
       image: "/api/placeholder/400/250",
       demoLink: "#",
       githubLink: "#",
@@ -24,18 +19,13 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Neon Racer",
-      genre: "Racing/Arcade",
-      description: "A high-speed cyberpunk racing game with neon-soaked tracks, customizable vehicles, and intense multiplayer competition in a futuristic cityscape.",
-      technologies: ["Unreal Engine", "C++", "Blender"],
-      features: [
-        "8-player online multiplayer",
-        "Vehicle customization system",
-        "12 unique racing tracks",
-        "Time trial and championship modes"
-      ],
+      title: "SOMBRE",
+      role: "DESIGNER / PROJECT MANAGER",
+      genre: "STORY - PUZZLE PLATFORMER",
+      description: "Born as a concept for a game design class, this story-driven puzzle-platformer is now a collaborative project and in development. I'm leading a team of five developers, working as both designer and programmer to realize the game. Drawing inspiration from Inside and Omori, it features a \"somber\" story but with a more unique mechanic.",
+      technologies: ["Unity", "C#", "Team Leadership"],
       status: "In Development",
-      platforms: ["PC", "Console"],
+      platforms: ["PC"],
       image: "/api/placeholder/400/250",
       demoLink: "#",
       githubLink: "#",
@@ -43,18 +33,13 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Pixel Garden",
-      genre: "Simulation/Casual",
-      description: "A relaxing farming simulation game where players create and manage their dream garden using pixel art aesthetics and soothing gameplay mechanics.",
-      technologies: ["Godot", "GDScript", "Aseprite"],
-      features: [
-        "50+ unique plants to grow",
-        "Seasonal weather system",
-        "Decoration and customization",
-        "Peaceful ambient soundtrack"
-      ],
-      status: "Released",
-      platforms: ["PC", "Mobile", "Web"],
+      title: "SHOPPER'S HAVOC",
+      role: "INDEPENDENT",
+      genre: "Strategy / Humour",
+      description: "I designed this Unity-based strategy game, drawing inspiration from a Black Friday sale. The game's core twist — the ability to clone yourself — adds both strategic depth and humor, shaping the player's experience.",
+      technologies: ["Unity", "C#", "Game Design"],
+      status: "Completed",
+      platforms: ["PC"],
       image: "/api/placeholder/400/250",
       demoLink: "#",
       githubLink: "#",
@@ -93,22 +78,14 @@ const Projects = () => {
               <div className="project-content">
                 <div className="project-header">
                   <h3 className="project-title">{game.title}</h3>
-                  <span className={`project-status ${game.status.toLowerCase().replace(' ', '-')}`}>
+                  <span className={`project-status ${game.status.toLowerCase().replace(/\s+/g, '-')}`}>
                     {game.status}
                   </span>
                 </div>
                 
+                <p className="project-role">{game.role}</p>
                 <p className="project-genre">{game.genre}</p>
                 <p className="project-description">{game.description}</p>
-                
-                <div className="project-features">
-                  <h4>Key Features:</h4>
-                  <ul>
-                    {game.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
                 
                 <div className="project-tech">
                   <h4>Technologies:</h4>

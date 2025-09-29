@@ -1,5 +1,6 @@
 /* Projects Section Styles */
 .projects {
+  width: 100vw;
   padding: 100px 2rem;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
   position: relative;
@@ -11,10 +12,13 @@
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-card {
@@ -25,6 +29,9 @@
   border: 1px solid rgba(100, 179, 244, 0.2);
   transition: all 0.3s ease;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 400px;
 }
 
 .project-card:hover {
@@ -35,7 +42,7 @@
 
 .project-image {
   position: relative;
-  height: 250px;
+  height: 100%;
   overflow: hidden;
   background: linear-gradient(135deg, #64b3f4 0%, #c2e59c 100%);
   display: flex;
@@ -158,11 +165,33 @@
   border: 1px solid rgba(255, 193, 61, 0.3);
 }
 
+.project-status.community-award-winner {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.project-status.completed {
+  background: rgba(194, 229, 156, 0.2);
+  color: #c2e59c;
+  border: 1px solid rgba(194, 229, 156, 0.3);
+}
+
+.project-role {
+  font-size: 0.9rem;
+  color: #c2e59c;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .project-genre {
   font-size: 1rem;
   color: #64b3f4;
   font-weight: 600;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .project-description {
@@ -234,8 +263,12 @@
   }
   
   .projects-grid {
-    grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .project-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
   }
   
   .project-image {
@@ -262,7 +295,7 @@
 }
 
 @media (max-width: 480px) {
-  .projects-grid {
+  .project-card {
     grid-template-columns: 1fr;
   }
   
