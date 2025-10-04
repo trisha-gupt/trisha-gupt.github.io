@@ -30,6 +30,12 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-height: 380px;
+  align-items: start; /* ensure grid items don't stretch to match each other */
+  grid-auto-rows: auto;
+}
+
+.project-card.clickable {
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -51,11 +57,78 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
+  display: block;
   transition: transform 0.2s ease;
 }
 
 .project-card:hover .project-image img {
   transform: scale(1.02);
+}
+
+/* Fix a consistent image height so details won't change it */
+.project-card {
+  /* allow columns to stretch to the same height so images fill evenly */
+  align-items: stretch;
+}
+
+.project-card .project-image {
+  /* don't force a fixed height — give a sensible minimum but let it stretch */
+  min-height: 320px;
+  height: 100%;
+}
+
+.project-content {
+  align-self: stretch; /* allow content column to stretch to match image */
+}
+
+.project-details-inline {
+  grid-column: 1 / -1; /* span both columns so it uses empty space */
+  padding: 0.75rem 2rem 1.25rem 2rem; /* align with .project-content padding */
+  background: rgba(0,0,0,0.02);
+  border-top: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+.project-details-inline .details-body h5 {
+  font-size: 1.05rem;
+  margin: 1.2rem 0 0.45rem 0;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.project-details-inline .details-body p {
+  margin: 0 0 0.9rem 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.project-details-inline .details-body ul {
+  margin: 0 0 1rem 1.25rem;
+}
+
+.project-details-inline .details-body li {
+  margin-bottom: 0.45rem;
+}
+
+.project-media {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.project-media img,
+.project-media .media-iframe {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border-accent);
+}
+
+.media-iframe {
+  aspect-ratio: 16/9;
 }
 
 .project-overlay {
@@ -79,6 +152,21 @@
 .project-links {
   display: flex;
   gap: 1rem;
+}
+
+.overlay-showmore {
+  background: rgba(255,255,255,0.06);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.overlay-showmore:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
 }
 
 .link-btn {

@@ -35,8 +35,8 @@ const About = () => {
                   <ul>
                     <li>C#</li>
                     <li>Unity Scripting</li>
+                    <li>Prototyping / updating code</li>
                     <li>Game Logic</li>
-                    <li>Team Leadership</li>
                   </ul>
                 </div>
                 <div className="skill-category">
