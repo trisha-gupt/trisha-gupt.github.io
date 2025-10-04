@@ -21,6 +21,9 @@ const Hero = () => {
             <button className="btn btn-secondary" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
               About Me
             </button>
+            <button className="btn btn-secondary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+              Contact
+            </button>
           </div>
         </div>
         <div className="hero-visual">

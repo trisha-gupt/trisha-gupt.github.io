@@ -2,6 +2,56 @@ import React, { useState } from 'react';
 import '../styles/Projects.css';
 import projects from '../data/projects';
 
+// Convert various YouTube URL formats into an embeddable URL.
+// Supports: watch?v=VIDEO_ID, youtu.be/VIDEO_ID, embed URLs, and time params like t=1m30s or t=90
+function parseYouTubeTime(t) {
+  if (!t) return 0;
+  // strip leading 't=' if present
+  const s = String(t).replace(/^t=/, '');
+  // If plain number, return it
+  if (/^\d+$/.test(s)) return parseInt(s, 10) || 0;
+  // parse 1h2m3s / 2m3s / 45s
+  const m = s.match(/(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
+  if (!m) return 0;
+  const hours = parseInt(m[1] || 0, 10);
+  const mins = parseInt(m[2] || 0, 10);
+  const secs = parseInt(m[3] || 0, 10);
+  return hours * 3600 + mins * 60 + secs;
+}
+
+function toYouTubeEmbed(url) {
+  if (!url) return url;
+  const u = String(url).trim();
+  try {
+    // already an embed URL
+    if (u.includes('youtube.com/embed/')) {
+      return u;
+    }
+
+    // watch?v=VIDEO_ID
+    const watch = u.match(/[?&]v=([A-Za-z0-9_-]{11})/);
+    if (watch) {
+      const id = watch[1];
+      const tMatch = u.match(/[?&](?:t|start)=([^&]+)/);
+      const start = tMatch ? parseYouTubeTime(tMatch[1]) : null;
+      return start ? `https://www.youtube.com/embed/${id}?start=${start}` : `https://www.youtube.com/embed/${id}`;
+    }
+
+    // youtu.be/VIDEO_ID
+    const short = u.match(/youtu\.be\/([A-Za-z0-9_-]{11})/);
+    if (short) {
+      const id = short[1];
+      const tMatch = u.match(/[?&](?:t|start)=([^&]+)/);
+      const start = tMatch ? parseYouTubeTime(tMatch[1]) : null;
+      return start ? `https://www.youtube.com/embed/${id}?start=${start}` : `https://www.youtube.com/embed/${id}`;
+    }
+
+    return u;
+  } catch (e) {
+    return url;
+  }
+}
+
 const Projects = () => {
   const [openProjectId, setOpenProjectId] = useState(null);
 
@@ -106,7 +156,7 @@ const Projects = () => {
                               <iframe
                                 key={idx}
                                 className="media-iframe"
-                                src={m.src}
+                                src={toYouTubeEmbed(m.src)}
                                 title={m.title || `${game.title} video`}
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

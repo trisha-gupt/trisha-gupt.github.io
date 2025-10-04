@@ -1,0 +1,58 @@
+/* Contact section styles */
+.contact {
+  padding: 60px 2rem;
+  background: var(--bg-secondary);
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.contact-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-sub {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.contact-icon {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Using the provided sprite images in src/assets/contact-icons */
+.contact-icon img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.contact-icon:hover {
+  transform: translateY(-4px);
+  transition: transform 0.12s ease;
+}

@@ -70,17 +70,7 @@ const Navigation = () => {
           </li>
         </ul>
         
-        <div className="nav-social">
-          <a href="#" className="social-link" title="GitHub">
-            <span>📁</span>
-          </a>
-          <a href="#" className="social-link" title="LinkedIn">
-            <span>💼</span>
-          </a>
-          <a href="#" className="social-link" title="Twitter">
-            <span>🐦</span>
-          </a>
-        </div>
+        {/* nav-social removed per request */}
       </div>
     </nav>
   );

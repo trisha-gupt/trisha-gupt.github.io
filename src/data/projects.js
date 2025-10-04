@@ -13,11 +13,12 @@ const projects = [
     description: "Developed during the Franco-Belge Game Jam, this project earned the Community Award and was later livestreamed on Twitch.",
     longDescription: [
       { type: 'heading', text: "Overview" },
-      { type: 'paragraph', text: "BUD'S OASIS is a friendly competitive/cooperative couch game created during a 48-hour game jam. I contributed to the game's design, 3D modelling and level layout." },
+      { type: 'paragraph', text: "BUD'S OASIS is a friendly competitive/cooperative couch game created during a 48-hour game jam with people from differnt schools who were put together. I contributed to the game's design, 3D modelling and level layout." },
       { type: 'heading', text: "My role" },
-      { type: 'paragraph', text: "I worked as the lead designer and artist: I prototyped core mechanics, created 3D assets, and implemented level interactions." },
+      { type: 'paragraph', text: "I worked as the designer and artist: creating the main characters and the tree progression" },
       { type: 'heading', text: "Highlights" },
-      { type: 'list', items: ["Community Award winner", "Featured on a Twitch livestream", "Prototype reached playable demo in 48 hours"] }
+      { type: 'list', items: ["Community Award winner", "Honorable mention for best trailer", "Achieved goal of making a fun co-op"] },
+      { type: 'heading', text: "Vidos of Trailer and Livestram clip" },
     ],
     technologies: ["Unity", "C#", "3D Modeling"],
     status: "Community Award Winner",
@@ -25,7 +26,11 @@ const projects = [
     image: "/src/assets/games-pictures/buds_oasis.jpeg",
     demoLink: "#",
     githubLink: "#",
-    playLink: "#"
+    playLink: "#",
+    media: [
+      { type: 'youtube', src: 'https://www.youtube.com/watch?v=aVt7UzyGD0I', title: 'BUD\'S OASIS trailer (https://www.youtube.com/watch?v=aVt7UzyGD0I)' },
+      { type: 'youtube', src: 'https://www.youtube.com/watch?v=3MENThg9acM&t=1s', title: 'BUD\'S OASIS livestream (https://www.youtube.com/watch?v=3MENThg9acM&t=1s)' }
+    ]
   },
   {
     id: 2,
@@ -34,12 +39,14 @@ const projects = [
     genre: "STORY - PUZZLE PLATFORMER",
     description: "A story-driven puzzle-platformer exploring somber themes with a unique core mechanic.",
     longDescription: [
-      { type: 'heading', text: "Design goals" },
-      { type: 'paragraph', text: "SOMBRE aims to combine atmospheric storytelling with tactile puzzle mechanics that reward curiosity." },
-      { type: 'heading', text: "Contributions" },
-      { type: 'list', items: ["Game design and prototyping", "Programming core mechanics", "Coordinating a team of five"] },
+        { type: 'heading', text: "Contributions" },
+        { type: 'list', items: ["Game design and prototyping","Coordinating a team of five"] },
+      { type: 'heading', text: "Design Pillars" },
+      { type: 'list', items: ["Discovery Within Narrative - Players discover story through narrative and visual storytelling, it is up to the player to interpret it the way they want to.", "Ability Driven Problem Solving - Each puzzle has an ideal solution, however the player is encoraged to solve it their own way and think of differnt solutions", "Low Difficulty Progression - The puzzles progressively get more difficult after each stage has been passed and a new ability is introdiced"] },
+      { type: 'heading', text: "CORE MECHANIC - SHADOW MANIPULATION" },
+      { type: 'paragraph', text: "I wanted to do something with shadows since there are already a lot of games where you use shadows as colliders to hide from the search light I thought it would be cool if instead of you hiding in the shadows you could use them as a power. This of course was very technically challenging since I wanted the colliders and mesh of the shadows to be in place of the shadows casted by the light " },
       { type: 'heading', text: "Media" },
-      { type: 'paragraph', text: "Below are short GIF demos and a trailer." }
+      { type: 'paragraph', text: "Below are short GIF demos of the prototyped mechanic" },
     ],
     technologies: ["Unity", "C#", "Team Leadership"],
     status: "In Development",
@@ -50,8 +57,7 @@ const projects = [
     playLink: "#",
     media: [
       { type: 'gif', src: '/src/assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif', alt: 'Core mechanic demo' },
-      { type: 'gif', src: '/src/assets/games-pictures/sombre-prototype/teleportation_mechanic.gif', alt: 'Teleportation mechanic' },
-      { type: 'youtube', src: 'https://www.youtube.com/embed/VIDEO_ID', title: 'Sombre trailer (replace VIDEO_ID)' }
+      { type: 'gif', src: '/src/assets/games-pictures/sombre-prototype/teleportation_mechanic.gif', alt: 'Teleportation mechanic' }
     ]
   },
   {
@@ -61,8 +67,13 @@ const projects = [
     genre: "Strategy / Humour",
     description: "A humorous strategy game about navigating hectic sales with a cloning mechanic.",
     longDescription: [
-      { type: 'heading', text: "Concept" },
-      { type: 'paragraph', text: "SHOPPER'S HAVOC is a fast-paced strategy game inspired by chaotic shopping events. The clone mechanic allows for interesting multi-agent puzzles." },
+      { type: 'heading', text: "Core Objectives :-" },
+      { type: 'heading', text: "• Complete the List -" },
+      { type: 'paragraph', text: "You need to find and collect every Item on the list to be able to move on to the next level" },
+      { type: 'heading', text: "• Escape the store -" },
+      { type: 'paragraph', text: "Once all the items are collected, you need to get out of there as soon as you can without having any of your items stolen by any of the shoppers" },
+      { type: 'heading', text: "• Outsmart the rival shoppers -" },
+      { type: 'paragraph', text: "You will need to maneuver the rival shoppers and strategize the best course of action for you to be able to escape without anything being stolen. (e.g. you will be able to grab their attention and distract one of them while your clone goes and steals from the area, etc.) " },
       { type: 'heading', text: "Design notes" },
       { type: 'paragraph', text: "I designed the cloning mechanic to be easy to learn but offer depth in planning and timing." }
     ],
@@ -72,7 +83,10 @@ const projects = [
     image: "/src/assets/games-pictures/shoppers_havoc.png",
     demoLink: "#",
     githubLink: "#",
-    playLink: "#"
+    playLink: "#",
+    media: [
+        { type: 'youtube', src: 'https://www.youtube.com/watch?v=CuZikGbWAc8', title: 'Shopper\'s Havoc trailer (https://www.youtube.com/watch?v=CuZikGbWAc8)' }
+    ]
   }
 ];
 
