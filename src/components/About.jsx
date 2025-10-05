@@ -2,87 +2,128 @@ import React from 'react';
 import '../styles/About.css';
 
 const About = () => {
+  const skillCategories = [
+    {
+      title: 'Game Development',
+      items: ['Unity Engine', 'Game Design', 'Gameplay Programming', 'Playtesting'],
+    },
+    {
+      title: 'Programming',
+      items: ['C#', 'Unity Scripting', 'Rapid Prototyping', 'Systems & Game Logic'],
+    },
+    {
+      title: '3D Art & Design',
+      items: ['Blender', 'Maya', 'Substance Painter', 'Stylised Game Art'],
+    },
+  ];
+
+  const experiences = [
+    {
+      label: 'Team Lead & Game Designer',
+      detail: "Sombre — directing a six-person team to build a narrative stealth adventure",
+    },
+    {
+      label: 'Award-Winning Designer',
+      detail: "Franco-Belge Game Jam Community Award for Bud's Oasis",
+    },
+    {
+      label: 'DAE @ Howest',
+      detail: 'Independent Game Production student specialising in gameplay & systems',
+    },
+    {
+      label: 'Cross-Disciplinary Collaborator',
+      detail: 'Bridging design, programming, and art to build polished player experiences',
+    },
+  ];
+
+  const quickStats = [
+    { value: '3+', label: 'Games Shipped' },
+    { value: '3+', label: 'Years Coding' },
+    { value: '4+', label: 'Game Jams & Pitches' },
+  ];
+
   return (
     <section className="about" id="about">
       <div className="about-container">
-        <h2 className="section-title">About Me</h2>
+        <div className="about-header">
+          <span className="about-tag">Game Designer · Gameplay Programmer · Team Lead</span>
+          <h2 className="section-title">About Me</h2>
+        </div>
+
         <div className="about-content">
           <div className="about-text">
-            <p className="about-intro">
-              Hi, I'm Trisha Gupta! A final-year Independent Game Production student at Howest's Digital Arts and Entertainment program. I've studied game design, gameplay programming, and game art, which gave me a strong foundation in building and playtesting games from the ground up.
-            </p>
-            <p className="about-intro">
-              I mostly develop in Unity using C#, and am also experienced with Blender, Maya, and Substance Painter for basic modeling and texturing.
-            </p>
-            <p className="about-intro">
-              Currently, I'm leading a team of six developers as both Game Designer and Programmer on our upcoming title, Sombre. I'm passionate about crafting engaging gameplay experiences and seeing ideas come to life through collaboration.
-            </p>
-            
+            <div className="bio-card">
+              <p>
+                Hey, I&apos;m Trisha Gupta — a final-year Independent Game Production student at Howest DAE with a love for building worlds players want to live in. I help teams move from whiteboard concepts to polished gameplay through tight iteration cycles and lots of playtesting.
+              </p>
+              <p>
+                My home base is Unity and C#, but I regularly jump into Blender, Maya, and Substance Painter to keep pipelines smooth across disciplines. Collaboration is my super power; translating design intent into responsive mechanics keeps me energised.
+              </p>
+              <div className="bio-highlights">
+                <span>Systems-driven design mindset</span>
+                <span>Player-first iteration loops</span>
+                <span>Hands-on leadership experience</span>
+              </div>
+            </div>
+
             <div className="skills-section">
-              <h3>Skills & Technologies</h3>
+              <h3>What I Work With</h3>
               <div className="skills-grid">
-                <div className="skill-category">
-                  <h4>Game Development</h4>
-                  <ul>
-                    <li>Unity Engine</li>
-                    <li>Game Design</li>
-                    <li>Gameplay Programming</li>
-                    <li>Playtesting</li>
-                  </ul>
-                </div>
-                <div className="skill-category">
-                  <h4>Programming</h4>
-                  <ul>
-                    <li>C#</li>
-                    <li>Unity Scripting</li>
-                    <li>Prototyping / updating code</li>
-                    <li>Game Logic</li>
-                  </ul>
-                </div>
-                <div className="skill-category">
-                  <h4>3D Art & Design</h4>
-                  <ul>
-                    <li>Blender</li>
-                    <li>Maya</li>
-                    <li>Substance Painter</li>
-                    <li>Game Art</li>
-                  </ul>
-                </div>
+                {skillCategories.map((category) => (
+                  <article className="skill-card" key={category.title}>
+                    <h4>{category.title}</h4>
+                    <ul>
+                      {category.items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
               </div>
             </div>
 
             <div className="experience-section">
               <h3>Experience Highlights</h3>
-              <ul className="experience-list">
-                <li>Final-year student at Howest Digital Arts and Entertainment</li>
-                <li>Leading a team of six developers on collaborative project 'Sombre'</li>
-                <li>Community Award winner at Franco-Belge Game Jam for 'Bud's Oasis'</li>
-                <li>Strong foundation in game design, programming, and 3D art</li>
+              <ul className="experience-timeline">
+                {experiences.map((experience) => (
+                  <li key={experience.label}>
+                    <div className="experience-marker" aria-hidden="true" />
+                    <div className="experience-content">
+                      <span className="experience-label">{experience.label}</span>
+                      <p>{experience.detail}</p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
-          
-          <div className="about-visual">
+
+          <aside className="about-visual" aria-label="Profile snapshot">
             <div className="profile-card">
               <div className="profile-image">
                 <img src="/src/assets/profile_photo.jpg" alt="Trisha Gupta" className="profile-img" />
               </div>
-              <div className="stats">
-                <div className="stat">
-                  <span className="stat-number">3+</span>
-                  <span className="stat-label">Games Shipped</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">5+</span>
-                  <span className="stat-label">Years Coding</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">∞</span>
-                  <span className="stat-label">Ideas</span>
-                </div>
+              <div className="profile-caption">
+                <h4>Crafting stylish stealth in Sombre</h4>
+                <p>Designing levels, scripting gameplay, and syncing art direction with mechanics.</p>
+              </div>
+              <div className="stat-grid">
+                {quickStats.map((stat) => (
+                  <div className="stat" key={stat.label}>
+                    <span className="stat-number">{stat.value}</span>
+                    <span className="stat-label">{stat.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
+
+            <div className="accent-card">
+              <h5>Currently</h5>
+              <p>
+                Guiding a multidisciplinary crew on <span className="accent-card__focus">Sombre</span>, a stealth-driven tale of light, shadow, and memory. Ask me about build pipelines or playtest strategy!
+              </p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
