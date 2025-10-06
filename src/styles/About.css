@@ -150,36 +150,51 @@
 .experience-timeline {
   list-style: none;
   position: relative;
-  padding-left: 1.5rem;
   display: grid;
   gap: 1.75rem;
+  padding-left: 0;
 }
 
 .experience-timeline::before {
   content: '';
   position: absolute;
-  left: 0.5rem;
-  top: 0.3rem;
-  bottom: 0.3rem;
+  left: 26px;
+  top: 0;
+  bottom: 0;
   width: 1px;
-  background: linear-gradient(180deg, rgba(235, 168, 56, 0.6), transparent);
+  background: linear-gradient(180deg, rgba(235, 168, 56, 0.55), transparent 85%);
+  transform: translateX(-50%);
 }
 
 .experience-timeline li {
   position: relative;
-  padding-left: 1.5rem;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: flex-start;
 }
 
 .experience-marker {
-  position: absolute;
-  left: -0.25rem;
-  top: 0.2rem;
-  width: 12px;
-  height: 12px;
+  position: relative;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 2px solid rgba(235, 168, 56, 0.6);
+  border: 2px solid rgba(235, 168, 56, 0.65);
   background: var(--bg-secondary);
-  box-shadow: 0 0 0 4px rgba(235, 168, 56, 0.18);
+  box-shadow: 0 0 0 4px rgba(235, 168, 56, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  margin-top: 0.45rem;
+}
+
+.experience-marker::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(235, 168, 56, 0.9);
 }
 
 .experience-content {
