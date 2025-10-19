@@ -6,15 +6,15 @@ const About = () => {
   const skillCategories = [
     {
       title: 'Game Development',
-      items: ['Unity Engine', 'Game Design', 'Gameplay Programming', 'Playtesting'],
+      items: ['Game Design', 'Character, Camera, Controller', 'Prototype Programming', 'Playtesting'],
     },
     {
       title: 'Programming',
-      items: ['C#', 'Unity Scripting', 'Rapid Prototyping', 'Systems & Game Logic'],
+      items: ['C#', 'Unity Scripting', 'Prototyping', 'Version Control (Git, P4V)'],
     },
     {
       title: '3D Art & Design',
-      items: ['Blender', 'Maya', 'Substance Painter', 'Stylised Game Art'],
+      items: ['3D Modelling', 'Unwrapping', 'Texturing', 'Stylised Game Art', '2D Stylized Art'],
     },
   ];
 
@@ -32,8 +32,8 @@ const About = () => {
       detail: 'Independent Game Production student specialising in gameplay & systems',
     },
     {
-      label: 'Cross-Disciplinary Collaborator',
-      detail: 'Bridging design, programming, and art to build polished player experiences',
+      label: 'Art Internship At A tech studio',
+      detail: 'Assisted in creating realistic 3D models and textures for their VR applications',
     },
   ];
 
@@ -64,14 +64,14 @@ const About = () => {
                 Currently, I&apos;m leading a team of six developers as both Game Designer and Programmer on our upcoming title, Sombre. I&apos;m passionate about crafting engaging gameplay experiences and seeing ideas come to life through collaboration.
               </p>
               <div className="bio-highlights">
-                <span>Systems-driven design mindset</span>
-                <span>Player-first iteration loops</span>
-                <span>Hands-on leadership experience</span>
+                <span>Game Design Experience</span>
+                <span>Lover of narrative driven puzzle games</span>
+                <span>Comunications Experience</span>
               </div>
             </div>
 
             <div className="skills-section">
-              <h3>What I Work With</h3>
+              <h3>What My Skills Are</h3>
               <div className="skills-grid">
                 {skillCategories.map((category) => (
                   <article className="skill-card" key={category.title}>
@@ -105,7 +105,7 @@ const About = () => {
           <aside className="about-visual" aria-label="Profile snapshot">
             <div className="profile-card">
               <div className="profile-image">
-                  <img src="/src/assets/profile_photo.jpg" alt="Trisha Gupta" className="profile-img" />
+                  {/* <img src="/src/assets/profile_photo.jpg" alt="Trisha Gupta" className="profile-img" /> */}
 +                 <img src={profilePhoto} alt="Trisha Gupta" className="profile-img" />
               </div>
               <div className="profile-caption">
@@ -125,7 +125,7 @@ const About = () => {
             <div className="accent-card">
               <h5>Currently</h5>
               <p>
-                Working on a Group projects game <span className="accent-card__focus">Sombre</span>, a narrative based puzzle game about shadows and lights. Ask me about the mechancics or the story!
+                Working on a Group projects game called: <span className="accent-card__focus">Sombre</span>, a narrative based puzzle game about shadows and lights. Ask me about the mechancics and the story!
               </p>
             </div>
           </aside>

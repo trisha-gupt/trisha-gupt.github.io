@@ -65,7 +65,7 @@ const Projects = () => {
       <div className="projects-container">
         <h2 className="section-title">My Games</h2>
         <p className="section-subtitle">
-          Explore the worlds I've created - from epic adventures to casual experiences
+          Explore some of the games I've designed and been a part of the development process!
         </p>
         
         <div className="projects-grid">

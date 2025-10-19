@@ -4,11 +4,18 @@
 // - { type: 'paragraph', text: '...' }
 // - { type: 'list', items: ['item1', 'item2'] }
 
+import sombrecoverPhoto from '../assets/games-pictures/concept_art_first_lvl.png';
+import shoppershavocPhoto from '../assets/games-pictures/shoppers_havoc.png';
+import budsOasisPhoto from '../assets/games-pictures/buds_oasis.jpeg';
+
+import sompbreCoreMechGif from '../assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif';
+import sombreTeleportGif from '../assets/games-pictures/sombre-prototype/teleportation_mechanic.gif';
+
 const projects = [
   {
     id: 1,
     title: "BUD'S OASIS",
-    role: "DESIGNER / ARTIST",
+    role: "role: DESIGNER / ARTIST",
     genre: "CO-OP COUCH GAME",
     description: "Developed during the Franco-Belge Game Jam, this project earned the Community Award and was later livestreamed on Twitch.",
     longDescription: [
@@ -16,14 +23,15 @@ const projects = [
       { type: 'paragraph', text: "BUD'S OASIS is a friendly competitive/cooperative couch game created during a 48-hour game jam with people from differnt schools who were put together. I contributed to the game's design, 3D modelling and level layout." },
       { type: 'heading', text: "My role" },
       { type: 'paragraph', text: "I worked as the designer and artist: creating the main characters and the tree progression" },
-      { type: 'heading', text: "Highlights" },
-      { type: 'list', items: ["Community Award winner", "Honorable mention for best trailer", "Achieved goal of making a fun co-op"] },
-      { type: 'heading', text: "Vidos of Trailer and Livestram clip" },
+      { type: 'heading', text: "Design Process -" },
+      { type: 'list', items: ["The theme of this game jam was about sustainability. We moved more towards Protection of environment from the evil robots but also making it a fun experience by having two or more people being able to play together.", "One challenging aspect of this was balancing the level so it wasn't too easily winnable and also wasn't too frustrating to beat.", "Due to time constraints we weren't able to have a health bar for the tree. But it would have been a good addition for player to have a visual feedback for tree health."] },
+      { type: 'heading', text: "Vidos of Trailer and Livestram clip:-" },
     ],
     technologies: ["Unity", "C#", "3D Modeling"],
     status: "Community Award Winner",
     platforms: ["PC"],
-    image: "/assets/games-pictures/buds_oasis.jpeg",
+    // image: "/assets/games-pictures/buds_oasis.jpeg",
+    image: budsOasisPhoto,
     demoLink: "#",
     githubLink: "#",
     playLink: "#",
@@ -35,7 +43,7 @@ const projects = [
   {
     id: 2,
     title: "SOMBRE",
-    role: "DESIGNER / PROJECT MANAGER",
+    role: "role: DESIGNER / PROJECT MANAGER",
     genre: "STORY - PUZZLE PLATFORMER",
     description: "A story-driven puzzle-platformer exploring somber themes with a unique core mechanic.",
     longDescription: [
@@ -51,19 +59,20 @@ const projects = [
     technologies: ["Unity", "C#", "Team Leadership"],
     status: "In Development",
     platforms: ["PC"],
-    image: "/assets/games-pictures/concept_art_first_lvl.png",
+    // image: "/assets/games-pictures/concept_art_first_lvl.png",
+    image: sombrecoverPhoto,
     demoLink: "#",
     githubLink: "#",
     playLink: "#",
     media: [
-      { type: 'gif', src: '/assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif', alt: 'Core mechanic demo' },
-      { type: 'gif', src: '/assets/games-pictures/sombre-prototype/teleportation_mechanic.gif', alt: 'Teleportation mechanic' }
+      { type: 'gif', src: sompbreCoreMechGif, alt: 'Core mechanic demo' },
+      { type: 'gif', src: sombreTeleportGif, alt: 'Teleportation mechanic' }
     ]
   },
   {
     id: 3,
     title: "SHOPPER'S HAVOC",
-    role: "INDEPENDENT",
+    role: "role: INDEPENDENT",
     genre: "Strategy / Humour",
     description: "A humorous strategy game about navigating hectic sales with a cloning mechanic.",
     longDescription: [
@@ -80,7 +89,8 @@ const projects = [
     technologies: ["Unity", "C#", "Game Design"],
     status: "Completed",
     platforms: ["PC"],
-    image: "/assets/games-pictures/shoppers_havoc.png",
+    // image: "/assets/games-pictures/shoppers_havoc.png",
+    image: shoppershavocPhoto,
     demoLink: "#",
     githubLink: "#",
     playLink: "#",
