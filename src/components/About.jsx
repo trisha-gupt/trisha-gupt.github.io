@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
+import profilePhoto from '../assets/profile_photo.jpg';
 
 const About = () => {
   const skillCategories = [
@@ -20,7 +21,7 @@ const About = () => {
   const experiences = [
     {
       label: 'Team Lead & Game Designer',
-      detail: "Sombre — directing a six-person team to build a narrative stealth adventure",
+      detail: "Sombre — Project manager for a six-person team to build a narrative heavy puzzle game in Unity",
     },
     {
       label: 'Award-Winning Designer',
@@ -46,7 +47,7 @@ const About = () => {
     <section className="about" id="about">
       <div className="about-container">
         <div className="about-header">
-          <span className="about-tag">Game Designer · Gameplay Programmer · Team Lead</span>
+          <span className="about-tag">Game Designer · 3D Generalist · Team Lead</span>
           <h2 className="section-title">About Me</h2>
         </div>
 
@@ -54,10 +55,13 @@ const About = () => {
           <div className="about-text">
             <div className="bio-card">
               <p>
-                Hey, I&apos;m Trisha Gupta — a final-year Independent Game Production student at Howest DAE with a love for building worlds players want to live in. I help teams move from whiteboard concepts to polished gameplay through tight iteration cycles and lots of playtesting.
+                Hey, I&apos;m Trisha Gupta — A final-year Independent Game Production student at Howest&apos;s Digital Arts and Entertainment program. I&apos;ve studied game design, gameplay programming, and game art, which gave me a strong foundation in building and playtesting games from the ground up.
               </p>
               <p>
-                My home base is Unity and C#, but I regularly jump into Blender, Maya, and Substance Painter to keep pipelines smooth across disciplines. Collaboration is my super power; translating design intent into responsive mechanics keeps me energised.
+                I mostly design games in Unity using C#, however I am also experienced with Blender, Maya, and Substance Painter for basic modeling and texturing.
+              </p>
+              <p>
+                Currently, I&apos;m leading a team of six developers as both Game Designer and Programmer on our upcoming title, Sombre. I&apos;m passionate about crafting engaging gameplay experiences and seeing ideas come to life through collaboration.
               </p>
               <div className="bio-highlights">
                 <span>Systems-driven design mindset</span>
@@ -101,11 +105,12 @@ const About = () => {
           <aside className="about-visual" aria-label="Profile snapshot">
             <div className="profile-card">
               <div className="profile-image">
-                <img src="/src/assets/profile_photo.jpg" alt="Trisha Gupta" className="profile-img" />
+                  <img src="/src/assets/profile_photo.jpg" alt="Trisha Gupta" className="profile-img" />
++                 <img src={profilePhoto} alt="Trisha Gupta" className="profile-img" />
               </div>
               <div className="profile-caption">
-                <h4>Crafting stylish stealth in Sombre</h4>
-                <p>Designing levels, scripting gameplay, and syncing art direction with mechanics.</p>
+                <h4>Game Designer / 3D Generalist</h4>
+                <p>Designing games and levels along with being able to script prototypes, also experienced with stylised 3D or 2D art.</p>
               </div>
               <div className="stat-grid">
                 {quickStats.map((stat) => (
@@ -120,7 +125,7 @@ const About = () => {
             <div className="accent-card">
               <h5>Currently</h5>
               <p>
-                Guiding a multidisciplinary crew on <span className="accent-card__focus">Sombre</span>, a stealth-driven tale of light, shadow, and memory. Ask me about build pipelines or playtest strategy!
+                Working on a Group projects game <span className="accent-card__focus">Sombre</span>, a narrative based puzzle game about shadows and lights. Ask me about the mechancics or the story!
               </p>
             </div>
           </aside>

@@ -23,7 +23,7 @@ const projects = [
     technologies: ["Unity", "C#", "3D Modeling"],
     status: "Community Award Winner",
     platforms: ["PC"],
-    image: "/src/assets/games-pictures/buds_oasis.jpeg",
+    image: "/assets/games-pictures/buds_oasis.jpeg",
     demoLink: "#",
     githubLink: "#",
     playLink: "#",
@@ -51,13 +51,13 @@ const projects = [
     technologies: ["Unity", "C#", "Team Leadership"],
     status: "In Development",
     platforms: ["PC"],
-    image: "/src/assets/games-pictures/concept_art_first_lvl.png",
+    image: "/assets/games-pictures/concept_art_first_lvl.png",
     demoLink: "#",
     githubLink: "#",
     playLink: "#",
     media: [
-      { type: 'gif', src: '/src/assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif', alt: 'Core mechanic demo' },
-      { type: 'gif', src: '/src/assets/games-pictures/sombre-prototype/teleportation_mechanic.gif', alt: 'Teleportation mechanic' }
+      { type: 'gif', src: '/assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif', alt: 'Core mechanic demo' },
+      { type: 'gif', src: '/assets/games-pictures/sombre-prototype/teleportation_mechanic.gif', alt: 'Teleportation mechanic' }
     ]
   },
   {
@@ -80,7 +80,7 @@ const projects = [
     technologies: ["Unity", "C#", "Game Design"],
     status: "Completed",
     platforms: ["PC"],
-    image: "/src/assets/games-pictures/shoppers_havoc.png",
+    image: "/assets/games-pictures/shoppers_havoc.png",
     demoLink: "#",
     githubLink: "#",
     playLink: "#",
