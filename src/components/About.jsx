@@ -10,11 +10,11 @@ const About = () => {
     },
     {
       title: 'Programming',
-      items: ['C#', 'Unity Scripting', 'Prototyping', 'Version Control (Git, P4V)'],
+      items: ['C#', 'Unity', 'Prototyping', 'Version Control (Git, P4V)'],
     },
     {
       title: '3D Art & Design',
-      items: ['3D Modelling', 'Unwrapping', 'Texturing', 'Stylised Game Art', '2D Stylized Art'],
+      items: ['3D Modelling', 'Unwrapping', 'Texturing', 'Stylised Game Art', 'Stylized Art'],
     },
   ];
 
@@ -29,7 +29,7 @@ const About = () => {
     },
     {
       label: 'DAE @ Howest',
-      detail: 'Independent Game Production student specialising in gameplay & systems',
+      detail: 'Independent Game Production student specialising in game design & Stylized art',
     },
     {
       label: 'Art Internship At A tech studio',
@@ -66,7 +66,7 @@ const About = () => {
               <div className="bio-highlights">
                 <span>Game Design Experience</span>
                 <span>Lover of narrative driven puzzle games</span>
-                <span>Comunications Experience</span>
+                <span>2D and 3D stylised art Experience</span>
               </div>
             </div>
 
@@ -125,7 +125,7 @@ const About = () => {
             <div className="accent-card">
               <h5>Currently</h5>
               <p>
-                Working on a Group projects game called: <span className="accent-card__focus">Sombre</span>, a narrative based puzzle game about shadows and lights. Ask me about the mechancics and the story!
+                Working on a Group projects game called: <span className="accent-card__focus">Sombre</span>, a narrative based puzzle game about shadows and lights. Ask me about the game design and the story!
               </p>
             </div>
           </aside>
