@@ -152,6 +152,7 @@
 .project-links {
   display: flex;
   gap: 1rem;
+  margin-top: 12px;
 }
 
 .overlay-showmore {
@@ -341,6 +342,49 @@
   border: 1px solid var(--border-accent);
 }
 
+.longdesc-gif-wrap {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.longdesc-gif {
+  width: 100%;
+  max-width: 560px; /* adjust to your preferred media width */
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.longdesc-images-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.longdesc-images-row-item {
+  flex: 1 1 calc(50% - 6px); /* two per row on larger screens */
+  max-width: calc(50% - 6px);
+}
+
+@media (max-width: 700px) {
+  .longdesc-images-row-item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.longdesc-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects {
@@ -398,4 +442,26 @@
     font-size: 0.7rem;
     padding: 0.2rem 0.5rem;
   }
+}
+
+/* Itch button */
+.project-links {
+  margin-top: 12px;
+}
+
+.itch-button {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--accent-primary, #2563eb);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.itch-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37,99,235,0.12);
 }

@@ -6,11 +6,8 @@ import projects from '../data/projects';
 // Supports: watch?v=VIDEO_ID, youtu.be/VIDEO_ID, embed URLs, and time params like t=1m30s or t=90
 function parseYouTubeTime(t) {
   if (!t) return 0;
-  // strip leading 't=' if present
   const s = String(t).replace(/^t=/, '');
-  // If plain number, return it
   if (/^\d+$/.test(s)) return parseInt(s, 10) || 0;
-  // parse 1h2m3s / 2m3s / 45s
   const m = s.match(/(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
   if (!m) return 0;
   const hours = parseInt(m[1] || 0, 10);
@@ -23,12 +20,7 @@ function toYouTubeEmbed(url) {
   if (!url) return url;
   const u = String(url).trim();
   try {
-    // already an embed URL
-    if (u.includes('youtube.com/embed/')) {
-      return u;
-    }
-
-    // watch?v=VIDEO_ID
+    if (u.includes('youtube.com/embed/')) return u;
     const watch = u.match(/[?&]v=([A-Za-z0-9_-]{11})/);
     if (watch) {
       const id = watch[1];
@@ -36,8 +28,6 @@ function toYouTubeEmbed(url) {
       const start = tMatch ? parseYouTubeTime(tMatch[1]) : null;
       return start ? `https://www.youtube.com/embed/${id}?start=${start}` : `https://www.youtube.com/embed/${id}`;
     }
-
-    // youtu.be/VIDEO_ID
     const short = u.match(/youtu\.be\/([A-Za-z0-9_-]{11})/);
     if (short) {
       const id = short[1];
@@ -45,7 +35,6 @@ function toYouTubeEmbed(url) {
       const start = tMatch ? parseYouTubeTime(tMatch[1]) : null;
       return start ? `https://www.youtube.com/embed/${id}?start=${start}` : `https://www.youtube.com/embed/${id}`;
     }
-
     return u;
   } catch (e) {
     return url;
@@ -58,7 +47,36 @@ const Projects = () => {
   const toggleOpen = (id) => {
     setOpenProjectId((prev) => (prev === id ? null : id));
   };
-  const games = projects;
+  const games = projects || [];
+
+  // render media array (gifs, youtube, images)
+  const renderMedia = (mediaArray, game) => {
+    if (!Array.isArray(mediaArray) || mediaArray.length === 0) return null;
+    return (
+      <div className="project-media">
+        {mediaArray.map((m, idx) => {
+          if (!m) return null;
+          if (m.type === 'gif' || m.type === 'image') {
+            return <img key={idx} src={m.src} alt={m.alt || `${game.title}-media-${idx}`} className="project-media-img" />;
+          }
+          if (m.type === 'youtube') {
+            return (
+              <iframe
+                key={idx}
+                className="media-iframe"
+                src={toYouTubeEmbed(m.src)}
+                title={m.title || `${game.title} video`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            );
+          }
+          return null;
+        })}
+      </div>
+    );
+  };
 
   return (
     <section className="projects" id="projects">
@@ -67,15 +85,17 @@ const Projects = () => {
         <p className="section-subtitle">
           Explore some of the games I've designed and been a part of the development process!
         </p>
-        
+
         <div className="projects-grid">
           {games.map((game) => (
-            // make the card clickable if it has a longDescription or media
-            <div key={game.id} className={`project-card ${(game.media || game.longDescription) ? 'clickable' : ''}`} onClick={() => (game.media || game.longDescription) && toggleOpen(game.id)}>
+            <div
+              key={game.id}
+              className={`project-card ${ (game.media || game.longDescription) ? 'clickable' : '' }`}
+              onClick={() => (game.media || game.longDescription) && toggleOpen(game.id)}
+            >
               <div className="project-image">
                 <img src={game.image} alt={game.title} />
                 <div className="project-overlay">
-                  {/* Single show-more control on overlay; show it when there is anything to expand */}
                   {(game.media || game.longDescription) && (
                     <button
                       className="overlay-showmore"
@@ -94,81 +114,99 @@ const Projects = () => {
               <div className="project-content">
                 <div className="project-header">
                   <h3 className="project-title">{game.title}</h3>
-                  <span className={`project-status ${game.status.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <span className={`project-status ${(game.status || '').toLowerCase().replace(/\s+/g, '-')}`}>
                     {game.status}
                   </span>
                 </div>
-                
+
                 <p className="project-role">{game.role}</p>
                 <p className="project-genre">{game.genre}</p>
                 <p className="project-description">{game.description}</p>
-                
+
                 <div className="project-tech">
                   <h4>Technologies:</h4>
                   <div className="tech-tags">
-                    {game.technologies.map((tech, index) => (
+                    {(game.technologies || []).map((tech, index) => (
                       <span key={index} className="tech-tag">{tech}</span>
                     ))}
                   </div>
                 </div>
-                
-                <div className="project-platforms">
+
+                {/* <div className="project-platforms">
                   <h4>Platforms:</h4>
                   <div className="platform-tags">
-                    {game.platforms.map((platform, index) => (
+                    {(game.platforms || []).map((platform, index) => (
                       <span key={index} className="platform-tag">{platform}</span>
                     ))}
                   </div>
-                </div>
+                </div> */}
+
+                {/* Itch.io button (shows if playLink is provided) */}
+                {game.playLink && game.playLink !== '#' && (
+                  <div className="project-links">
+                    <a
+                      href={game.playLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="itch-button"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Go to Itch
+                    </a>
+                  </div>
+                )}
+                {/* If you want a disabled-looking button when no URL, you can render it with game.playLink === '#' */}
               </div>
 
-              {/* details render in-place below project-content, clicking card toggles them */}
               {(game.longDescription || game.media) && openProjectId === game.id && (
                 <div className="project-details-inline" onClick={(e) => e.stopPropagation()}>
                   <div className="details-body">
                     <h4>More about {game.title}</h4>
-                    {/* Render structured longDescription if present (array of blocks) */}
+
                     {Array.isArray(game.longDescription) ? (
                       game.longDescription.map((block, i) => {
+                        if (!block) return null;
                         if (block.type === 'heading') return <h5 key={i}>{block.text}</h5>;
-                        if (block.type === 'paragraph') return <p key={i}>{block.text}</p>;
-                        if (block.type === 'list') return (
-                          <ul key={i}>
-                            {block.items.map((it, j) => <li key={j}>{it}</li>)}
-                          </ul>
-                        );
+                        if (block.type === 'paragraph') return <p key={i} dangerouslySetInnerHTML={{ __html: block.text }} />;
+                        if (block.type === 'list') {
+                          return (
+                            <ul key={i}>
+                              {Array.isArray(block.items) ? block.items.map((it, j) => <li key={j}>{it}</li>) : null}
+                            </ul>
+                          );
+                        }
+                        if (block.type === 'image-row') {
+                          return (
+                            <div key={i} className="longdesc-images-row">
+                              {Array.isArray(block.items) ? block.items.map((img, idx) => (
+                                <div key={idx} className="longdesc-images-row-item">
+                                  <img src={img.src} alt={img.alt || ''} className="longdesc-image" />
+                                </div>
+                              )) : null}
+                            </div>
+                          );
+                        }
+                        if (block.type === 'image') {
+                          return (
+                            <div key={i} className="longdesc-image-wrap">
+                              <img src={block.src} alt={block.alt || ''} className="longdesc-image" />
+                            </div>
+                          );
+                        }
+                        if (block.type === 'gif') {
+                          return (
+                            <div key={i} className="longdesc-gif-wrap">
+                              <img src={block.src} alt={block.alt || ''} className="longdesc-gif" />
+                            </div>
+                          );
+                        }
                         return null;
                       })
                     ) : (
-                      <p style={{ marginTop: 4 }}>{game.description}</p>
+                      <p style={{ marginTop: 4 }} dangerouslySetInnerHTML={{ __html: game.description }} />
                     )}
 
-                    {/* Render media only when present */}
-                    {game.media && (
-                      <div className="project-media">
-                        {game.media.map((m, idx) => {
-                          if (m.type === 'gif') {
-                            return <img key={idx} src={m.src} alt={m.alt || `${game.title}-media-${idx}`} />;
-                          }
-
-                          if (m.type === 'youtube') {
-                            return (
-                              <iframe
-                                key={idx}
-                                className="media-iframe"
-                                src={toYouTubeEmbed(m.src)}
-                                title={m.title || `${game.title} video`}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                              />
-                            );
-                          }
-
-                          return null;
-                        })}
-                      </div>
-                    )}
+                    {renderMedia(game.media, game)}
                   </div>
                 </div>
               )}
