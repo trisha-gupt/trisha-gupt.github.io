@@ -24,6 +24,9 @@ const Hero = () => {
             <button className="btn btn-secondary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
               Contact
             </button>
+            <button className="btn btn-secondary" onClick={() => window.open('/Trisha_Gupta_Resume.pdf', '_blank')}>
+              Resume
+            </button>
           </div>
         </div>
         <div className="hero-visual">

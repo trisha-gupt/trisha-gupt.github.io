@@ -5,23 +5,23 @@ import profilePhoto from '../assets/profile_photo.jpg';
 const About = () => {
   const skillCategories = [
     {
-      title: 'Game Development',
-      items: ['Game Design', 'Character, Camera, Controller', 'Prototype Programming', 'Playtesting'],
+      title: 'Game Design',
+      items: ['Level Design', 'Character, Camera, Controller', 'Prototype Programming', 'Playtesting'],
     },
     {
       title: 'Programming',
-      items: ['C#', 'Unity', 'Prototyping', 'Version Control (Git, P4V)'],
+      items: ['Unity C# basics', 'Prototyping', 'Version Control (Git, P4V)'],
     },
     {
       title: '3D Art & Design',
-      items: ['3D Modelling', 'Unwrapping', 'Texturing', 'Stylised Game Art', 'Stylized Art'],
+      items: ['3D Modelling', 'Unwrapping', 'Texturing', 'Stylised 2D/ 3D Game Art'],
     },
   ];
 
   const experiences = [
     {
       label: 'Team Lead & Game Designer',
-      detail: "Sombre — Project manager for a six-person team to build a narrative heavy puzzle game in Unity",
+      detail: "Sombre — actively learning how to manage a six-person team to build a narrative heavy puzzle game in Unity",
     },
     {
       label: 'Award-Winning Designer',
@@ -38,16 +38,16 @@ const About = () => {
   ];
 
   const quickStats = [
-    { value: '3+', label: 'Games Shipped' },
-    { value: '3+', label: 'Years Coding' },
-    { value: '4+', label: 'Game Jams & Pitches' },
+    { value: '6', label: 'Games Made' },
+    { value: '3', label: 'Years of exp' },
+    { value: '5', label: 'Game Jams & Pitches' },
   ];
 
   return (
     <section className="about" id="about">
       <div className="about-container">
         <div className="about-header">
-          <span className="about-tag">Game Designer · 3D Generalist · Team Lead</span>
+          <span className="about-tag">Game Designer · 3D Generalist </span>
           <h2 className="section-title">About Me</h2>
         </div>
 
@@ -55,13 +55,13 @@ const About = () => {
           <div className="about-text">
             <div className="bio-card">
               <p>
-                Hey, I&apos;m Trisha Gupta — A final-year Independent Game Production student at Howest&apos;s Digital Arts and Entertainment program. I&apos;ve studied game design, gameplay programming, and game art, which gave me a strong foundation in building and playtesting games from the ground up.
+                Hey, I&apos;m Trisha Gupta — A final-year Independent Game Production student at Howest&apos;s Digital Arts and Entertainment program. I&apos;ve studied game design, game art and programming for prototypes which gave me a strong foundation in building and playtesting games from the ground up.
               </p>
               <p>
-                I mostly design games in Unity using C#, however I am also experienced with Blender, Maya, and Substance Painter for basic modeling and texturing.
+                I mostly design games in Unity, however I am also experienced with Blender, Maya, and Substance Painter for basic modeling and texturing.
               </p>
               <p>
-                Currently, I&apos;m leading a team of six developers as both Game Designer and Programmer on our upcoming title, Sombre. I&apos;m passionate about crafting engaging gameplay experiences and seeing ideas come to life through collaboration.
+                Currently, I&apos;m actively learning how to lead a team of six developers as both Game Designer and Programmer on our upcoming title, Sombre. I&apos;m passionate about crafting engaging gameplay experiences and seeing ideas come to life through collaboration.
               </p>
               <div className="bio-highlights">
                 <span>Game Design Experience</span>

@@ -29,13 +29,32 @@ const projects = [
     genre: "CO-OP COUCH GAME",
     description: "Developed during the Franco-Belge Game Jam, this project earned the Community Award and was later livestreamed on Twitch.",
     longDescription: [
+      { type: 'heading', text: "Trailer-" },
+      { type: 'youtube', src: 'https://www.youtube.com/watch?v=aVt7UzyGD0I', title: 'BUD\'S OASIS trailer (https://www.youtube.com/watch?v=aVt7UzyGD0I)' },
       { type: 'heading', text: "Overview" },
-      { type: 'paragraph', text: "BUD'S OASIS is a friendly competitive/cooperative couch game created during a 48-hour game jam with people from differnt schools who were put together. I contributed to the game's design, 3D modelling and level layout." },
-      { type: 'heading', text: "My role" },
-      { type: 'paragraph', text: "I worked as the designer and artist: creating the main characters and the tree progression" },
+      { type: 'paragraph', text: "BUD'S OASIS is a friendly competitive/cooperative couch game created during a 48-hour game jam with people from 4 different schools who were put together. You also have the option to play this solo but it's always recommended to play with friends, it's simply much more fun that way. " },
+      {type: 'paragraph', text: "You (and your friends) are in charge of maintaining the last remaining life form on earth. You have to fend off the evil robots that are out there to destroy the tree by picking up the flowers that grow around it and throwing them. Once you've collected enough flowers you will be able to plant a seed with it which will make more flowers of the same color grow around the area, but be careful! This also increased the spawn rate of the enemies."},
+      {type: 'paragraph', text: "a short gameplay of it that was livestreamed -"},
+      { type: 'youtube', src: 'https://www.youtube.com/watch?v=3MENThg9acM&t=1s', title: 'BUD\'S OASIS livestream (https://www.youtube.com/watch?v=3MENThg9acM&t=1s)' },
+      
+      {type: 'heading', text: "Gameplay Mechanics"},
+      {type: 'list', items: ["Colors of flowers"]},
+      {type: 'paragraph', text: "Each color of flower has its own powers. There are 4 colors that the flowers have - red, blue, yellow and white. White being the most common one since it has a small impact which lets you kill the robots. When you plant a seed of a particular color, you'll start to see more flowers of the same color spawn"},
+
+      {type: 'list', items: ["White flowers"]},
+      {type: 'paragraph', text: "White flowers are the ones you are encountered with first. You need to grab these flowers and throw them at the robots which give them damage"},
+      {type: 'list', items: ["Blue flowers"]},
+      {type: 'paragraph', text: "Blue flowers slow the enemies down so they stay in the same area for a longer time. The blue flowers are related to the water element"},
+      {type: 'list', items: ["Red flowers"]},
+      {type: 'paragraph', text: "Red Flowers one shot the enemies. they are related to the fire element"},
+      {type: 'list', items: ["Yellow flowers"]},
+      {type: 'paragraph', text: "Yellow flowers allow you to <strong>stun</strong> your enemies. Once you throw it at the robots, they will be immobalised for a second"},
+
+      
       { type: 'heading', text: "Design Process -" },
-      { type: 'list', items: ["The theme of this game jam was about sustainability. We moved more towards Protection of environment from the evil robots but also making it a fun experience by having two or more people being able to play together.", "One challenging aspect of this was balancing the level so it wasn't too easily winnable and also wasn't too frustrating to beat.", "Due to time constraints we weren't able to have a health bar for the tree. But it would have been a good addition for player to have a visual feedback for tree health."] },
-      { type: 'heading', text: "Vidos of Trailer and Livestram clip:-" },
+      { type: 'paragraph', text: "- The theme of this game jam was sustainability. We moved more towards the protection of the environment from the evil robots but also making it a fun experience by having two or more people be able to play together." },
+      {type: 'paragraph', text: "- One challenging aspect of this was balancing the level so it wasn't too easily winnable and also wasn't too frustrating to beat."},
+      {type: 'paragraph', text: "- Due to time constraints we weren't able to have a health bar for the tree. But it would have been a good addition for players to have visual feedback for tree health."},
     ],
     technologies: ["Blender", "Unity"],
     status: "Community Award Winner",
@@ -45,8 +64,6 @@ const projects = [
     githubLink: "#",
     playLink: "https://mms5004.itch.io/i-scream-metal",
     media: [
-      { type: 'youtube', src: 'https://www.youtube.com/watch?v=aVt7UzyGD0I', title: 'BUD\'S OASIS trailer (https://www.youtube.com/watch?v=aVt7UzyGD0I)' },
-      { type: 'youtube', src: 'https://www.youtube.com/watch?v=3MENThg9acM&t=1s', title: 'BUD\'S OASIS livestream (https://www.youtube.com/watch?v=3MENThg9acM&t=1s)' }
     ]
   },
   {
@@ -57,7 +74,7 @@ const projects = [
     description: "A story-driven puzzle-platformer exploring somber themes with a unique core mechanic.",
     longDescription: [
       { type: 'heading', text: "Overview" },
-      { type: 'paragraph', text: 'In this story-based puzzle platformer - You are a scared kid who has woken up in an unknown environment with no memories, you don\’t see anyone around you and feel lost and lonely. Your main goal is to figure out what is going on in this estranged world. As you progress, you find that you have the ability to spawn platforms out of your own shadows.' },
+      { type: 'paragraph', text: 'A Personal project that turned into a semester long group project. This is a project that I had a unique interest in because of the gameplay mechanics after I had prototyped a couple quick iteration of the mechanics in unity, I knew I wanted to take it towards A narrative driven theme with some platforming gameplay. ' },
       {type: 'paragraph', text: "a very early prototype of shadow manipulation mechanic -"},
       {type: 'gif', src: sompbreCoreMechGif, alt: 'Core mechanic demo'},
 
@@ -65,35 +82,35 @@ const projects = [
 {type: 'paragraph', text: ""}, // blank space to separate
       { type: 'list', items: ["Discovery Within Narrative"] },
       { type: 'paragraph', text: "Players discover story through narrative and visual storytelling, it is up to the player to interpret it the way they want to." },
-      { type: 'list', items: ["Ability driven Problem solving"]},
+      { type: 'list', items: ["Ability-driven Problem solving"]},
       {type: 'paragraph', text: "Each puzzle has an ideal solution, giving more control on how to make the experience for players more in tune with how we would want them to feel."},
       { type: 'list', items: ["Low Difficulty Progression"]},
-      {type: 'paragraph', text: "The puzzles progressively get more difficult after each stage has been passed and a new ability is introdiced"},
+      {type: 'paragraph', text: "The puzzles progressively get more difficult after each stage has been passed and a new ability is introduced"},
 
       {type: 'heading', text: "Story" },
-      {type: 'paragraph', text: "Sombre takes you on a journey through the <strong>stages of grief</strong>. for the time limit on group projects, we are only able to do 2 of these stages, however I will talk about the core idea of this particular element. "},
-      {type: 'paragraph', text: "there would consist of 5 stages, denial, anger, depression, bargaining and finally acceptance. For each of these stages you will <strong>meet an NPC</strong> who has been stuck in the stage for quite a while. As you get to know them throughout the stage, you <strong>find out</strong> more of their <strong>backstory</strong>. As you do this, you’ll eventually have to help them move on from the stage they had been stuck in. And in turn they help you move on as well into the next stage of grief. "},
+      {type: 'paragraph', text: "Sombre takes you on a journey through the <strong>stages of grief</strong>. For the time limit on group projects, we are only able to do 2 of these stages, however I will talk about the core idea of this particular element. "},
+      {type: 'paragraph', text: "There would consist of 5 stages, denial, anger, depression, bargaining and finally acceptance. For each of these stages you will <strong>meet an NPC</strong> who has been stuck in the stage for quite a while. As you get to know them throughout the stage, you <strong>find out</strong> more of their <strong>backstory</strong>. As you do this, you’ll eventually have to help them move on from the stage they had been stuck in. And in turn they help you move on as well into the next stage of grief. "},
       {type: 'paragraph', text: "It is important to note that not every person experiences grief the same way. For most people, it’s going through all the five stages in order and for others it may only be three or they may be stuck in one consistently. "},
-      {type: 'paragraph', text: "Throughout the game, you will notice environmental hints and clues as to who you are and how you ended up here. Though the story is that you’re a very young kid of around 8-12 years of age and had died in the process of finding your mother who had abandoned you. You wake up in the in between with these powers which help you go through the stages."},
+      {type: 'paragraph', text: "Throughout the game, you will notice environmental hints and clues as to who you are and how you ended up here. Though the story is that you’re a very young kid of around 8-12 years of age and had died in the process of finding your mother who had abandoned you. You wake up in the -in between- with these powers which help you go through the stages."},
       
-      { type: 'heading', text: "GamePlay" },
+      { type: 'heading', text: "Gameplay" },
       {type: 'paragraph', text: " "}, // blank space to separate
       { type: 'list', items: ["Goal"] },
-      {type: 'paragraph', text: "The initial narrative goal of our character is to find their mother. However when the player takes control of our character, it becomes more into discovery. Where am I? and what has happened? the goal for the player then becomes to explore the narrative and to find the end to the game."},
-      {type: 'list', items: ["Challange"]},
-      {type: 'paragraph', text: "The main challange for the player is to go through the levels by using their new found ability - shadows. It is important to note that in different colored lights, the shadows also have different abilities. such as teleportation in blue light. as shown below."},
+      {type: 'paragraph', text: "The initial narrative goal of our character is to find their mother. However when the player takes control of our character, it becomes more of a discovery. Where am I? And what has happened? The goal for the player then becomes to explore the narrative and to find the end to the game."},
+      {type: 'list', items: ["Challenge"]},
+      {type: 'paragraph', text: "The main challenge for the player is to go through the levels by using their newfound ability - shadows. It is important to note that in different colored lights, the shadows also have different abilities. such as teleportation in blue light. as shown below."},
       {type: 'gif', src: sombreTeleportGif, alt: 'Teleportation mechanic'},
-      {type: 'paragraph', text: "The player will also be constricted by the number of shadows they have in each area. Some areas the player may only be able to place one shadow and maybe in others, more. It would depend on how the puzzle is layed out."},
+      {type: 'paragraph', text: "The player will also be constricted by the number of shadows they have in each area. Some areas the player may only be able to place one shadow and maybe in others, more. It would depend on how the puzzle is laied out."},
       { type: 'heading', text: "Mechanics" },
       {type: 'list', items: ["Place shadow"]},
-      {type: 'paragraph', text: "The essence of the game is the fact that the player can place a physical version of their shadow. These physical shadows can be used to walk on as if it were solid ground. They can be activated by pressing the ability activation button, and have an ability based on the colour of the light. These abilities are the moving shadows, teleport shadow and bomb shadow, which are further discussed below. The player can place these shadows on designated areas, these could be floors, walls, and ceilings."},
+      {type: 'paragraph', text: "The essence of the game is the fact that the player can place a physical version of their shadow. These physical shadows can be used to walk on as if they were solid ground. They can be activated by pressing the ability activation button, and have an ability based on the colour of the light. These abilities are the moving shadows, teleport shadow and bomb shadow, which are further discussed below. The player can place these shadows on designated areas, these could be floors, walls, and ceilings."},
       {type: 'list', items: ["Moving Shadow"]},
-      {type: 'paragraph', text: "This is the most basic shadow. Once placed, the player can press the activation key for them to move towards it's normal. The shadow moves for the duration that the player is holding the button"},
-      {type: 'paragraph', text: "The platform has the ability to push or carry specific objects as well. including the player."},
+      {type: 'paragraph', text: "This is the most basic shadow. Once placed, the player can press the activation key for them to move towards its normal direction. The shadow moves for the duration that the player is holding the button"},
+      {type: 'paragraph', text: "The platform has the ability to push or carry specific objects as well. Including the player."},
       {type: 'list', items: ["Teleport Shadow"]},
       {type: 'paragraph', text: "The teleport shadow allows the player to move from one shadow to the other when two of them are placed down and the shadow has been activated while the player is directly standing on top of it. The shadow has a blue hue and can only be placed in a blue light source."},
       {type: 'list', items: ["Bomb Shadow"]},
-      {type: 'paragraph', text: "In the stage of anger, the bomb shadow is introduced.  This shadow has a red hue, and can only be placed in red lights. When activated the shadow forms a mass that slams into the surface that it is placed on. This can be used in different ways, one of them is a way to break fragile walls or items. Another way could be placing it on the ground and moving a platform over it, this would launch the platform upwards."},
+      {type: 'paragraph', text: "In the stage of anger, the bomb shadow is introduced.  This shadow has a red hue, and can only be placed in red lights. When activated, the shadow forms a mass that slams into the surface that it is placed on. This can be used in different ways; one of them is a way to break fragile walls or items. Another way could be placing it on the ground and moving a platform over it, this would launch the platform upwards."},
       
       { type: 'heading', text: "Progress" },
       { type: 'paragraph', text: "Below is a short GIF demo of the progress of this game" },
@@ -121,23 +138,23 @@ const projects = [
       { type: 'heading', text: "context" },
       { type: 'paragraph', text: "This game was made in two days for a game jam whose theme was -spread it- and we had chosen to spread lies. I worked on the core design along with writing dialogues with another design in the project" },
       { type: 'heading', text: "Overview" },
-      { type: 'paragraph', text: "Can you get yourself and your partner out of your web of lies? You and a friend of your choice will play as <strong>2 suspects</strong> in a mysterious <strong>murder case</strong>. You both dont know how you got there. But whatever it may be, the detective wants answers now! You both need to come up with <strong>alibies</strong> and <strong>stick to it</strong>. You will also need to <strong>remember</strong> what the other person had said as their alibies to <strong>match them</strong>" },
+      { type: 'paragraph', text: "Can you get yourself and your partner out of your web of lies? You and a friend of your choice will play as <strong>2 suspects</strong> in a mysterious <strong>murder case</strong>. You both don't know how you got there. But whatever it may be, the detective wants answers now! You both need to come up with <strong>alibis</strong> and <strong>stick to it</strong>. You will also need to <strong>remember</strong> what the other person had said as their alibis to <strong>match them</strong>" },
       { type: 'paragraph', text: "This game tests your memories and trust. Will you be able to <strong>stay consistent</strong> with the web that you've created together? The core gameplay involves answering the questions that the detective throws at you through 4 options given at the bottom of your screen such as shown here"},
       { type: 'image-row', items: [
-        { src: webOfLiesDemo, alt: 'WOL question picture' },
-        { src: webOfLiesScreenshot, alt: 'WOL screenshot' }
+        { src: webOfLiesDemo, alt: 'WebOfLies screenshot' },
+        { src: webOfLiesScreenshot, alt: 'WebOfLies polished screeshot' }
       ] },
       
       { type: 'heading', text: "Core Design"},
       { type: 'paragraph', text: "This game takes place in two phases - the story building phase and the answering phase."},
       { type: 'list', items: ["Phase one - Story building phase"]},
-      { type: 'paragraph', text: "The questioning phase involves questioning to each person about 4 things in relation to the victim - What job they do, What thier relationship was with the victim, their location and what they were doing at the time of the murder. Once each player gives their answers, they will also have to remember the other's answers and this phase will be over then, starting the answering phase"},
+      { type: 'paragraph', text: "The questioning phase involves questioning each person about 4 things in relation to the victim - What job they do, What their relationship was with the victim, their location and what they were doing at the time of the murder. Once each player gives their answers, they will also have to remember the others' answers and this phase will be over then, starting the answering phase"},
       { type: 'list', items: ["Phase two - Answering Phase"] },
-      { type: 'paragraph', text: "In the answering phase, the detective now knows your story. And will try their best to poke holes in it. The moment they catch either of you straying off your alibis, his <strong>suspection meter</strong> will increase. The questions for this phase can vary. There will be moments where players are able to betray the other by telling them that they would be spared at the expence of the other"},
+      { type: 'paragraph', text: "In the answering phase, the detective now knows your story. And will try their best to poke holes in it. The moment they catch either of you straying off your alibis, his <strong>suspicion meter</strong> will increase. The questions for this phase can vary. There will be moments where players are able to betray the other by telling them that they would be spared at the expense of the other"},
       
       {type: 'heading', text: "Questions design choices"},
-      {type: 'paragraph', text: "- Sometimes the players get asked yes or no questions about what they had answered previously. i.e. If player had said they were in the living room at the time of the murder, detective would ask where they were and based on if their answer was wrong or right he would give them a lighthearted comment. The overall tone for the detective is heavy but he has a strong character."},
-      {type: 'paragraph', text: "- We have also designed some questions where the detective asks a player questions about the other player to see how much attention they were paying to them and could match what they were saying. Getting these wrong would raise the suspision on the both of you and not just you alone."},
+      {type: 'paragraph', text: "- Sometimes the players get asked yes or no questions about what they had answered previously. I.e. if the player had said they were in the living room at the time of the murder, the detective would ask where they were and based on whether their answer was wrong or right he would give them a lighthearted comment. The overall tone for the detective is heavy but he has a strong character."},
+      {type: 'paragraph', text: "- We have also designed some questions where the detective asks a player questions about the other player to see how much attention they were paying to them and could match what they were saying. Getting these wrong would raise suspicion on both of you and not just you alone."},
       {type: 'paragraph', text: "- We also tried to design some questions which would potentially betray the trust of each other. i.e :"},
       {type: 'list', items: ["Detective - I will offer one of you an out but someone will have to pay for this! Lorraine, make your decision. "]},
       {type: 'list', items: ["I'm guilty", "Rick is guilty", "I'm not saying anything to the likes of you"]},
@@ -164,6 +181,10 @@ const projects = [
     genre: "Strategy / Humour",
     description: "A humorous strategy game about navigating hectic sales with a cloning mechanic.",
     longDescription: [
+      { type: 'heading', text: "Overview :-" },
+      { type: 'paragraph', text: "This was a school project created in one week including brainstorming and paper prototyping. I wanted to focus on game feel and core concept to make it stand out and give an edge." },
+
+
       { type: 'heading', text: "Core Objectives :-" },
       {type: 'paragraph', text: ""}, // blank space to separate
       { type: 'list', items: ["Complete the List -"] },
@@ -188,7 +209,7 @@ const projects = [
       {type : 'paragraph', text: "These are the shoppers who will hunt you down if they see you have any items. They have a detection radius of 5 units. If you are within this radius and have items with you, they will start dashing towards you and try to steal all of them one by one. Once you are out of this radius, they will go back to shopping."}, 
          
       { type: 'heading', text: "Design notes" },
-      { type: 'paragraph', text: "I designed the cloning mechanic to be easy to learn but offer depth in planning and timing." }
+      { type: 'paragraph', text: "I designed the cloning mechanic to be easy to learn but offer depth in planning and timing. Focusing on the game feel was important for this project since it needed a lot of running around." }
     ],
     technologies: ["Unity", "Miro"],
     // image: "/assets/games-pictures/shoppers_havoc.png",

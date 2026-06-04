@@ -200,6 +200,20 @@ const Projects = () => {
                             </div>
                           );
                         }
+                        if (block.type === 'youtube') {
+                          return (
+                            <div key={i} className="longdesc-youtube-wrap">
+                              <iframe
+                                className="longdesc-youtube"
+                                src={toYouTubeEmbed(block.src)}
+                                title={block.title || `video-${i}`}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              />
+                            </div>
+                          );
+                        }
                         return null;
                       })
                     ) : (
