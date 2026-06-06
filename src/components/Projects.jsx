@@ -57,7 +57,19 @@ const Projects = () => {
         {mediaArray.map((m, idx) => {
           if (!m) return null;
           if (m.type === 'gif' || m.type === 'image') {
-            return <img key={idx} src={m.src} alt={m.alt || `${game.title}-media-${idx}`} className="project-media-img" />;
+            const sources = Array.isArray(m.src) ? m.src : [m.src];
+            return (
+              <div key={idx} className="project-media-group">
+                {sources.map((src, srcIdx) => (
+                  <img
+                    key={`${idx}-${srcIdx}`}
+                    src={src}
+                    alt={m.alt || `${game.title}-media-${idx}-${srcIdx}`}
+                    className="project-media-img"
+                  />
+                ))}
+              </div>
+            );
           }
           if (m.type === 'youtube') {
             return (
@@ -122,6 +134,8 @@ const Projects = () => {
                 <p className="project-role">{game.role}</p>
                 <p className="project-genre">{game.genre}</p>
                 <p className="project-description">{game.description}</p>
+
+                {renderMedia(game.media, game)}
 
                 <div className="project-tech">
                   <h4>Technologies:</h4>
@@ -194,9 +208,17 @@ const Projects = () => {
                           );
                         }
                         if (block.type === 'gif') {
+                          const gifSources = Array.isArray(block.src) ? block.src : [block.src];
                           return (
                             <div key={i} className="longdesc-gif-wrap">
-                              <img src={block.src} alt={block.alt || ''} className="longdesc-gif" />
+                              {gifSources.map((src, gifIndex) => (
+                                <img
+                                  key={`${i}-${gifIndex}`}
+                                  src={src}
+                                  alt={block.alt || `gif-${i}-${gifIndex}`}
+                                  className="longdesc-gif"
+                                />
+                              ))}
                             </div>
                           );
                         }

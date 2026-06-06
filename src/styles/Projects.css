@@ -122,6 +122,19 @@
   margin-top: 0.75rem;
 }
 
+.project-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.project-media-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .project-media img,
 .project-media .media-iframe {
   max-width: 320px;
@@ -349,12 +362,14 @@
 .longdesc-gif-wrap {
   margin: 12px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 12px;
 }
 
 .longdesc-gif {
   width: 100%;
-  max-width: 560px; /* adjust to your preferred media width */
+  max-width: 320px;
   height: auto;
   display: block;
   border-radius: 6px;

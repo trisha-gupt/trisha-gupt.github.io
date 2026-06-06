@@ -25,6 +25,7 @@ import wol_win_win_bg from '../assets/games-pictures/web_of_lies_endings/win_win
 import sombreCoreMechGif from '../assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif';
 import sombreTeleportGif from '../assets/games-pictures/sombre-prototype/teleportation_mechanic.gif';
 import sombreProgressGif from '../assets/games-pictures/sombre-prototype/shadow_game_progress.gif'
+import sombreTrailer from '../assets/games-pictures/sombre-prototype/sombre-trailer.mp4';
 
 const projects = [
   {
@@ -97,18 +98,19 @@ const projects = [
      // { type: 'paragraph', text: 'A Personal project that turned into a semester long group project. This is a project that I had a unique interest in because of the gameplay mechanics after I had prototyped a couple quick iteration of the mechanics in unity, I knew I wanted to take it towards A narrative driven theme with some platforming gameplay. ' },
       {type: 'paragraph', text: "Sombre is a Story-Based puzzle platformer which required a lot of iterations with level designing the puzzles and platforming sections. During the production of this, I was able to learn a lot of things."}, 
       {type: 'paragraph', text: "The narrative of this game was the part that drew people in. And I really wanted to focus on player’s emotions and how to make this an experience they would not forget while also keeping the challenges they face just frustrating enough to keep engagement and not abandon the game." },
-      {type: 'paragraph', text: "a very early prototype of shadow manipulation mechanic -"},
-      {type: 'gif', src: sombreCoreMechGif, alt: 'Core mechanic demo'},
-
+      
       { type: 'heading', text: "My responsibilities for this project" },
       { type: 'list', items: ["I had been working on a few gameplay mechanics, a couple being the lever system and implementing the different types of shadows.",
         "Implementing different types of shadows (Teleportation, lift and explosion types) Only teleportation and lift were able to get into the game because of time constraints.",
         "Level Design and final layout of the first and second level (second level was not able to be in the game).",
         "Playtesting and iterating on the level design while gauging how the players react to certain elements of the mechanic and writing down changes required for a particular area of the puzzle."
       ] },
+      {type: 'paragraph', text: "a very early prototype of shadow manipulation mechanic -"},
+      {type: 'gif', src: [sombreCoreMechGif, sombreTeleportGif], alt: 'Core mechanic demo'},
+      
       { type: 'paragraph', text: "" }, // blank space to separate
-
-
+      
+      
       { type: 'heading', text: "Where it had succeeded" },
       { type: 'list', items: ["This project was able to grab the attention of the audience that I had initially wanted to grab the attention of, and the reactions to the puzzles and stories were satisfying to read as a game designer.",
         "I feel like this project eventually became a huge learning experience for me as a game designer trying to chip in wherever I could as a generalist for the project, in turn making myself much better with my general skills.", 
@@ -130,7 +132,7 @@ const projects = [
       { type: 'list', items: ["Low Difficulty Progression"]},
       {type: 'paragraph', text: "The puzzles progressively get more difficult after each stage has been passed and a new ability is introduced"},
  */
-      {type: 'heading', text: "Story" },
+      {type: 'heading', text: "Narrative" },
       {type: 'paragraph', text: "Sombre takes you on a journey through the <strong>stages of grief</strong>. For the time limit on group projects, we are only able to do 2 of these stages, however I will talk about the core idea of this particular element. "},
       {type: 'paragraph', text: "There would consist of 5 stages, denial, anger, depression, bargaining and finally acceptance. For each of these stages you will <strong>meet an NPC</strong> who has been stuck in the stage for quite a while. As you get to know them throughout the stage, you <strong>find out</strong> more of their <strong>backstory</strong>. As you do this, you’ll eventually have to help them move on from the stage they had been stuck in. And in turn they help you move on as well into the next stage of grief. "},
       {type: 'paragraph', text: "It is important to note that not every person experiences grief the same way. For most people, it’s going through all the five stages in order and for others it may only be three or they may be stuck in one consistently. "},
@@ -153,7 +155,7 @@ const projects = [
       // { type: 'gif', src: sombreProgressGif, alt: 'Core mechanic demo' },
     ]
   },
-    {
+/*     {
     id: 3,
     title: "WEB OF LIES",
     role: "role: GAMEPLAY DESIGNER",
@@ -199,9 +201,9 @@ const projects = [
     image: webOfLies,
     thumbnail: webOfLies,
     playLink: 'https://razvanluca.itch.io/web-of-lies-spreading-misinformation'
-  },
+  }, */
   {
-    id: 4,
+    id: 3,
     title: "SHOPPER'S HAVOC",
     role: "role: INDEPENDENT",
     genre: "Strategy / Humour",
