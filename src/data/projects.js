@@ -8,6 +8,10 @@ import sombrecoverPhoto from '../assets/games-pictures/concept_art_first_lvl.png
 import shoppershavocPhoto from '../assets/games-pictures/shoppers_havoc.png';
 import budsOasisPhoto from '../assets/games-pictures/buds_oasis.jpeg';
 
+// GIF thumbnail assets
+import budsOasisThumbnail from '../assets/games-pictures/buds-oasis/buds-oasis-thumbnail.gif';
+import sombreThumbnailGif from '../assets/games-pictures/sombre-prototype/sombre-gif-thumbnail.gif';
+
 //web of lies assets
 import webOfLies from '../assets/games-pictures/web_of_lies_cover.png';
 import webOfLiesDemo from '../assets/games-pictures/wol_demo_questions.jpg';
@@ -17,7 +21,8 @@ import wol_lose_win_bg from '../assets/games-pictures/web_of_lies_endings/lose_w
 import wol_lose_lose_bg from '../assets/games-pictures/web_of_lies_endings/lose_lose_ending_bg.png';
 import wol_win_win_bg from '../assets/games-pictures/web_of_lies_endings/win_win_ending_bg.png';
 
-import sompbreCoreMechGif from '../assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif';
+// sombre assets
+import sombreCoreMechGif from '../assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif';
 import sombreTeleportGif from '../assets/games-pictures/sombre-prototype/teleportation_mechanic.gif';
 import sombreProgressGif from '../assets/games-pictures/sombre-prototype/shadow_game_progress.gif'
 
@@ -31,13 +36,22 @@ const projects = [
     longDescription: [
       { type: 'heading', text: "Trailer-" },
       { type: 'youtube', src: 'https://www.youtube.com/watch?v=aVt7UzyGD0I', title: 'BUD\'S OASIS trailer (https://www.youtube.com/watch?v=aVt7UzyGD0I)' },
-      { type: 'heading', text: "Overview" },
-      { type: 'paragraph', text: "BUD'S OASIS is a friendly competitive/cooperative couch game created during a 48-hour game jam with people from 4 different schools who were put together. You also have the option to play this solo but it's always recommended to play with friends, it's simply much more fun that way. " },
-      {type: 'paragraph', text: "You (and your friends) are in charge of maintaining the last remaining life form on earth. You have to fend off the evil robots that are out there to destroy the tree by picking up the flowers that grow around it and throwing them. Once you've collected enough flowers you will be able to plant a seed with it which will make more flowers of the same color grow around the area, but be careful! This also increased the spawn rate of the enemies."},
+      { type: 'heading', text: "Project Overview" },
+      { type: 'list', items: ["Bud’s oasis was a game Jam that was created within a 48-hour Franco-Belge game jam with people from 4 different schools who were put together on random. The theme of the game jam was sustainability and we had a brainstorming session about a couch co - op game.",
+        "This project won the community award as the game which was the most fun to play."
+      ]},
+/*       { type: 'paragraph', text: "BUD'S OASIS is a friendly competitive/cooperative couch game created during a 48-hour game jam with people from 4 different schools who were put together. You also have the option to play this solo but it's always recommended to play with friends, it's simply much more fun that way. " },
+      {type: 'paragraph', text: "You (and your friends) are in charge of maintaining the last remaining life form on earth. You have to fend off the evil robots that are out there to destroy the tree by picking up the flowers that grow around it and throwing them. Once you've collected enough flowers you will be able to plant a seed with it which will make more flowers of the same color grow around the area, but be careful! This also increased the spawn rate of the enemies."}, */
       {type: 'paragraph', text: "a short gameplay of it that was livestreamed -"},
       { type: 'youtube', src: 'https://www.youtube.com/watch?v=3MENThg9acM&t=1s', title: 'BUD\'S OASIS livestream (https://www.youtube.com/watch?v=3MENThg9acM&t=1s)' },
       
-      {type: 'heading', text: "Gameplay Mechanics"},
+      { type: 'heading', text: "My responsibilities" },
+      { type: 'list', items: ["I was responsible for the main 3d assets in the game such as the character and the flowers.",
+        "I had implemented the sound and created videos for the trailer of the game.",
+        "Game Design - bridging the gap between programming and art."
+       ]},
+
+/*       {type: 'heading', text: "Gameplay Mechanics"},
       {type: 'list', items: ["Colors of flowers"]},
       {type: 'paragraph', text: "Each color of flower has its own powers. There are 4 colors that the flowers have - red, blue, yellow and white. White being the most common one since it has a small impact which lets you kill the robots. When you plant a seed of a particular color, you'll start to see more flowers of the same color spawn"},
 
@@ -50,16 +64,22 @@ const projects = [
       {type: 'list', items: ["Yellow flowers"]},
       {type: 'paragraph', text: "Yellow flowers allow you to <strong>stun</strong> your enemies. Once you throw it at the robots, they will be immobalised for a second"},
 
-      
-      { type: 'heading', text: "Design Process -" },
-      { type: 'paragraph', text: "- The theme of this game jam was sustainability. We moved more towards the protection of the environment from the evil robots but also making it a fun experience by having two or more people be able to play together." },
+       */
+      { type: 'heading', text: "Challenges in Design -" },
+      { type: 'list', items: [" The theme of this game jam was sustainability. We moved more towards the protection of the environment from the evil robots but also making it a fun experience by having two or more people be able to play together.",
+        "There were quite a few things missing from the game due to time constraints. The feedback received was that there was not enough player feedback for when the tree was hit or who your character was. Going back, I would have added visual clarity for these mechanics - it would have made it so that the players had an easier time getting used to the game.",
+        "Another challenging aspect of this game was balancing the level in such a way that it isn’t too easily winnable and also wasn't too frustrating to beat."
+      ]
+      }
+/*       { type: 'paragraph', text: "- The theme of this game jam was sustainability. We moved more towards the protection of the environment from the evil robots but also making it a fun experience by having two or more people be able to play together." },
       {type: 'paragraph', text: "- One challenging aspect of this was balancing the level so it wasn't too easily winnable and also wasn't too frustrating to beat."},
-      {type: 'paragraph', text: "- Due to time constraints we weren't able to have a health bar for the tree. But it would have been a good addition for players to have visual feedback for tree health."},
+      {type: 'paragraph', text: "- Due to time constraints we weren't able to have a health bar for the tree. But it would have been a good addition for players to have visual feedback for tree health."}, */
     ],
     technologies: ["Blender", "Unity"],
     status: "Community Award Winner",
     // image: "/assets/games-pictures/buds_oasis.jpeg",
     image: budsOasisPhoto,
+    thumbnail: budsOasisThumbnail,
     demoLink: "#",
     githubLink: "#",
     playLink: "https://mms5004.itch.io/i-scream-metal",
@@ -73,54 +93,59 @@ const projects = [
     genre: "STORY - PUZZLE PLATFORMER",
     description: "A story-driven puzzle-platformer exploring somber themes with a unique core mechanic.",
     longDescription: [
-      { type: 'heading', text: "Overview" },
-      { type: 'paragraph', text: 'A Personal project that turned into a semester long group project. This is a project that I had a unique interest in because of the gameplay mechanics after I had prototyped a couple quick iteration of the mechanics in unity, I knew I wanted to take it towards A narrative driven theme with some platforming gameplay. ' },
+      {type: 'heading', text: "Project Overview" },
+     // { type: 'paragraph', text: 'A Personal project that turned into a semester long group project. This is a project that I had a unique interest in because of the gameplay mechanics after I had prototyped a couple quick iteration of the mechanics in unity, I knew I wanted to take it towards A narrative driven theme with some platforming gameplay. ' },
+      {type: 'paragraph', text: "Sombre is a Story-Based puzzle platformer which required a lot of iterations with level designing the puzzles and platforming sections. During the production of this, I was able to learn a lot of things."}, 
+      {type: 'paragraph', text: "The narrative of this game was the part that drew people in. And I really wanted to focus on player’s emotions and how to make this an experience they would not forget while also keeping the challenges they face just frustrating enough to keep engagement and not abandon the game." },
       {type: 'paragraph', text: "a very early prototype of shadow manipulation mechanic -"},
-      {type: 'gif', src: sompbreCoreMechGif, alt: 'Core mechanic demo'},
+      {type: 'gif', src: sombreCoreMechGif, alt: 'Core mechanic demo'},
 
-      { type: 'heading', text: "Design Pillars" },
-{type: 'paragraph', text: ""}, // blank space to separate
+      { type: 'heading', text: "My responsibilities for this project" },
+      { type: 'list', items: ["I had been working on a few gameplay mechanics, a couple being the lever system and implementing the different types of shadows.",
+        "Implementing different types of shadows (Teleportation, lift and explosion types) Only teleportation and lift were able to get into the game because of time constraints.",
+        "Level Design and final layout of the first and second level (second level was not able to be in the game).",
+        "Playtesting and iterating on the level design while gauging how the players react to certain elements of the mechanic and writing down changes required for a particular area of the puzzle."
+      ] },
+      { type: 'paragraph', text: "" }, // blank space to separate
+
+
+      { type: 'heading', text: "Where it had succeeded" },
+      { type: 'list', items: ["This project was able to grab the attention of the audience that I had initially wanted to grab the attention of, and the reactions to the puzzles and stories were satisfying to read as a game designer.",
+        "I feel like this project eventually became a huge learning experience for me as a game designer trying to chip in wherever I could as a generalist for the project, in turn making myself much better with my general skills.", 
+        "This project was filled with technical difficulties and setbacks due to the shadow system being so challenging and time consuming to figure out. Due to this, I was able to learn how time constraints can effect a team in playtesting and iterating on certain parts of the game."] },
+      { type: 'paragraph', text: "" }, // blank space to separate
+
+      { type: 'heading', text: "Challenges I faced on the project as a Designer" },
+      { type: 'list', items: ["One of the most challenging parts of this project as a designer was the fact that while designing puzzles, you never know how people are going to approach it. Everyone has their own way of approaching a problem to solve.",
+        "I’ve also learnt the amount of playtesting needed for a puzzle platformer has to be at a much larger scale since you need to try to adhere to a good balance of people who are great at solving problems and people who take longer. I’ve also had to make sure that the level of difficulty stayed somewhat similar throughout the different types of audience."
+      ] },
+      { type: 'paragraph', text: "" }, // blank space to separate
+
+/*       { type: 'heading', text: "Design Pillars" },
+      {type: 'paragraph', text: ""}, // blank space to separate
       { type: 'list', items: ["Discovery Within Narrative"] },
       { type: 'paragraph', text: "Players discover story through narrative and visual storytelling, it is up to the player to interpret it the way they want to." },
       { type: 'list', items: ["Ability-driven Problem solving"]},
       {type: 'paragraph', text: "Each puzzle has an ideal solution, giving more control on how to make the experience for players more in tune with how we would want them to feel."},
       { type: 'list', items: ["Low Difficulty Progression"]},
       {type: 'paragraph', text: "The puzzles progressively get more difficult after each stage has been passed and a new ability is introduced"},
-
+ */
       {type: 'heading', text: "Story" },
       {type: 'paragraph', text: "Sombre takes you on a journey through the <strong>stages of grief</strong>. For the time limit on group projects, we are only able to do 2 of these stages, however I will talk about the core idea of this particular element. "},
       {type: 'paragraph', text: "There would consist of 5 stages, denial, anger, depression, bargaining and finally acceptance. For each of these stages you will <strong>meet an NPC</strong> who has been stuck in the stage for quite a while. As you get to know them throughout the stage, you <strong>find out</strong> more of their <strong>backstory</strong>. As you do this, you’ll eventually have to help them move on from the stage they had been stuck in. And in turn they help you move on as well into the next stage of grief. "},
       {type: 'paragraph', text: "It is important to note that not every person experiences grief the same way. For most people, it’s going through all the five stages in order and for others it may only be three or they may be stuck in one consistently. "},
       {type: 'paragraph', text: "Throughout the game, you will notice environmental hints and clues as to who you are and how you ended up here. Though the story is that you’re a very young kid of around 8-12 years of age and had died in the process of finding your mother who had abandoned you. You wake up in the -in between- with these powers which help you go through the stages."},
-      
-      { type: 'heading', text: "Gameplay" },
-      {type: 'paragraph', text: " "}, // blank space to separate
-      { type: 'list', items: ["Goal"] },
-      {type: 'paragraph', text: "The initial narrative goal of our character is to find their mother. However when the player takes control of our character, it becomes more of a discovery. Where am I? And what has happened? The goal for the player then becomes to explore the narrative and to find the end to the game."},
-      {type: 'list', items: ["Challenge"]},
-      {type: 'paragraph', text: "The main challenge for the player is to go through the levels by using their newfound ability - shadows. It is important to note that in different colored lights, the shadows also have different abilities. such as teleportation in blue light. as shown below."},
-      {type: 'gif', src: sombreTeleportGif, alt: 'Teleportation mechanic'},
-      {type: 'paragraph', text: "The player will also be constricted by the number of shadows they have in each area. Some areas the player may only be able to place one shadow and maybe in others, more. It would depend on how the puzzle is laied out."},
-      { type: 'heading', text: "Mechanics" },
-      {type: 'list', items: ["Place shadow"]},
-      {type: 'paragraph', text: "The essence of the game is the fact that the player can place a physical version of their shadow. These physical shadows can be used to walk on as if they were solid ground. They can be activated by pressing the ability activation button, and have an ability based on the colour of the light. These abilities are the moving shadows, teleport shadow and bomb shadow, which are further discussed below. The player can place these shadows on designated areas, these could be floors, walls, and ceilings."},
-      {type: 'list', items: ["Moving Shadow"]},
-      {type: 'paragraph', text: "This is the most basic shadow. Once placed, the player can press the activation key for them to move towards its normal direction. The shadow moves for the duration that the player is holding the button"},
-      {type: 'paragraph', text: "The platform has the ability to push or carry specific objects as well. Including the player."},
-      {type: 'list', items: ["Teleport Shadow"]},
-      {type: 'paragraph', text: "The teleport shadow allows the player to move from one shadow to the other when two of them are placed down and the shadow has been activated while the player is directly standing on top of it. The shadow has a blue hue and can only be placed in a blue light source."},
-      {type: 'list', items: ["Bomb Shadow"]},
-      {type: 'paragraph', text: "In the stage of anger, the bomb shadow is introduced.  This shadow has a red hue, and can only be placed in red lights. When activated, the shadow forms a mass that slams into the surface that it is placed on. This can be used in different ways; one of them is a way to break fragile walls or items. Another way could be placing it on the ground and moving a platform over it, this would launch the platform upwards."},
-      
+
       { type: 'heading', text: "Progress" },
       { type: 'paragraph', text: "Below is a short GIF demo of the progress of this game" },
       { type: 'gif', src: sombreProgressGif, alt: 'Core mechanic demo' },
 
     ],
     technologies: ["Unity", "Miro", "HacknPlan"],
-    status: "In Development",
+    status: "In development",
     // image: "/assets/games-pictures/concept_art_first_lvl.png",
     image: sombrecoverPhoto,
+    thumbnail: sombreThumbnailGif,
     demoLink: "#",
     githubLink: "#",
     playLink: "#",
@@ -172,6 +197,7 @@ const projects = [
     ],
     technologies: ["Unity", "Miro"],
     image: webOfLies,
+    thumbnail: webOfLies,
     playLink: 'https://razvanluca.itch.io/web-of-lies-spreading-misinformation'
   },
   {
@@ -214,6 +240,7 @@ const projects = [
     technologies: ["Unity", "Miro"],
     // image: "/assets/games-pictures/shoppers_havoc.png",
     image: shoppershavocPhoto,
+    thumbnail: shoppershavocPhoto,
     demoLink: "#",
     githubLink: "#",
     playLink: "https://teragatchi.itch.io/shoppers-havoc",

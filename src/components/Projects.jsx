@@ -94,7 +94,7 @@ const Projects = () => {
               onClick={() => (game.media || game.longDescription) && toggleOpen(game.id)}
             >
               <div className="project-image">
-                <img src={game.image} alt={game.title} />
+                <img src={game.thumbnail || game.image} alt={game.title} />
                 <div className="project-overlay">
                   {(game.media || game.longDescription) && (
                     <button
