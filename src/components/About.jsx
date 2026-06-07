@@ -20,8 +20,12 @@ const About = () => {
 
   const experiences = [
     {
+      label: 'Game Design and Programming intern at Pixel-Nexus',
+      detail: 'Worked with Godot engine and contributed to designing and implementing features for their title Dino Duck Mayhem'
+    },
+    {
       label: 'Team Lead & Game Designer',
-      detail: "Sombre — actively learning how to manage a six-person team to build a narrative heavy puzzle game in Unity",
+      detail: "Sombre — learnt team management skills and created a narrative puzzle game in Unity",
     },
     {
       label: 'Award-Winning Designer',
@@ -30,11 +34,7 @@ const About = () => {
     {
       label: 'DAE @ Howest',
       detail: 'Independent Game Production student specialising in game design & Stylized art',
-    },
-    {
-      label: 'Art Internship At A tech studio',
-      detail: 'Assisted in creating realistic 3D models and textures for their VR applications',
-    },
+    }
   ];
 
   const quickStats = [
@@ -61,7 +61,7 @@ const About = () => {
                 I mostly design games in Unity, however I am also experienced with Blender, Maya, and Substance Painter for basic modeling and texturing.
               </p>
               <p>
-                Currently, I&apos;m actively learning how to lead a team of six developers as both Game Designer and Programmer on our upcoming title, Sombre. I&apos;m passionate about crafting engaging gameplay experiences and seeing ideas come to life through collaboration.
+                Currently, I&apos;m finishing up my internship at Pixel-Nexus whilst learning new skills and working on personal projects.
               </p>
               <div className="bio-highlights">
                 <span>Game Design Experience</span>
@@ -125,7 +125,7 @@ const About = () => {
             <div className="accent-card">
               <h5>Currently</h5>
               <p>
-                Working on a Group projects game called: <span className="accent-card__focus">Sombre</span>, a narrative based puzzle game about shadows and lights. Ask me about the game design and the story!
+                Finshing up my internship at Pixel-Nexus and working on personal projects while improving my technical and creative skills through making new games every two weeks.
               </p>
             </div>
           </aside>

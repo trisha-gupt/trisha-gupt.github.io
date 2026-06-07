@@ -12,7 +12,6 @@ const Hero = () => {
           </h1>
           <p className="hero-description">
             Hello! I'm Trisha - I specialize in game design and game art, with a focus on creating experiences that spark emotions and tell meaningful stories to players.
-            I'm currently seeking an end-of-study internship where I can bring my creativity and skills to an inspiring team.
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>

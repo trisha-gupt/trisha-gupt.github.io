@@ -10,8 +10,8 @@ import budsOasisPhoto from '../assets/games-pictures/buds_oasis.jpeg';
 
 // GIF thumbnail assets
 import budsOasisThumbnail from '../assets/games-pictures/buds-oasis/buds-oasis-thumbnail.mp4';
-import sombreThumbnailGif from '../assets/games-pictures/sombre-prototype/sombre-thumbnail.mp4';
-import shoppershavocThumbnail from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-thumbnail.mp4';
+import sombreThumbnailGif from '../assets/games-pictures/sombre-prototype/sombre-thumbnail-compressed.mp4';
+import shoppershavocThumbnail from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-thumbnail-compressed.mp4';
 
 //web of lies assets
 import webOfLies from '../assets/games-pictures/web_of_lies_cover.png';
@@ -26,7 +26,7 @@ import wol_win_win_bg from '../assets/games-pictures/web_of_lies_endings/win_win
 import sombreCoreMechGif from '../assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif';
 import sombreTeleportGif from '../assets/games-pictures/sombre-prototype/teleportation_mechanic.gif';
 import sombreProgressGif from '../assets/games-pictures/sombre-prototype/shadow_game_progress.gif'
-import sombreTrailer from '../assets/games-pictures/sombre-prototype/sombre-trailer.mp4';
+import sombreTrailer from '../assets/games-pictures/sombre-prototype/sombre-trailer-compressed.mp4';
 
 // shopper's havoc assets
 import shoppershavocGameplayLoop from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-gameplay-loop.png';
@@ -58,20 +58,6 @@ const projects = [
         "Game Design - bridging the gap between programming and art."
        ]},
 
-/*       {type: 'heading', text: "Gameplay Mechanics"},
-      {type: 'list', items: ["Colors of flowers"]},
-      {type: 'paragraph', text: "Each color of flower has its own powers. There are 4 colors that the flowers have - red, blue, yellow and white. White being the most common one since it has a small impact which lets you kill the robots. When you plant a seed of a particular color, you'll start to see more flowers of the same color spawn"},
-
-      {type: 'list', items: ["White flowers"]},
-      {type: 'paragraph', text: "White flowers are the ones you are encountered with first. You need to grab these flowers and throw them at the robots which give them damage"},
-      {type: 'list', items: ["Blue flowers"]},
-      {type: 'paragraph', text: "Blue flowers slow the enemies down so they stay in the same area for a longer time. The blue flowers are related to the water element"},
-      {type: 'list', items: ["Red flowers"]},
-      {type: 'paragraph', text: "Red Flowers one shot the enemies. they are related to the fire element"},
-      {type: 'list', items: ["Yellow flowers"]},
-      {type: 'paragraph', text: "Yellow flowers allow you to <strong>stun</strong> your enemies. Once you throw it at the robots, they will be immobalised for a second"},
-
-       */
       { type: 'heading', text: "Challenges in Design -" },
       { type: 'list', items: [" The theme of this game jam was sustainability. We moved more towards the protection of the environment from the evil robots but also making it a fun experience by having two or more people be able to play together.",
         "There were quite a few things missing from the game due to time constraints. The feedback received was that there was not enough player feedback for when the tree was hit or who your character was. Going back, I would have added visual clarity for these mechanics - it would have made it so that the players had an easier time getting used to the game.",
@@ -101,10 +87,15 @@ const projects = [
     genre: "STORY - PUZZLE PLATFORMER",
     description: "A story-driven puzzle-platformer exploring somber themes with a unique core mechanic.",
     longDescription: [
+      {type: 'heading', text: "Trailer"},
+      {type: 'video', src: sombreTrailer, alt: 'SOMBRE trailer' },
+      {type: 'paragraph', text: ""}, // blank space to separate
+
+
       {type: 'heading', text: "Project Overview" },
      // { type: 'paragraph', text: 'A Personal project that turned into a semester long group project. This is a project that I had a unique interest in because of the gameplay mechanics after I had prototyped a couple quick iteration of the mechanics in unity, I knew I wanted to take it towards A narrative driven theme with some platforming gameplay. ' },
-      {type: 'paragraph', text: "Sombre is a Story-Based puzzle platformer which required a lot of iterations with level designing the puzzles and platforming sections. During the production of this, I was able to learn a lot of things."}, 
-      {type: 'paragraph', text: "The narrative of this game was the part that drew people in. And I really wanted to focus on player’s emotions and how to make this an experience they would not forget while also keeping the challenges they face just frustrating enough to keep engagement and not abandon the game." },
+      {type: 'paragraph', text: "Sombre is a Story-Based puzzle platformer which required a lot of iterations with level designing the puzzles and platforming sections. During the production of this, I was able to learn a lot about how to design puzzles within a narrative."}, 
+      {type: 'paragraph', text: "The narrative of this game was the part that drew people in. I really wanted to focus on player’s emotions and making this an experience they would not forget while also keeping the challenges they face with the puzzles frustrating enough to keep engagement." },
       
 
       { type: 'heading', text: "My responsibilities for this project" },
@@ -121,9 +112,9 @@ const projects = [
       
       
       { type: 'heading', text: "Where it had succeeded" },
-      { type: 'list', items: ["This project was able to grab the attention of the audience that I had initially wanted to grab the attention of, and the reactions to the puzzles and stories were satisfying to read as a game designer.",
-        "I feel like this project eventually became a huge learning experience for me as a game designer trying to chip in wherever I could as a generalist for the project, in turn making myself much better with my general skills.", 
-        "This project was filled with technical difficulties and setbacks due to the shadow system being so challenging and time consuming to figure out. Due to this, I was able to learn how time constraints can effect a team in playtesting and iterating on certain parts of the game."] },
+      { type: 'list', items: ["This project was able to grab the attention of our target audience, the player satisfaction varied depending on their problem solving abilities.",
+        "I feel like this project eventually became a huge learning experience for me as a game designer by having constant playtesting sessions and player feedback, it made me better understand how to level design for puzzle games.", 
+        "This project was filled with technical difficulties and setbacks due to the shadow system being so challenging and time consuming to figure out. Despite of this, the team as a whole was able to persevere and it taught me how to better adapt my abilities within a team."] },
       { type: 'paragraph', text: "" }, // blank space to separate
 
       { type: 'heading', text: "Challenges I faced on the project as a Designer" },
@@ -162,7 +153,7 @@ const projects = [
     githubLink: "#",
     playLink: "#",
     media: [
-      { type: 'video', src: sombreTrailer, alt: 'SOMBRE trailer' },
+      //{ type: 'video', src: sombreTrailer, alt: 'SOMBRE trailer' },
     ]
   },
 /*     {
@@ -219,33 +210,9 @@ const projects = [
     genre: "Strategy / Humour",
     description: "A humorous strategy game about navigating hectic sales with a cloning mechanic.",
     longDescription: [
-/*       { type: 'heading', text: "Overview :-" },
-      { type: 'paragraph', text: "This was a school project created in one week including brainstorming and paper prototyping. I wanted to focus on game feel and core concept to make it stand out and give an edge." },
-
-
-      { type: 'heading', text: "Core Objectives :-" },
+      {type: 'heading', text: "Trailer"},
+      {type: 'youtube', src: 'https://www.youtube.com/watch?v=CuZikGbWAc8', title: 'Shopper\'s Havoc trailer (https://www.youtube.com/watch?v=CuZikGbWAc8)' },
       {type: 'paragraph', text: ""}, // blank space to separate
-      { type: 'list', items: ["Complete the List -"] },
-      { type: 'paragraph', text: "You need to find and collect every Item on the list to be able to move on to the next level" },
-      { type: 'list', items: ["Escape the store -"] },
-      { type: 'paragraph', text: "Once all the items are collected, you need to get out of there as soon as you can without having any of your items stolen by any of the shoppers" },
-      { type: 'list', items: ["Outsmart the rival shoppers -"] },
-      { type: 'paragraph', text: "You will need to maneuver the rival shoppers and strategize the best course of action for you to be able to escape without anything being stolen. (e.g. you will be able to grab their attention and distract one of them while your clone goes and steals from the area, etc.) " },
-      { type: 'list', items: ["Uncover character's story -"] },
-      { type: 'paragraph', text: "Based on the items that you collect, you'll learn a piece of new information about the player which will be filled in a diary. The diary is also the same book where your shopping list is in the menu, you will open new chapters the more items you collect - and also get a short description of what the story is through dialogue, if you're not much of a reader." },
-
-      { type: 'heading', text: "Types Of Shoppers"},
-      { type: 'paragraph', text: "I wanted to create shoppers with different abilities. There are 4 types of shoppers in this game -"},
-      {type : 'list', items: ["Sneaky Teen"]},
-      {type : 'paragraph', text: "These teens are very sneaky, you will maybe get a glimpse of them in the store you are walking in but they only strike when you are busy (for example when you are collecting an item) you need to hold down a button for 2 seconds. You will see them slowly sneak in and if you don't move away they will steal one item from your list."},
-      {type : 'list', items: ["Karen"]},
-      {type : 'paragraph', text: "These shoppers are more of a nuisance than pose an actual threat to your items. You will be able to hear a Karen as soon as you enter the store. If you get in the radius of one, you will be stuck with them right next to you and be forced to hear their noise. "},
-      {type: 'paragraph', text: "You are able to shift these Karens to another customer by interacting with the customer you want to shift them to for 3 seconds (beware of the sneaky teen)"},
-      {type : 'list', items: ["Tired Dad"]},
-      {type : 'paragraph', text: "He really doesn't do much but walk around pretty slowly trying to get some items. He quite a big man though, so he blocks certain pathways for you to pass through and you are forced to take another route or switch to a clone if you placed any."},
-      {type : 'list', items: ["Evil Shopper"]},
-      {type : 'paragraph', text: "These are the shoppers who will hunt you down if they see you have any items. They have a detection radius of 5 units. If you are within this radius and have items with you, they will start dashing towards you and try to steal all of them one by one. Once you are out of this radius, they will go back to shopping."}, 
-          */
 
       {type: 'heading', text: "Project Overview"},
       {type: 'list', items: ["This was an Independent project for a game design class where I was responsible for everything in the game including programming, design and art. I had worked on this project for one week including the time spent for brainstorming and iterations. ",
@@ -276,7 +243,7 @@ const projects = [
     githubLink: "#",
     playLink: "https://teragatchi.itch.io/shoppers-havoc",
     media: [
-        { type: 'youtube', src: 'https://www.youtube.com/watch?v=CuZikGbWAc8', title: 'Shopper\'s Havoc trailer (https://www.youtube.com/watch?v=CuZikGbWAc8)' }
+        //{ type: 'youtube', src: 'https://www.youtube.com/watch?v=CuZikGbWAc8', title: 'Shopper\'s Havoc trailer (https://www.youtube.com/watch?v=CuZikGbWAc8)' }
     ]
   },
 
