@@ -9,9 +9,9 @@ import shoppershavocPhoto from '../assets/games-pictures/shoppers_havoc.png';
 import budsOasisPhoto from '../assets/games-pictures/buds_oasis.jpeg';
 
 // GIF thumbnail assets
-import budsOasisThumbnail from '../assets/games-pictures/buds-oasis/buds-oasis-thumbnail.gif';
-import sombreThumbnailGif from '../assets/games-pictures/sombre-prototype/sombre-gif-thumbnail.gif';
-import shoppershavocThumbnail from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-thumbnail.gif';
+import budsOasisThumbnail from '../assets/games-pictures/buds-oasis/buds-oasis-thumbnail.mp4';
+import sombreThumbnailGif from '../assets/games-pictures/sombre-prototype/sombre-thumbnail.mp4';
+import shoppershavocThumbnail from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-thumbnail.mp4';
 
 //web of lies assets
 import webOfLies from '../assets/games-pictures/web_of_lies_cover.png';
@@ -91,7 +91,7 @@ const projects = [
     githubLink: "#",
     playLink: "https://mms5004.itch.io/i-scream-metal",
     media: [
-      { type: 'youtube', src: 'https://www.youtube.com/watch?v=aVt7UzyGD0I', title: 'BUD\'S OASIS trailer (https://www.youtube.com/watch?v=aVt7UzyGD0I)' },
+      //{ type: 'youtube', src: 'https://www.youtube.com/watch?v=aVt7UzyGD0I', title: 'BUD\'S OASIS trailer (https://www.youtube.com/watch?v=aVt7UzyGD0I)' },
     ]
   },
   {

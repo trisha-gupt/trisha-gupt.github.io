@@ -44,6 +44,8 @@ function toYouTubeEmbed(url) {
 const Projects = () => {
   const [openProjectId, setOpenProjectId] = useState(null);
 
+  const isVideoSrc = (src) => typeof src === 'string' && /\.(mp4|webm|ogg)$/i.test(src);
+
   const toggleOpen = (id) => {
     setOpenProjectId((prev) => (prev === id ? null : id));
   };
@@ -119,7 +121,19 @@ const Projects = () => {
               onClick={() => (game.media || game.longDescription) && toggleOpen(game.id)}
             >
               <div className="project-image">
-                <img src={game.thumbnail || game.image} alt={game.title} />
+                {isVideoSrc(game.thumbnail || game.image) ? (
+                  <video
+                    className="project-thumbnail-video"
+                    src={game.thumbnail || game.image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                ) : (
+                  <img src={game.thumbnail || game.image} alt={game.title} />
+                )}
                 <div className="project-overlay">
                   {(game.media || game.longDescription) && (
                     <button
