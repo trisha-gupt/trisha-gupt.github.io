@@ -117,9 +117,22 @@ const Projects = () => {
           {games.map((game) => (
             <div
               key={game.id}
-              className={`project-card ${ (game.media || game.longDescription) ? 'clickable' : '' }`}
+              className={`project-card ${openProjectId === game.id ? 'project-card--expanded' : ''} ${ (game.media || game.longDescription) ? 'clickable' : '' }`}
               onClick={() => (game.media || game.longDescription) && toggleOpen(game.id)}
             >
+{(game.media || game.longDescription) && openProjectId !== game.id && (
+                <button
+                  className="project-hover-action"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleOpen(game.id);
+                  }}
+                  aria-expanded={openProjectId === game.id}
+>
+                  Show more
+                </button>
+              )}
+
               <div className="project-image">
                 {isVideoSrc(game.thumbnail || game.image) ? (
                   <video
@@ -134,31 +147,21 @@ const Projects = () => {
                 ) : (
                   <img src={game.thumbnail || game.image} alt={game.title} />
                 )}
-                <div className="project-overlay">
-                  {(game.media || game.longDescription) && (
-                    <button
-                      className="overlay-showmore"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleOpen(game.id);
-                      }}
-                      aria-expanded={openProjectId === game.id}
-                    >
-                      {openProjectId === game.id ? 'Hide details' : 'Show more'}
-                    </button>
-                  )}
-                </div>
               </div>
 
               <div className="project-content">
                 <div className="project-header">
-                  <h3 className="project-title">{game.title}</h3>
-                  <span className={`project-status ${(game.status || '').toLowerCase().replace(/\s+/g, '-')}`}>
-                    {game.status}
-                  </span>
+                  <div className="project-header-copy">
+                    <h3 className="project-title">{game.title}</h3>
+                    <p className="project-role">{game.role}</p>
+                  </div>
+                  <div className="project-header-actions">
+                    <span className={`project-status ${(game.status || '').toLowerCase().replace(/\s+/g, '-')}`}>
+                      {game.status}
+                    </span>
+                  </div>
                 </div>
 
-                <p className="project-role">{game.role}</p>
                 <p className="project-genre">{game.genre}</p>
                 <p className="project-description">{game.description}</p>
 
@@ -196,6 +199,7 @@ const Projects = () => {
                     </a>
                   </div>
                 )}
+
                 {/* If you want a disabled-looking button when no URL, you can render it with game.playLink === '#' */}
               </div>
 
