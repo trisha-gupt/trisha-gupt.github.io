@@ -54,23 +54,21 @@ const Navigation = () => {
           </li>
           <li>
             <button 
-              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-              onClick={() => scrollToSection('about')}
-            >
-              About
-            </button>
-          </li>
-          <li>
-            <button 
               className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
               onClick={() => scrollToSection('projects')}
             >
               Games
             </button>
           </li>
+          <li>
+            <button 
+              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
+              onClick={() => scrollToSection('about')}
+            >
+              About
+            </button>
+          </li>
         </ul>
-        
-        {/* nav-social removed per request */}
       </div>
     </nav>
   );
