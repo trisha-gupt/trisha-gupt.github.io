@@ -11,6 +11,7 @@ import budsOasisPhoto from '../assets/games-pictures/buds_oasis.jpeg';
 // GIF thumbnail assets
 import budsOasisThumbnail from '../assets/games-pictures/buds-oasis/buds-oasis-thumbnail.gif';
 import sombreThumbnailGif from '../assets/games-pictures/sombre-prototype/sombre-gif-thumbnail.gif';
+import shoppershavocThumbnail from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-thumbnail.gif';
 
 //web of lies assets
 import webOfLies from '../assets/games-pictures/web_of_lies_cover.png';
@@ -26,6 +27,11 @@ import sombreCoreMechGif from '../assets/games-pictures/sombre-prototype/core_me
 import sombreTeleportGif from '../assets/games-pictures/sombre-prototype/teleportation_mechanic.gif';
 import sombreProgressGif from '../assets/games-pictures/sombre-prototype/shadow_game_progress.gif'
 import sombreTrailer from '../assets/games-pictures/sombre-prototype/sombre-trailer.mp4';
+
+// shopper's havoc assets
+import shoppershavocGameplayLoop from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-gameplay-loop.png';
+import shoppershavocPOC from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-poc.png';
+
 
 const projects = [
   {
@@ -85,6 +91,7 @@ const projects = [
     githubLink: "#",
     playLink: "https://mms5004.itch.io/i-scream-metal",
     media: [
+      { type: 'youtube', src: 'https://www.youtube.com/watch?v=aVt7UzyGD0I', title: 'BUD\'S OASIS trailer (https://www.youtube.com/watch?v=aVt7UzyGD0I)' },
     ]
   },
   {
@@ -99,13 +106,15 @@ const projects = [
       {type: 'paragraph', text: "Sombre is a Story-Based puzzle platformer which required a lot of iterations with level designing the puzzles and platforming sections. During the production of this, I was able to learn a lot of things."}, 
       {type: 'paragraph', text: "The narrative of this game was the part that drew people in. And I really wanted to focus on player’s emotions and how to make this an experience they would not forget while also keeping the challenges they face just frustrating enough to keep engagement and not abandon the game." },
       
+
       { type: 'heading', text: "My responsibilities for this project" },
       { type: 'list', items: ["I had been working on a few gameplay mechanics, a couple being the lever system and implementing the different types of shadows.",
         "Implementing different types of shadows (Teleportation, lift and explosion types) Only teleportation and lift were able to get into the game because of time constraints.",
         "Level Design and final layout of the first and second level (second level was not able to be in the game).",
-        "Playtesting and iterating on the level design while gauging how the players react to certain elements of the mechanic and writing down changes required for a particular area of the puzzle."
+        "Playtesting and iterating on the level design while gauging how the players react to certain elements of the mechanic and writing down changes required for a particular area of the puzzle.",
+        "I had programmed a prototype of different shadow types and the base shadow mechanic for the project"
       ] },
-      {type: 'paragraph', text: "a very early prototype of shadow manipulation mechanic -"},
+      {type: 'paragraph', text: "very early prototypes of shadow manipulation mechanic -"},
       {type: 'gif', src: [sombreCoreMechGif, sombreTeleportGif], alt: 'Core mechanic demo'},
       
       { type: 'paragraph', text: "" }, // blank space to separate
@@ -137,6 +146,7 @@ const projects = [
       {type: 'paragraph', text: "There would consist of 5 stages, denial, anger, depression, bargaining and finally acceptance. For each of these stages you will <strong>meet an NPC</strong> who has been stuck in the stage for quite a while. As you get to know them throughout the stage, you <strong>find out</strong> more of their <strong>backstory</strong>. As you do this, you’ll eventually have to help them move on from the stage they had been stuck in. And in turn they help you move on as well into the next stage of grief. "},
       {type: 'paragraph', text: "It is important to note that not every person experiences grief the same way. For most people, it’s going through all the five stages in order and for others it may only be three or they may be stuck in one consistently. "},
       {type: 'paragraph', text: "Throughout the game, you will notice environmental hints and clues as to who you are and how you ended up here. Though the story is that you’re a very young kid of around 8-12 years of age and had died in the process of finding your mother who had abandoned you. You wake up in the -in between- with these powers which help you go through the stages."},
+      {type: 'paragraph', text: ""}, // blank space to separate
 
       { type: 'heading', text: "Progress" },
       { type: 'paragraph', text: "Below is a short GIF demo of the progress of this game" },
@@ -152,7 +162,7 @@ const projects = [
     githubLink: "#",
     playLink: "#",
     media: [
-      // { type: 'gif', src: sombreProgressGif, alt: 'Core mechanic demo' },
+      { type: 'video', src: sombreTrailer, alt: 'SOMBRE trailer' },
     ]
   },
 /*     {
@@ -209,7 +219,7 @@ const projects = [
     genre: "Strategy / Humour",
     description: "A humorous strategy game about navigating hectic sales with a cloning mechanic.",
     longDescription: [
-      { type: 'heading', text: "Overview :-" },
+/*       { type: 'heading', text: "Overview :-" },
       { type: 'paragraph', text: "This was a school project created in one week including brainstorming and paper prototyping. I wanted to focus on game feel and core concept to make it stand out and give an edge." },
 
 
@@ -235,14 +245,33 @@ const projects = [
       {type : 'paragraph', text: "He really doesn't do much but walk around pretty slowly trying to get some items. He quite a big man though, so he blocks certain pathways for you to pass through and you are forced to take another route or switch to a clone if you placed any."},
       {type : 'list', items: ["Evil Shopper"]},
       {type : 'paragraph', text: "These are the shoppers who will hunt you down if they see you have any items. They have a detection radius of 5 units. If you are within this radius and have items with you, they will start dashing towards you and try to steal all of them one by one. Once you are out of this radius, they will go back to shopping."}, 
-         
+          */
+
+      {type: 'heading', text: "Project Overview"},
+      {type: 'list', items: ["This was an Independent project for a game design class where I was responsible for everything in the game including programming, design and art. I had worked on this project for one week including the time spent for brainstorming and iterations. ",
+        "I used the paper prototyping method for this. I find it to be a lot faster and iterations on a paper prototype take about 3 minutes as compared to a potential 10 minutes for an engine prototype.",
+        "This was a project that was more focused on a mechanics first approach with some humorous content added through the story and characters. I chose to first focus on the mechanics being fun to play through paper prototyping and then moved on to the game also having rich characters with personalities that would bring a fun experience to the players."
+      ]},
+      {type:'image', src: shoppershavocGameplayLoop, alt: 'Shopper\'s Havoc gameplay loop'},
+      {type: 'paragraph', text: ""}, // blank space to separate
+
+      {type: 'heading', text: "Iterations "},
+      {type: 'list', items: ["This project had initially started as a turn based game which went through multiple iterations throughout the paper prototyping and later, Unity prototyping as well to make sure that the paper prototype has been translated well within the engine.",
+        "Below is a screenshot of the Proof of concept for this game. I had tested it out through paper prototyping and came to the conclusiton to make it in Unity and get more player feedback"
+      ]},
+      {type: 'image', src: shoppershavocPOC, alt: 'Shopper\'s Havoc early prototype'},
+      {type: 'paragraph', text: ""}, // blank space to separate
+      {type: 'list', items: ["It is important to know what kind of a game would require a paper prototype and when you should switch to an engine to get the player experience you want. For this project, even though it had started as a paper prototype, I couldn’t quite get the player experience right. It was a fast paced game and you can’t get fast paced through only paper prototyping. So, it was important to switch to an engine that I was comfortable in - which was Unity for me.",
+        "I wanted to bring more focus towards the players being able to think critically about their decisions and where they move. I thought about adding some constraints for the player",
+      ]},
+
       { type: 'heading', text: "Design notes" },
       { type: 'paragraph', text: "I designed the cloning mechanic to be easy to learn but offer depth in planning and timing. Focusing on the game feel was important for this project since it needed a lot of running around." }
     ],
     technologies: ["Unity", "Miro"],
     // image: "/assets/games-pictures/shoppers_havoc.png",
     image: shoppershavocPhoto,
-    thumbnail: shoppershavocPhoto,
+    thumbnail: shoppershavocThumbnail,
     demoLink: "#",
     githubLink: "#",
     playLink: "https://teragatchi.itch.io/shoppers-havoc",

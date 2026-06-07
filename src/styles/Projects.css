@@ -136,12 +136,30 @@
 }
 
 .project-media img,
-.project-media .media-iframe {
+.project-media .media-iframe,
+.project-media-video {
   max-width: 320px;
   width: 100%;
   height: auto;
   border-radius: 6px;
   border: 1px solid var(--border-accent);
+}
+
+.project-media-video,
+.longdesc-video {
+  background: #000;
+}
+
+.longdesc-video-wrap {
+  margin: 12px 0;
+}
+
+.longdesc-video {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
 }
 
 .media-iframe {

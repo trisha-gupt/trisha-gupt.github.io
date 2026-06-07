@@ -71,6 +71,19 @@ const Projects = () => {
               </div>
             );
           }
+          if (m.type === 'video') {
+            return (
+              <video
+                key={idx}
+                className="project-media-video"
+                src={m.src}
+                controls
+                playsInline
+                muted
+                preload="metadata"
+              />
+            );
+          }
           if (m.type === 'youtube') {
             return (
               <iframe
@@ -219,6 +232,20 @@ const Projects = () => {
                                   className="longdesc-gif"
                                 />
                               ))}
+                            </div>
+                          );
+                        }
+                        if (block.type === 'video') {
+                          return (
+                            <div key={i} className="longdesc-video-wrap">
+                              <video
+                                className="longdesc-video"
+                                src={block.src}
+                                controls
+                                playsInline
+                                muted
+                                preload="metadata"
+                              />
                             </div>
                           );
                         }
