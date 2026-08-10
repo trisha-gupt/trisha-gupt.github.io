@@ -23,10 +23,47 @@ import wol_lose_lose_bg from '../assets/games-pictures/web_of_lies_endings/lose_
 import wol_win_win_bg from '../assets/games-pictures/web_of_lies_endings/win_win_ending_bg.png';
 
 // sombre assets
+<<<<<<< HEAD
 import sombreCoreMechGif from '../assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif';
 import sombreTeleportGif from '../assets/games-pictures/sombre-prototype/teleportation_mechanic.gif';
 import sombreProgressGif from '../assets/games-pictures/sombre-prototype/shadow_game_progress.gif'
 import sombreTrailer from '../assets/games-pictures/sombre-prototype/sombre-trailer-compressed.mp4';
+=======
+import sombreCoreMechGif from "../assets/games-pictures/sombre-prototype/core_mechanic_sombre.gif";
+import sombreTeleportGif from "../assets/games-pictures/sombre-prototype/teleportation_mechanic.gif";
+import sombreBombGif from "../assets/games-pictures/sombre-prototype/Bomb_shadow_prototype.gif";
+import sombreProgressGif from "../assets/games-pictures/sombre-prototype/shadow_game_progress.gif";
+import sombreTrailer from "../assets/games-pictures/sombre-prototype/sombre-trailer-compressed.mp4";
+
+// Level breakdown gifs - Area 1
+import sombrePitGif from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/the_pit_gif.webm"; /* CONVERTED */
+import sombreArea1IntroSparkle from "../assets/games-pictures/sombre-prototype/Area_1_intro-sparkle-surface.gif";
+import sombreArea1IntroPuzzle from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_1_intro-puzzle.webm"; /*CONVERTED BUT NO USE */
+//Area 2 gifs
+import sombreArea2outlook from "../assets/games-pictures/sombre-prototype/Area_2_outlook.gif";
+import sombreArea2orbintro from "../assets/games-pictures/sombre-prototype/Area_2_shadow_orbs_2.gif";
+import sombreArea2buttonintro from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_3_button_intro.webm"; /*CONVERTED */
+import sombreArea2pianopuzzle from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_2_piano_puzzle.webm"; /*CONVERTED WITH ERROR */
+import sombreArea2finalpuzzle from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_2_final_puzzle.webm"; /*CONVERTED */
+//Area 3 gifs
+import sombreArea3outlook from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_3_outlook.webm"; /*CONVERTED */
+import sombreArea3intro from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_3_teleportation_intro.webm"; /*CONVERTED */
+import sombreArea3difficultyspike from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_3_difficulty_spike.webm"; /* CONVERTED WITH ERROR */
+import sombreArea3end from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_3_the_end.webm"; /* CONVERTED */
+//Sombre Prototype Images & Gifs
+import sombreDenialPuzzles from "../assets/games-pictures/sombre-prototype/sombre-Images/denial_puzzles_1.png";
+import sombreAngerPuzzles from "../assets/games-pictures/sombre-prototype/sombre-Images/anger_puzzles.png";
+import sombreLevelDesignWriteup from "../assets/games-pictures/sombre-prototype/sombre-Images/level_design_writeup.png";
+import sombreMiroIterations from "../assets/games-pictures/sombre-prototype/Miro_Iterations.gif";
+import sombreMoodboard from "../assets/games-pictures/sombre-prototype/sombre-Images/moodboard.png";
+import sombreDenialMood from "../assets/games-pictures/sombre-prototype/sombre-Images/denial_mood.png";
+import sombreDepressionMood from "../assets/games-pictures/sombre-prototype/sombre-Images/depression_mood.png";
+import sombreRageMood from "../assets/games-pictures/sombre-prototype/sombre-Images/anger_mood.png";
+import sombreAccetanceMood from "../assets/games-pictures/sombre-prototype/sombre-Images/acceptance_mood.png";
+
+//DinoDuckMayhem Assets - Cover
+import ddmCoverPhoto from "../assets/games-pictures/Internship/Mayhem_cover.webm"; /* CONVERT */
+>>>>>>> 3811222 (Changed all the too big  gifs for webm format and wrote it into the project.js)
 
 // shopper's havoc assets
 import shoppershavocGameplayLoop from '../assets/games-pictures/shoppers-havoc/shoppers-havoc-gameplay-loop.png';
@@ -36,6 +73,760 @@ import shoppershavocPOC from '../assets/games-pictures/shoppers-havoc/shoppers-h
 const projects = [
   {
     id: 1,
+<<<<<<< HEAD
+=======
+    title: "DINO DUCK MAYHEM",
+    role: "role: Game Designer/ Programmer",
+    genre: "TWIN STICK SHOOTER",
+    description:
+      "I was a part of the production of this shipped title - Dino Duck Mayhem - during my internship at Duckosaurus Games.",
+    longDescription: [
+      {
+        type: "heading",
+        text: "Overview",
+      },
+
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: "I worked on Dino Duck Mayhem as a part of my end of year internship as a game designer and developer, where I attended daily dev scrums and was closely involved in a team of 4 developers",
+            },
+            {
+              type: "paragraph",
+              text: "I will break down the parts of this project that I was involved with and explain the process.",
+            },
+          ],
+          [
+            {
+              type: "paragraph",
+              text: "This game had already been in production for one year when I had joined the team. I had to learn how to use the godot interphase and work around the existing code base",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "I was in charge of a big part of the ",
+                {
+                  accent: true,
+                  text: "Design changes proposals and Narrative Design",
+                },
+                " (through code), and making sure the game was ",
+                {
+                  accent: true,
+                  text: " fun to play",
+                },
+                ". This involved a couple of iterations for the camera and controller.",
+              ],
+            },
+          ],
+        ],
+      },
+    ],
+    technologies: ["Godot", "Miro", "Source Tree", "Git"],
+    status: "completed",
+    thumbnail: ddmCoverPhoto,
+    teamSize: "4 people",
+    demoLink: "#",
+    githubLink: "#",
+    playLink: "#",
+  },
+  {
+    id: 2,
+    title: "SOMBRE",
+    role: "role: Designer / Programmer",
+    genre: "STORY - PUZZLE PLATFORMER",
+    description:
+      "A story-driven puzzle-platformer exploring somber themes with a unique core mechanic.",
+    longDescription: [
+      {
+        type: "columns",
+        items: [
+          [
+            { type: "heading", text: "Overview" },
+            { type: "paragraph", text: "" },
+            {
+              type: "paragraph",
+              text: "Sombre is a story-based 3D puzzle platformer in which you discover you have the ability to manipulate your shadows. With no memories of your past or how you got here, you must uncover the story as you progress through different stages while learning how to use your shadow abilities.",
+            },
+            {
+              type: "paragraph",
+              text: "Within this project page, I will break down the tasks I was involved in and how I tackled them.",
+            },
+          ],
+          [
+            { type: "heading", text: "Project details" },
+            {
+              type: "paragraph",
+              text: "This game was made over a duration of four months for a group project class. The game initially had four stages, where each stage correlated to the stages of grief. However, due to time constraints, we were only able to complete one stage -Denial- as a vertical slice.",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "I was in charge of a big part of the ",
+                {
+                  accent: true,
+                  text: "puzzle design, translating them into Unity",
+                },
+                " (through code), and making sure ",
+                {
+                  accent: true,
+                  text: "they were fun to play",
+                },
+                ". This involved a couple of iterations for the camera and controller.",
+              ],
+            },
+          ],
+        ],
+      },
+
+      { type: "heading", text: "Trailer" },
+
+      {
+        type: "youtube",
+        src: "https://www.youtube.com/watch?v=smptLx9C3Dk",
+        title: "SOMBRE trailer (https://www.youtube.com/watch?v=smptLx9C3Dk)",
+      },
+
+      // Level breakdown - talk about how the level is laied out
+      {
+        type: "heading",
+        text: "Level Breakdown",
+      },
+
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "Area 1",
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "gif",
+              src: [sombrePitGif],
+              alt: "Core mechanic demo",
+            },
+          ],
+          [
+            { type: "heading", text: "The Pit" },
+            {
+              type: "paragraph",
+              text: [
+                "This is the",
+                { accent: true, text: " introduction of the core mechanic. " },
+                "The player is expected to use the shadow manipulation ability to get out of the pit and progress further into the level.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "The player is introduced to an NPC who also acts as a tutorial. (inspired by Toriel from the game Undertale). They tell you what controls you need to use in order to activate your ability.",
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "gif",
+              src: [sombreArea1IntroSparkle],
+              alt: "Core mechanic Intro",
+            },
+          ],
+          [
+            { type: "heading", text: "Information" },
+            {
+              type: "paragraph",
+              text: "The player learns two things in this area.",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "1 - Shadows can only be placed on ",
+                { accent: true, text: " specific surfaces." },
+                " The player has to use this information immediately as it will be recurring throughout the game.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "2 - Shadows are ",
+                { accent: true, text: " Physical objects" },
+                " that have the ability to interact with other physical objects in the game.",
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "gif",
+              src: [sombreArea2outlook],
+              alt: "Core mechanic demo",
+            },
+          ],
+          [
+            { type: "heading", text: "The Obstacle" },
+            {
+              type: "paragraph",
+              text: [
+                "The player must",
+                { accent: true, text: " use " },
+                "their",
+                { accent: true, text: " previous knowledge" },
+                " to now solve an obstacle course that requires them to place a shadow to move a box in the deadly vines.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "They are expected to use this box as leverage to jump over the deadly vines to complete a small obstacle course.",
+              ],
+            },
+          ],
+        ],
+      },
+
+      // Area 2 - The Obstacle
+
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "Area 2",
+      },
+
+      {
+        type: "columns",
+        variant: "text-left",
+        items: [
+          [
+            {
+              type: "heading",
+              text: "NPC Intro + Puzzles",
+            },
+            {
+              type: "paragraph",
+              text: "In this area, the player is introdced to an NPC - Ima. She seems to be in her own world. And also wants to get out of this place. ",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "She informs you about being able to pick up light sources. The player is able to",
+                { accent: true, text: " place a light source" },
+                " where they wish to create a shadow they need, and are expected to use this information to solve the next puzzle.",
+              ],
+            },
+          ],
+          [
+            {
+              type: "gif",
+              src: [sombreArea3outlook],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-left",
+        items: [
+          [
+            {
+              type: "heading",
+              text: "Button Introduction",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "Player is introduced to a pressure plate.",
+                { accent: true, text: " A simple puzzle" },
+                " is presented to them in order for them to learn about it's existance",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "The pressure plate will be reccuring for the player to get used to the mechanics.",
+            },
+          ],
+          [
+            {
+              type: "gif",
+              src: [sombreArea2buttonintro],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-left",
+        items: [
+          [
+            {
+              type: "heading",
+              text: "Orbs",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "The player is pointed towards their ",
+                { accent: true, text: "orbs" },
+                ". Orbs show you how many shadows the player can cast at a time as a ",
+                { accent: true, text: "diegetic UI. " },
+                "A simple puzzle is used to demonstrate the use of multiple shadows",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "Once a shadow is placed, the orbs update to the remaining amount of shadows a player has.",
+            },
+          ],
+          [
+            {
+              type: "gif",
+              src: [sombreArea2orbintro, sombreArea2pianopuzzle],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-left",
+        items: [
+          [
+            {
+              type: "heading",
+              text: "Final Puzzle",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "At the end of this area, the player is expected to use the previously learnt knowledge, such as ",
+                {
+                  accent: true,
+                  text: "orbs, light pick ups and pressure plates",
+                },
+                " to get through this area.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "This allows repetetion for the player. Where they are able to get more comfortable with the puzzles where there's not much intensivity",
+            },
+          ],
+          [
+            {
+              type: "gif",
+              src: [sombreArea2finalpuzzle],
+            },
+          ],
+        ],
+      },
+
+      //Area 3 start - Teleport shadows
+
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "Area 3",
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "gif",
+              src: [sombreArea3intro],
+            },
+          ],
+          [
+            {
+              type: "heading",
+              text: "Teleport Shadow",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "This is the first time that the player is introduced to a different type of shadow.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "The controls to place the shadow and activate are the same as the previous type. The only difference is in the ability. This can be noticed by ",
+                { accent: true, text: "different colored lights and platform" },
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "gif",
+              src: [sombreArea3difficultyspike],
+            },
+          ],
+          [
+            {
+              type: "heading",
+              text: "Dificulty spike",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "Eventually, the player is faced with a puzzle that ",
+                { accent: true, text: "combines both the shadow types" },
+                " and gives the player ",
+                { accent: true, text: "3 shadows" },
+                " to use.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "This area requires the players to understand the mechanic and use the resources they have. There is ",
+                { accent: true, text: " no time limit " },
+                "which gives them room to play around with the mechanics and think of an approach to solve it.",
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "gif",
+              src: [sombreArea3end],
+            },
+          ],
+          [
+            {
+              type: "heading",
+              text: "The End",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "The final puzzle consists of a simple lever mechnaic and the use of just the teleportation shadow.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "This is meant to contrast the previous defficulty spike and make the player feel releaved before finally concluding the game.",
+            },
+          ],
+        ],
+      },
+
+      //Prototyping
+
+      {
+        type: "heading",
+        text: "Prototyping",
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "gif",
+              src: [sombreCoreMechGif],
+              alt: "Core mechanic demo",
+            },
+          ],
+
+          [
+            {
+              type: "heading",
+              text: "Core Mechanic",
+            },
+            {
+              type: "paragraph",
+              text: "This was the very first working prototype of the core mechanic. It is also the first mechanic that the player is introduced to.",
+            },
+            {
+              type: "paragraph",
+              text: "Most of the gameplay revolves around placing the shadows in the right spot. The player is introduced to new shadow abilities as the game progresses.",
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-left",
+        items: [
+          [
+            {
+              type: "heading",
+              text: "Teleport Variant",
+            },
+            {
+              type: "paragraph",
+              text: "This is a varriation of the first ability, it lets the player teleport to the shadows that are placed within a certain distance form the player.",
+            },
+            {
+              type: "paragraph",
+              text: "This ability is introduced halfway through the first stage, this is done so the players can get used to the mechanics and later on, they are expected to combine these abilities to solve some puzzles.",
+            },
+          ],
+
+          [
+            {
+              type: "gif",
+              src: [sombreTeleportGif],
+              alt: "Core mechanic demo",
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "gif",
+              src: [sombreBombGif],
+              alt: "Bomb shadow demo",
+            },
+          ],
+          [
+            {
+              type: "heading",
+              text: "Bomb Variant",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "This was the third variant for this shadow type, which never got used in the final version due to time constraints.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                " The idea was that the shadow itself would be a bomb which if activated, has a ceratin time limit for explosion. There will be a few",
+                { accent: true, text: " explodable objects" },
+                " which will leave some debris behind. This debris can be picked up and used for pressure plates, etc.",
+              ],
+            },
+          ],
+        ],
+      },
+
+      { type: "heading", variant: "secondary", text: "Gameplay Layout" },
+
+      {
+        type: "paragraph",
+        text: [
+          "During prototyping, I had come up with two levels. The idea was to take the player through the ",
+          { accent: true, text: "different stages of grief " },
+          "where they would meet an NPC representing their stage of grief.",
+          " The two images shown below represents the ",
+          { accent: true, text: "layout of each puzzle" },
+          " in the denial section as well as anger. Though anger was never able to make it into the final version due to time constraints",
+        ],
+      },
+
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: [
+                "A prototype made in unity for all the puzzles within",
+                { accent: true, text: " denial" },
+              ],
+            },
+            {
+              type: "image",
+              src: sombreDenialPuzzles,
+            },
+          ],
+          [
+            {
+              type: "paragraph",
+              text: [
+                "A prototype made in unity for all the puzzles within",
+                { accent: true, text: " anger" },
+              ],
+            },
+            {
+              type: "image",
+              src: sombreAngerPuzzles,
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "Level Design",
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [{ type: "image", src: sombreLevelDesignWriteup }],
+          [
+            {
+              type: "paragraph",
+              text: [
+                "With the help of my colegues, I had written down a basic structure for all the puzzles within the different stages of grief",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "Each of these stages would have a different visual layout.",
+                { accent: true, text: " Some visual clues" },
+                " about how the NPC within each stage died. ",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "As the player progresses, they will slowly find out how they had died through visual and audio cues. Which will bring them into the acceptance stage.",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "*",
+                { accent: true, text: "Note" },
+                " that not all of these made into the final version and this was just the prototyping stage.*",
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "Moodboard",
+      },
+
+      {
+        type: "image",
+        src: sombreMoodboard,
+      },
+      {
+        type: "paragraph",
+        text: "Different color scemes for each level",
+      },
+      {
+        type: "image-row",
+        items: [
+          { src: sombreDenialMood },
+          { src: sombreRageMood },
+          { src: sombreDepressionMood },
+          { src: sombreAccetanceMood },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: [
+          { accent: true, text: "Note: " },
+          "None of these art pieces were drawn by me. These were mostly taken off of pinterest or google to get an idea of the basic color schemes that we could go off of for each stage. They were further iterated on by the artists.",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Iterations",
+      },
+      {
+        type: "paragraph",
+        text: "Below are some recorded iterations I had made for the project",
+      },
+      {
+        type: "gif",
+        src: sombreMiroIterations,
+      },
+
+      // { type: "heading", text: "My responsibilities" },
+      // {
+      //   type: "list",
+      //   items: [
+      //     "I had worked on the lever system. A couple gameplay mechanics as well as bug fixing and playtesting the game.",
+      //     "Implementing different types of shadows (teleportation, lift and explosion types) Only teleportation and lift were able to get into the game because of time constraints.",
+      //     "Level Design and final layout of the first and second level (second level was not able to be in the game).",
+      //     "Playtesting and iterating on the level design while gauging how the players react to certain elements of the mechanic and writing down changes required for a particular area of the puzzle.",
+      //     "I had programmed a prototype of different shadow types and the base shadow mechanic for the project",
+      //   ],
+      // },
+
+      // { type: "paragraph", text: "" }, // blank space to separate
+
+      // { type: "heading", text: "Where it had succeeded" },
+      // {
+      //   type: "list",
+      //   items: [
+      //     "This project was able to grab the attention of our target audience, the player satisfaction varied depending on their problem solving abilities.",
+      //     "I feel like this project eventually became a huge learning experience for me as a game designer by having constant playtesting sessions and player feedback, it made me better understand how to level design for puzzle games.",
+      //     "This project was filled with technical difficulties and setbacks due to the shadow system being so challenging and time consuming to figure out. Despite of this, the team as a whole was able to persevere and it taught me how to better adapt my abilities within a team.",
+      //   ],
+      // },
+      // { type: "paragraph", text: "" }, // blank space to separate
+
+      // {
+      //   type: "heading",
+      //   text: "Challenges I faced on the project as a Designer",
+      // },
+      // {
+      //   type: "list",
+      //   items: [
+      //     "One of the most challenging parts of this project as a designer was the fact that while designing puzzles, you never know how people are going to approach it. Everyone has their own way of approaching a problem to solve.",
+      //     "I’ve also learnt the amount of playtesting needed for a puzzle platformer has to be at a much larger scale since you need to try to adhere to a good balance of people who are great at solving problems and people who take longer. I’ve also had to make sure that the level of difficulty stayed somewhat similar throughout the different types of audience.",
+      //   ],
+      // },
+    ],
+    technologies: ["Unity", "Miro", "HacknPlan"],
+    status: "completed",
+    // image: "/assets/games-pictures/concept_art_first_lvl.png",
+    image: sombrecoverPhoto,
+    thumbnail: sombreThumbnailGif,
+    teamSize: "6 People",
+    demoLink: "#",
+    githubLink: "#",
+    playLink: "#",
+    media: [
+      //{ type: 'video', src: sombreTrailer, alt: 'SOMBRE trailer' },
+    ],
+  },
+  {
+    id: 3,
+>>>>>>> 3811222 (Changed all the too big  gifs for webm format and wrote it into the project.js)
     title: "BUD'S OASIS",
     role: "role: DESIGNER / ARTIST",
     genre: "CO-OP COUCH GAME",
