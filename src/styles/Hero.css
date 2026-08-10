@@ -14,12 +14,20 @@
 .hero-container {
   max-width: 1200px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
   align-items: center;
   z-index: 2;
   position: relative;
+}
+
+.hero-main-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-content {
@@ -37,7 +45,7 @@
 .name {
   font-size: 3.5rem;
   font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   color: var(--text-primary);
   opacity: 0;
   animation: slideInLeft 0.8s ease 0.2s forwards;
@@ -48,7 +56,7 @@
 .role {
   font-size: 1.2rem;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--accent-primary);
   opacity: 0;
   animation: slideInLeft 0.8s ease 0.4s forwards;
@@ -63,7 +71,7 @@
   max-width: 500px;
   opacity: 0;
   animation: slideInLeft 0.8s ease 0.6s forwards;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .hero-buttons {
@@ -82,8 +90,111 @@
   animation: slideInRight 1s ease 0.5s forwards;
 }
 
+/* Profile Card Styles */
+.profile-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2.25rem;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(15, 15, 40, 0.3);
+  animation: slideInRight 0.8s ease 0.2s forwards;
+}
+
+.profile-image {
+  position: relative;
+  margin-bottom: 1.75rem;
+  /* animation: slideInRight 0.8s ease 0.4s forwards; */
+}
+
+.profile-image::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    transparent 60%
+  );
+  z-index: 0;
+  /* animation: slideInRight 0.8s ease 0.5s forwards; */
+}
+
+.profile-img {
+  position: relative;
+  z-index: 1;
+  width: 140px;
+  height: 140px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border: 2px solid rgba(235, 168, 56, 0.65);
+  /* animation: slideInRight 0.8s ease 0.6s forwards; */
+}
+
+.profile-caption {
+  display: grid;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
+  /* animation: slideInRight 1s ease 0.8s forwards; */
+}
+
+.profile-caption h4 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  /* animation: slideInRight 1s ease 0.7s forwards; */
+}
+
+.profile-caption p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+  /* animation: slideInRight 1s ease 0.7s forwards; */
+}
+
+/* Stat Grid Style */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stat {
+  padding: 1rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.text-accent {
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
 /* Game Controller Animation */
-.game-controller {
+/* .game-controller {
   position: relative;
   z-index: 2;
 }
@@ -98,17 +209,17 @@
     0 0 20px rgba(100, 179, 244, 0.3),
     inset 0 2px 10px rgba(255, 255, 255, 0.1);
   animation: float 3s ease-in-out infinite;
-}
+} */
 
-.d-pad {
+/* .d-pad {
   position: absolute;
   top: 30px;
   left: 40px;
   width: 30px;
   height: 30px;
-}
+} */
 
-.d-pad-up, .d-pad-down {
+/* .d-pad-up, .d-pad-down {
   position: absolute;
   width: 10px;
   height: 15px;
@@ -116,17 +227,17 @@
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
-}
+} */
 
-.d-pad-up {
+/* .d-pad-up {
   top: 0;
 }
 
 .d-pad-down {
   bottom: 0;
-}
+} */
 
-.d-pad-left, .d-pad-right {
+/* .d-pad-left, .d-pad-right {
   position: absolute;
   width: 15px;
   height: 10px;
@@ -134,35 +245,35 @@
   top: 50%;
   transform: translateY(-50%);
   border-radius: 2px;
-}
+} */
 
-.d-pad-left {
+/* .d-pad-left {
   left: 0;
 }
 
 .d-pad-right {
   right: 0;
-}
+} */
 
-.buttons {
+/* .buttons {
   position: absolute;
   top: 25px;
   right: 40px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
-}
+} */
 
-.btn-a, .btn-b, .btn-x, .btn-y {
+/* .btn-a, .btn-b, .btn-x, .btn-y {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: #c2e59c;
   box-shadow: 0 2px 5px rgba(194, 229, 156, 0.4);
   animation: pulse 2s ease-in-out infinite;
-}
+} */
 
-.btn-b {
+/* .btn-b {
   animation-delay: 0.2s;
 }
 
@@ -172,10 +283,10 @@
 
 .btn-y {
   animation-delay: 0.6s;
-}
+} */
 
 /* Floating Elements */
-.floating-elements {
+/* .floating-elements {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -201,21 +312,21 @@
   right: 10%;
   animation-delay: 1s;
   color: #c2e59c;
-}
+} 
 
 .pixel-3 {
   bottom: 30%;
   left: 20%;
   animation-delay: 2s;
   color: #ff6b6b;
-}
+} 
 
 .pixel-4 {
   top: 10%;
   right: 30%;
   animation-delay: 3s;
   color: #ffd93d;
-}
+} */
 
 /* Animations */
 @keyframes slideInLeft {
@@ -241,7 +352,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -250,7 +362,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.8;
   }
@@ -261,7 +374,8 @@
 }
 
 @keyframes floatPixel {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   25% {
@@ -282,42 +396,24 @@
     text-align: center;
     gap: 3rem;
   }
-  
+
   .name {
     font-size: 3rem;
-  }
-  
-  .controller-body {
-    width: 150px;
-    height: 90px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 80px 1rem 2rem;
-  }
-  
-  .name {
-    font-size: 2.5rem;
-  }
-  
-  .role {
-    font-size: 1.5rem;
-  }
-  
-  .hero-description {
-    font-size: 1rem;
-  }
-  
-  .hero-buttons {
+  .hero-main-row {
+    display: flex;
     flex-direction: column;
-    gap: 1rem;
   }
-  
-  .controller-body {
-    width: 120px;
-    height: 70px;
+
+  .hero-content {
+    order: 1; /* text first */
+  }
+
+  .profile-card {
+    order: 2; /* card second */
   }
 }
 
@@ -325,11 +421,11 @@
   .greeting {
     font-size: 1.2rem;
   }
-  
+
   .name {
     font-size: 2rem;
   }
-  
+
   .role {
     font-size: 1.3rem;
   }

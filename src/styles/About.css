@@ -100,16 +100,27 @@
   margin-bottom: 1.75rem;
   font-weight: 600;
   letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.skills-section {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  width: 100%;
+  flex-direction: column;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-auto-rows: auto;
   gap: 1.75rem;
+  width: 80%;
 }
 
 .skill-card {
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 14px;
   padding: 1.75rem;
@@ -227,7 +238,7 @@
   align-items: stretch;
 }
 
-.profile-card {
+/* .profile-card {
   background: var(--bg-tertiary);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
@@ -309,7 +320,7 @@
   color: var(--text-muted);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-}
+} */
 
 .accent-card {
   background: linear-gradient(145deg, rgba(235, 168, 56, 0.16), rgba(15, 15, 40, 0.95));

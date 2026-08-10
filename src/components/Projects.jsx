@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Projects.css';
 import projects from '../data/projects';
 
@@ -42,12 +43,12 @@ function toYouTubeEmbed(url) {
 }
 
 const Projects = () => {
-  const [openProjectId, setOpenProjectId] = useState(null);
+  const navigate = useNavigate();
 
   const isVideoSrc = (src) => typeof src === 'string' && /\.(mp4|webm|ogg)$/i.test(src);
 
-  const toggleOpen = (id) => {
-    setOpenProjectId((prev) => (prev === id ? null : id));
+  const openProject = (id) => {
+    navigate(`/project/${id}`);
   };
   const games = projects || [];
 
@@ -117,22 +118,13 @@ const Projects = () => {
           {games.map((game) => (
             <div
               key={game.id}
-              className={`project-card ${openProjectId === game.id ? 'project-card--expanded' : ''} ${ (game.media || game.longDescription) ? 'clickable' : '' }`}
-              onClick={() => (game.media || game.longDescription) && toggleOpen(game.id)}
+              className={`project-card ${ (game.media || game.longDescription) ? 'clickable' : '' }`}
+              onClick={() => {
+                if (game.media || game.longDescription) {
+                  openProject(game.id);
+                }
+              }}
             >
-{(game.media || game.longDescription) && openProjectId !== game.id && (
-                <button
-                  className="project-hover-action"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleOpen(game.id);
-                  }}
-                  aria-expanded={openProjectId === game.id}
->
-                  Show more
-                </button>
-              )}
-
               <div className="project-image">
                 {isVideoSrc(game.thumbnail || game.image) ? (
                   <video
@@ -203,94 +195,6 @@ const Projects = () => {
                 {/* If you want a disabled-looking button when no URL, you can render it with game.playLink === '#' */}
               </div>
 
-              {(game.longDescription || game.media) && openProjectId === game.id && (
-                <div className="project-details-inline" onClick={(e) => e.stopPropagation()}>
-                  <div className="details-body">
-                    <h4>More about {game.title}</h4>
-
-                    {Array.isArray(game.longDescription) ? (
-                      game.longDescription.map((block, i) => {
-                        if (!block) return null;
-                        if (block.type === 'heading') return <h5 key={i}>{block.text}</h5>;
-                        if (block.type === 'paragraph') return <p key={i} dangerouslySetInnerHTML={{ __html: block.text }} />;
-                        if (block.type === 'list') {
-                          return (
-                            <ul key={i}>
-                              {Array.isArray(block.items) ? block.items.map((it, j) => <li key={j}>{it}</li>) : null}
-                            </ul>
-                          );
-                        }
-                        if (block.type === 'image-row') {
-                          return (
-                            <div key={i} className="longdesc-images-row">
-                              {Array.isArray(block.items) ? block.items.map((img, idx) => (
-                                <div key={idx} className="longdesc-images-row-item">
-                                  <img src={img.src} alt={img.alt || ''} className="longdesc-image" />
-                                </div>
-                              )) : null}
-                            </div>
-                          );
-                        }
-                        if (block.type === 'image') {
-                          return (
-                            <div key={i} className="longdesc-image-wrap">
-                              <img src={block.src} alt={block.alt || ''} className="longdesc-image" />
-                            </div>
-                          );
-                        }
-                        if (block.type === 'gif') {
-                          const gifSources = Array.isArray(block.src) ? block.src : [block.src];
-                          return (
-                            <div key={i} className="longdesc-gif-wrap">
-                              {gifSources.map((src, gifIndex) => (
-                                <img
-                                  key={`${i}-${gifIndex}`}
-                                  src={src}
-                                  alt={block.alt || `gif-${i}-${gifIndex}`}
-                                  className="longdesc-gif"
-                                />
-                              ))}
-                            </div>
-                          );
-                        }
-                        if (block.type === 'video') {
-                          return (
-                            <div key={i} className="longdesc-video-wrap">
-                              <video
-                                className="longdesc-video"
-                                src={block.src}
-                                controls
-                                playsInline
-                                muted
-                                preload="metadata"
-                              />
-                            </div>
-                          );
-                        }
-                        if (block.type === 'youtube') {
-                          return (
-                            <div key={i} className="longdesc-youtube-wrap">
-                              <iframe
-                                className="longdesc-youtube"
-                                src={toYouTubeEmbed(block.src)}
-                                title={block.title || `video-${i}`}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                              />
-                            </div>
-                          );
-                        }
-                        return null;
-                      })
-                    ) : (
-                      <p style={{ marginTop: 4 }} dangerouslySetInnerHTML={{ __html: game.description }} />
-                    )}
-
-                    {renderMedia(game.media, game)}
-                  </div>
-                </div>
-              )}
             </div>
           ))}
         </div>

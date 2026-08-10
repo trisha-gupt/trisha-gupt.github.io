@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Navigation.css';
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +32,20 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const goToSection = (sectionId) => {
+    if (location.pathname !== '/') {
+      // Not on the home page — navigate there first
+      navigate('/');
+      // Wait for the home page to render before scrolling
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100); // small delay so the DOM exists after navigation
+    } else {
+      // Already home — just scroll
+      scrollToSection(sectionId);
+    }
+  };
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -47,7 +65,7 @@ const Navigation = () => {
           <li>
             <button 
               className={`nav-link ${activeSection === 'hero' ? 'active' : ''}`}
-              onClick={() => scrollToSection('hero')}
+              onClick={() => goToSection('hero')}
             >
               Home
             </button>
@@ -55,7 +73,7 @@ const Navigation = () => {
           <li>
             <button 
               className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
-              onClick={() => scrollToSection('projects')}
+              onClick={() => goToSection('projects')}
             >
               Games
             </button>
@@ -63,7 +81,7 @@ const Navigation = () => {
           <li>
             <button 
               className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-              onClick={() => scrollToSection('about')}
+              onClick={() => goToSection('about')}
             >
               About
             </button>
