@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import projects from "../data/projects";
 import "../styles/Projects.css";
 
@@ -145,6 +145,7 @@ function renderBlock(block, key, handleMediaExpand) {
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
+  const navigate = useNavigate();
   const game = projects.find((item) => String(item.id) === projectId);
   const [lightboxMedia, setLightboxMedia] = useState(null);
   const [showSidebar, setShowSidebar] = useState(false);
@@ -189,9 +190,13 @@ const ProjectDetail = () => {
           <p className="section-subtitle">
             The project you are looking for does not exist.
           </p>
-          <Link to="/" className="itch-button">
+          <button
+            type="button"
+            className="itch-button"
+            onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}
+          >
             Back to projects
-          </Link>
+          </button>
         </div>
       </section>
     );
@@ -528,6 +533,18 @@ const ProjectDetail = () => {
                     dangerouslySetInnerHTML={{ __html: game.description }}
                   />
                 )}
+                <div className="project-detail-back-wrap">
+                  <Link
+                    to="/"
+                    className="itch-button project-detail-back"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate('/', { state: { scrollTo: 'projects' } });
+                    }}
+                  >
+                    ← Back to projects
+                  </Link>
+                </div>
               </div>
             )}
           </article>

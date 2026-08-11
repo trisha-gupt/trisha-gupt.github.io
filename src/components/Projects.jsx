@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Projects.css';
 import projects from '../data/projects';
 
@@ -44,6 +44,27 @@ function toYouTubeEmbed(url) {
 
 const Projects = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const target = (location && location.state && location.state.scrollTo) || location.hash;
+    if (!target) return;
+    const shouldScroll = target === 'projects' || String(target).includes('projects');
+    if (!shouldScroll) return;
+    // Temporarily disable any CSS smooth-scrolling to force an immediate jump
+    const prevBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    const t = setTimeout(() => {
+      const el = document.getElementById('projects');
+      if (el) el.scrollIntoView();
+      // restore previous behavior
+      document.documentElement.style.scrollBehavior = prevBehavior || '';
+    }, 50);
+    return () => {
+      clearTimeout(t);
+      document.documentElement.style.scrollBehavior = prevBehavior || '';
+    };
+  }, [location]);
 
   const isVideoSrc = (src) => typeof src === 'string' && /\.(mp4|webm|ogg)$/i.test(src);
 
@@ -202,5 +223,7 @@ const Projects = () => {
     </section>
   );
 };
+
+// scrolling is handled inside the Projects component's useEffect above
 
 export default Projects;
