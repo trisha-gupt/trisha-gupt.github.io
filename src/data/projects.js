@@ -82,7 +82,12 @@ const projects = [
           [
             {
               type: "paragraph",
-              text: "I worked on Dino Duck Mayhem as a part of my end of year internship as a game designer and developer, where I attended daily dev scrums and was closely involved in a team of 4 developers",
+              text: [
+                "I worked on Dino Duck Mayhem as a part of my end of year internship as a game designer and developer, where I attended",
+                { accent: true, text: " daily dev scrums" },
+                " and was closely involved in a team of",
+                { accent: true, text: " 4 developers" },
+              ],
             },
             {
               type: "paragraph",
@@ -112,6 +117,14 @@ const projects = [
             },
           ],
         ],
+      },
+
+      {
+        type: "steam-widget",
+        appid: "3676840",
+        widgetType: "store",
+        width: 646,
+        height: 190,
       },
     ],
     technologies: ["Godot", "Miro", "Source Tree", "Git"],
@@ -149,7 +162,9 @@ const projects = [
             { type: "heading", text: "Project details" },
             {
               type: "paragraph",
-              text: "This game was made over a duration of four months for a group project class. The game initially had four stages, where each stage correlated to the stages of grief. However, due to time constraints, we were only able to complete one stage -Denial- as a vertical slice.",
+              text: ["This game was made over a duration of ",
+                {accent: true, text: "four months "},
+                "for a group project class. The game initially had four stages, where each stage correlated to the stages of grief. However, due to time constraints, we were only able to complete one stage -Denial- as a vertical slice."],
             },
             {
               type: "paragraph",
@@ -207,14 +222,34 @@ const projects = [
             {
               type: "paragraph",
               text: [
-                "This is the",
-                { accent: true, text: " introduction of the core mechanic. " },
-                "The player is expected to use the shadow manipulation ability to get out of the pit and progress further into the level.",
+                "This area is where players are",
+                { accent: true, text: " introduced "},"to the ",{accent: true, text: "core mechanic. " },
+                "They are expected to use their abilities to get out of the pit and progress further.",
               ],
             },
             {
               type: "paragraph",
-              text: "The player is introduced to an NPC who also acts as a tutorial. (inspired by Toriel from the game Undertale). They tell you what controls you need to use in order to activate your ability.",
+              text: [ "• ",
+                "Challenges", 
+                // " This is a ",
+                // {accent: true, text: "new mechanic "},
+                // " which players were ",
+                // {accent: true, text: "unable to figure out"}, " by messing around with the controls "
+              ]
+            },
+            {
+              type: "tag",
+              tags: ["New Mechanic", "Controls Unclear","Players Confused",]
+            },
+            {
+              type: "paragraph",
+              text: ["• ", "Solution : ","Given the time we had, I thought of creating an",
+                {accent: true, text: " NPC"},
+                " who acts as a ",
+                {accent: true, text: "tutorial "},
+                // "(inspired by Toriel from Undertale). They tell you what controls you need to use."
+                ". They tell you the controls needed."
+                ],
             },
           ],
         ],
@@ -286,6 +321,10 @@ const projects = [
                 "They are expected to use this box as leverage to jump over the deadly vines to complete a small obstacle course.",
               ],
             },
+            {
+              type: "tag",
+              tags: ["Repetition Of Mechanic", "Building Foundation"]
+            }
           ],
         ],
       },
@@ -305,7 +344,7 @@ const projects = [
           [
             {
               type: "heading",
-              text: "NPC Intro + Puzzles",
+              text: "Light Sources",
             },
             {
               type: "paragraph",
@@ -318,6 +357,10 @@ const projects = [
                 { accent: true, text: " place a light source" },
                 " where they wish to create a shadow they need, and are expected to use this information to solve the next puzzle.",
               ],
+            },
+            {
+              type: "tag",
+              tags: ["Narrative Introduction", "New Mechanic"]
             },
           ],
           [
@@ -348,7 +391,7 @@ const projects = [
             },
             {
               type: "paragraph",
-              text: "The pressure plate will be reccuring for the player to get used to the mechanics.",
+              text: "The pressure plate will be reccuring for the player to get used to this.",
             },
           ],
           [
@@ -372,11 +415,11 @@ const projects = [
             {
               type: "paragraph",
               text: [
-                "The player is pointed towards their ",
-                { accent: true, text: "orbs" },
-                ". Orbs show you how many shadows the player can cast at a time as a ",
-                { accent: true, text: "diegetic UI. " },
-                "A simple puzzle is used to demonstrate the use of multiple shadows",
+                "Orbs appear around the player when they have stood ",
+                { accent: true, text: "still " },
+                "for a short amount of time. They indicate ",
+                { accent: true, text: "the amount of shadows " },
+                " the players can cast. A puzzle is used to demonstrate the use of multiple shadows",
               ],
             },
             {
@@ -415,7 +458,7 @@ const projects = [
             },
             {
               type: "paragraph",
-              text: "This allows repetetion for the player. Where they are able to get more comfortable with the puzzles where there's not much intensivity",
+              text: "This allows repetition for the player. Where they are able to get more comfortable with the puzzles where there's not much intensivity.",
             },
           ],
           [
