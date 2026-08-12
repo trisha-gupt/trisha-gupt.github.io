@@ -85,6 +85,23 @@ function renderBlock(block, key, handleMediaExpand) {
           {renderText(block.text)}
         </p>
       );
+    case "tag": {
+      const tagItems = Array.isArray(block.tags)
+        ? block.tags
+        : Array.isArray(block.items)
+        ? block.items
+        : [];
+
+      return (
+        <div key={key} className="longdesc-tags">
+          {tagItems.map((tag, tagIndex) => (
+            <span key={tagIndex} className="longdesc-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      );
+    }
     case "image":
       return (
         <div key={key} className="longdesc-image-wrap">
@@ -388,6 +405,23 @@ const ProjectDetail = () => {
                             ? block.items.map((it, j) => <li key={j}>{it}</li>)
                             : null}
                         </ul>
+                      );
+                    }
+                    if (block.type === "tag") {
+                      const tagItems = Array.isArray(block.tags)
+                        ? block.tags
+                        : Array.isArray(block.items)
+                        ? block.items
+                        : [];
+
+                      return (
+                        <div key={i} className="longdesc-tags">
+                          {tagItems.map((tag, tagIndex) => (
+                            <span key={tagIndex} className="longdesc-tag">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       );
                     }
                     if (block.type === "columns") {
