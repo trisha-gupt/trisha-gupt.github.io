@@ -37,7 +37,7 @@ import sombreArea1IntroPuzzle from "../assets/games-pictures/sombre-prototype/so
 import sombreArea2outlook from "../assets/games-pictures/sombre-prototype/Area_2_outlook.gif";
 import sombreArea2orbintro from "../assets/games-pictures/sombre-prototype/Area_2_shadow_orbs_2.gif";
 import sombreArea2buttonintro from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_3_button_intro.webm"; /*CONVERTED */
-import sombreArea2pianopuzzle from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_2_piano_puzzle.webm"; /*CONVERTED WITH ERROR */
+import sombreArea2pianopuzzle from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Piano_puzzle.webm"; /*CONVERTED WITH ERROR */
 import sombreArea2finalpuzzle from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_2_final_puzzle.webm"; /*CONVERTED */
 //Area 3 gifs
 import sombreArea3outlook from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/Area_3_outlook.webm"; /*CONVERTED */
@@ -54,6 +54,7 @@ import sombreDenialMood from "../assets/games-pictures/sombre-prototype/sombre-I
 import sombreDepressionMood from "../assets/games-pictures/sombre-prototype/sombre-Images/depression_mood.png";
 import sombreRageMood from "../assets/games-pictures/sombre-prototype/sombre-Images/anger_mood.png";
 import sombreAccetanceMood from "../assets/games-pictures/sombre-prototype/sombre-Images/acceptance_mood.png";
+import sombreDenialLevelDesign from "../assets/games-pictures/sombre-prototype/Denial_level_design.png";
 
 //DinoDuckMayhem Assets - Cover
 import ddmCoverPhoto from "../assets/games-pictures/Internship/Mayhem_cover.webm"; /* CONVERT */
@@ -162,9 +163,11 @@ const projects = [
             { type: "heading", text: "Project details" },
             {
               type: "paragraph",
-              text: ["This game was made over a duration of ",
-                {accent: true, text: "four months "},
-                "for a group project class. The game initially had four stages, where each stage correlated to the stages of grief. However, due to time constraints, we were only able to complete one stage -Denial- as a vertical slice."],
+              text: [
+                "This game was made over a duration of ",
+                { accent: true, text: "four months " },
+                "for a group project class. The game initially had four stages, where each stage correlated to the stages of grief. However, due to time constraints, we were only able to complete one stage -Denial- as a vertical slice.",
+              ],
             },
             {
               type: "paragraph",
@@ -223,33 +226,39 @@ const projects = [
               type: "paragraph",
               text: [
                 "This area is where players are",
-                { accent: true, text: " introduced "},"to the ",{accent: true, text: "core mechanic. " },
+                { accent: true, text: " introduced " },
+                "to the ",
+                { accent: true, text: "core mechanic. " },
                 "They are expected to use their abilities to get out of the pit and progress further.",
               ],
             },
             {
               type: "paragraph",
-              text: [ "• ",
-                "Challenges", 
+              text: [
+                "",
+                "Challenges",
                 // " This is a ",
                 // {accent: true, text: "new mechanic "},
                 // " which players were ",
                 // {accent: true, text: "unable to figure out"}, " by messing around with the controls "
-              ]
+              ],
             },
             {
               type: "tag",
-              tags: ["New Mechanic", "Controls Unclear","Players Confused",]
+              tags: ["New Mechanic", "Controls Unclear", "Players Confused"],
             },
             {
               type: "paragraph",
-              text: ["• ", "Solution : ","Given the time we had, I thought of creating an",
-                {accent: true, text: " NPC"},
+              text: [
+                "",
+                "Solution : ",
+                "Given the time we had, I thought of creating an",
+                { accent: true, text: " NPC" },
                 " who acts as a ",
-                {accent: true, text: "tutorial "},
+                { accent: true, text: "tutorial " },
                 // "(inspired by Toriel from Undertale). They tell you what controls you need to use."
-                ". They tell you the controls needed."
-                ],
+                ". They tell you the controls needed.",
+              ],
             },
           ],
         ],
@@ -323,8 +332,8 @@ const projects = [
             },
             {
               type: "tag",
-              tags: ["Repetition Of Mechanic", "Building Foundation"]
-            }
+              tags: ["Repetition Of Mechanic", "Building Foundation"],
+            },
           ],
         ],
       },
@@ -360,7 +369,7 @@ const projects = [
             },
             {
               type: "tag",
-              tags: ["Narrative Introduction", "New Mechanic"]
+              tags: ["Narrative Introduction", "Light Pick-up"],
             },
           ],
           [
@@ -393,6 +402,10 @@ const projects = [
               type: "paragraph",
               text: "The pressure plate will be reccuring for the player to get used to this.",
             },
+            {
+              type: "tag",
+              tags: ["Very Low Intensity", "New Mechanic"],
+            },
           ],
           [
             {
@@ -419,12 +432,23 @@ const projects = [
                 { accent: true, text: "still " },
                 "for a short amount of time. They indicate ",
                 { accent: true, text: "the amount of shadows " },
-                " the players can cast. A puzzle is used to demonstrate the use of multiple shadows",
+                " the player can cast. A puzzle is used to demonstrate the use of multiple shadows",
               ],
             },
             {
               type: "paragraph",
-              text: "Once a shadow is placed, the orbs update to the remaining amount of shadows a player has.",
+              text: [
+                { accent: true, text: "Experimental learning " },
+                "is crutial to this area. Players tend to replay this area a couple times to understand how the shadow mechanics work.",
+              ],
+            },
+            {
+              type: "tag",
+              tags: [
+                "Higher Difficulty",
+                "Experimental Learning",
+                "Easy to Retry",
+              ],
             },
           ],
           [
@@ -459,6 +483,10 @@ const projects = [
             {
               type: "paragraph",
               text: "This allows repetition for the player. Where they are able to get more comfortable with the puzzles where there's not much intensivity.",
+            },
+            {
+              type: "tag",
+              tags: ["Low Intensity", "Onboarding"],
             },
           ],
           [
@@ -506,6 +534,13 @@ const projects = [
                 { accent: true, text: "different colored lights and platform" },
               ],
             },
+            {
+              type: "tag",
+              tags: [
+                "Colored Lights = Different Shadow Abilities",
+                "New Major Mechanic",
+              ],
+            },
           ],
         ],
       },
@@ -543,6 +578,10 @@ const projects = [
                 "which gives them room to play around with the mechanics and think of an approach to solve it.",
               ],
             },
+            {
+              type: "tag",
+              tags: ["Understand Mechanics", "Play Around", "High Difficulty"],
+            },
           ],
         ],
       },
@@ -565,12 +604,22 @@ const projects = [
             {
               type: "paragraph",
               text: [
-                "The final puzzle consists of a simple lever mechnaic and the use of just the teleportation shadow.",
+                "The final puzzle consists of a ",
+                { accent: true, text: "simple lever mechnaic" },
+                " and the use of just the teleportation shadow.",
               ],
             },
             {
               type: "paragraph",
-              text: "This is meant to contrast the previous defficulty spike and make the player feel releaved before finally concluding the game.",
+              text: [
+                "This is meant to contrast the previous defficulty spike and make the player feel ",
+                { accent: true, text: "relieved " },
+                "before finally concluding the game.",
+              ],
+            },
+            {
+              type: "tag",
+              tags: ["Relieving", "Low Intensity Puzzle"],
             },
           ],
         ],
@@ -602,11 +651,19 @@ const projects = [
             },
             {
               type: "paragraph",
-              text: "This was the very first working prototype of the core mechanic. It is also the first mechanic that the player is introduced to.",
+              text: [
+                "This was the very ",
+                { accent: true, text: "first working prototype " },
+                "of the core mechanic. It is also the first mechanic that the player is introduced to.",
+              ],
             },
             {
               type: "paragraph",
               text: "Most of the gameplay revolves around placing the shadows in the right spot. The player is introduced to new shadow abilities as the game progresses.",
+            },
+            {
+              type: "tag",
+              tags: ["Light Math", "C# Unity", "Buggy"],
             },
           ],
         ],
@@ -628,6 +685,10 @@ const projects = [
             {
               type: "paragraph",
               text: "This ability is introduced halfway through the first stage, this is done so the players can get used to the mechanics and later on, they are expected to combine these abilities to solve some puzzles.",
+            },
+            {
+              type: "tag",
+              tags: ["Used Scriptable Objects"],
             },
           ],
 
@@ -660,7 +721,8 @@ const projects = [
             {
               type: "paragraph",
               text: [
-                "This was the third variant for this shadow type, which never got used in the final version due to time constraints.",
+                "This was the third variant for this shadow type, which never got used in the final version due to ",
+                { accent: true, text: "time constraints." },
               ],
             },
             {
@@ -671,55 +733,15 @@ const projects = [
                 " which will leave some debris behind. This debris can be picked up and used for pressure plates, etc.",
               ],
             },
-          ],
-        ],
-      },
-
-      { type: "heading", variant: "secondary", text: "Gameplay Layout" },
-
-      {
-        type: "paragraph",
-        text: [
-          "During prototyping, I had come up with two levels. The idea was to take the player through the ",
-          { accent: true, text: "different stages of grief " },
-          "where they would meet an NPC representing their stage of grief.",
-          " The two images shown below represents the ",
-          { accent: true, text: "layout of each puzzle" },
-          " in the denial section as well as anger. Though anger was never able to make it into the final version due to time constraints",
-        ],
-      },
-
-      {
-        type: "columns",
-        items: [
-          [
             {
-              type: "paragraph",
-              text: [
-                "A prototype made in unity for all the puzzles within",
-                { accent: true, text: " denial" },
-              ],
-            },
-            {
-              type: "image",
-              src: sombreDenialPuzzles,
-            },
-          ],
-          [
-            {
-              type: "paragraph",
-              text: [
-                "A prototype made in unity for all the puzzles within",
-                { accent: true, text: " anger" },
-              ],
-            },
-            {
-              type: "image",
-              src: sombreAngerPuzzles,
+              type: "tag",
+              tags: ["Unused", "Fun to Make!"],
             },
           ],
         ],
       },
+
+      //Level Design
 
       {
         type: "heading",
@@ -736,7 +758,15 @@ const projects = [
             {
               type: "paragraph",
               text: [
-                "With the help of my colegues, I had written down a basic structure for all the puzzles within the different stages of grief",
+                "The idea was to have the player go through",
+                { accent: true, text: " stages of gief" },
+                ". They will discover the narrative as they progress further.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "With the help of my colegues, I had written down a basic structure for all the puzzles within the different stages.",
               ],
             },
             {
@@ -751,12 +781,150 @@ const projects = [
               type: "paragraph",
               text: "As the player progresses, they will slowly find out how they had died through visual and audio cues. Which will bring them into the acceptance stage.",
             },
+            // {
+            //   type: "paragraph",
+            //   text: [
+            //     "*",
+            //     { accent: true, text: "Note" },
+            //     " that not all of these made into the final version and this was just the prototyping stage.*",
+            //   ],
+            // },
+            {
+              type: "tag",
+              tags: [
+                "Player Going Through Grief",
+                "Environmental Storytelling",
+                "NPC",
+                "Audio Cues -> Narrative",
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "What actually made it within game?",
+      },
+      {
+        type: "columns",
+        items: [
+          [
             {
               type: "paragraph",
               text: [
-                "*",
-                { accent: true, text: "Note" },
-                " that not all of these made into the final version and this was just the prototyping stage.*",
+                "I quickly realized that we had to ",
+                { accent: true, text: "scope down " },
+                "since every stage required new assets, new NPC's, more level design. This was simply not possible with 3 months of production. We decided to have a meeting and scoped down to only",
+                { accent: true, text: " denial and anger." },
+              ],
+            },
+          ],
+          [
+            {
+              type: "paragraph",
+              text: [
+                "This also meant we could Spend more time with perfecting the level with more puzzles and fine tune the learning curve.. However, even with scoping down, Only denial was able to make it within the final version, which resulted in me having more awareness in ",
+                { accent: true, text: "time management " },
+                "within projects.",
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "image",
+        src: [sombreDenialLevelDesign],
+      },
+
+      //Gameplay Layout
+
+      { type: "heading", variant: "secondary", text: "Gameplay Layout" },
+
+      {
+        type: "paragraph",
+        text: [
+          "During prototyping, I had prototyped two levels. The idea was to take the player through the ",
+          { accent: true, text: "different stages of grief " },
+          "where they would meet an NPC representing their stage of grief.",
+          " The two images shown below represents the ",
+          { accent: true, text: "layout of each puzzle" },
+          " in the denial section as well as anger. Though anger was never able to make it into the final version due to time constraints",
+        ],
+      },
+
+      {
+        type: "columns",
+        variant: "text-left",
+        items: [
+          [
+            {
+              type: "heading",
+              text: "Denial Prototype",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "These are the images of the prototype used to ",
+                { accent: true, text: "Playtest" },
+                " the puzzles present within the first stage of the game.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "The very first iteration of the shadow system was used to playtest these puzzles which led to them having ",
+                { accent: true, text: "bad game feel " },
+                "since it still had quite a few bugs where the shadows didn't always work.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "Though, playtestng was able to provide integral information about the learning curve of the players.",
+            },
+          ],
+          [
+            {
+              type: "image",
+              src: sombreDenialPuzzles,
+            },
+          ],
+        ],
+      },
+      // {
+      //   type: "heading",
+      //   variant: "secondary",
+      //   text: "Anger Prototype",
+      // },
+
+      // {
+      //   type: "image",
+      //   src: sombreAngerPuzzles,
+      // },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "image",
+              src: sombreAngerPuzzles,
+            },
+          ],
+          [
+            {
+              type: "heading",
+              text: "Anger Prototype",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "I was able to create a quick level design blockout with primitive shapes in a ",
+                { accent: true, text: "couple hours" },
+                ". The puzzles were prototyped based on the brainstormed ideations. These were then iterated based on a couple playtestings, however, more piority was given to the denial stage during production.",
               ],
             },
           ],
@@ -805,6 +973,35 @@ const projects = [
       {
         type: "gif",
         src: sombreMiroIterations,
+      },
+
+      {
+        type: "heading",
+        text: "Post Mortem",
+      },
+
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: [
+                "Looking back at this project, I am happy with the final result. though I feel as though my time and scope management needs to be improved, this project has taught me crutial skills about managing my time effectively. I've now learnt to be aware about the time a certain mechanic or a feature may take to finish through time tracking.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "Given the circumstances, I think we were able to produce a fun experience for the players, though the story was not completed, most of our playtesters felt as though the game had a unique concept and I'm proud to have taken it further and saw how it could look like",
+              ],
+            },
+          ],
+          [{
+            type: "miro",
+            src: "https://miro.com/app/board/uXjVJe7zrh8=/"
+          }],
+        ],
       },
 
       // { type: "heading", text: "My responsibilities" },
