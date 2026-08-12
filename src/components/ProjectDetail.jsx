@@ -44,6 +44,20 @@ function toYouTubeEmbed(url) {
   }
 }
 
+function toMiroEmbed(url) {
+  if (!url) return url;
+  const u = String(url).trim();
+  try {
+    if (u.includes("miro.com")) return u;
+    // If user provided a bare board id, build a basic embed URL
+    const idMatch = u.match(/^[A-Za-z0-9_-]+$/);
+    if (idMatch) return `https://miro.com/app/embed/${u}/`;
+    return u;
+  } catch (e) {
+    return url;
+  }
+}
+
 function slugify(text) {
   return String(text || "")
     .replace(/<[^>]*>/g, "")
@@ -155,6 +169,19 @@ function renderBlock(block, key, handleMediaExpand) {
         </div>
       );
     }
+    case "miro":
+      return (
+        <div key={key} className="longdesc-miro-wrap">
+          <iframe
+            className="longdesc-miro expandable-media"
+            src={toMiroEmbed(block.src)}
+            title={block.title || `miro-${key}`}
+            frameBorder="0"
+            allow="clipboard-write; encrypted-media; fullscreen"
+            allowFullScreen
+          />
+        </div>
+      );
     default:
       return null;
   }
@@ -554,6 +581,20 @@ const ProjectDetail = () => {
                             title={block.title || `video-${i}`}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                      );
+                    }
+                    if (block.type === "miro") {
+                      return (
+                        <div key={i} className="longdesc-miro-wrap">
+                          <iframe
+                            className="longdesc-miro expandable-media"
+                            src={toMiroEmbed(block.src)}
+                            title={block.title || `miro-${i}`}
+                            frameBorder="0"
+                            allow="clipboard-write; encrypted-media; fullscreen"
                             allowFullScreen
                           />
                         </div>

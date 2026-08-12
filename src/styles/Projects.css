@@ -486,6 +486,7 @@
 .longdesc-image-wrap,
 .longdesc-video-wrap,
 .longdesc-youtube-wrap,
+.longdesc-miro-wrap,
 .longdesc-images-row {
   margin: 1rem 0 0;
 }
@@ -503,7 +504,8 @@
 .longdesc-image,
 .longdesc-gif,
 .longdesc-video,
-.longdesc-youtube {
+.longdesc-youtube,
+.longdesc-miro {
   width: 75%;
   border-radius: 12px;
   display: block;
