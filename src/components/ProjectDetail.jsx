@@ -525,6 +525,68 @@ const ProjectDetail = () => {
                         </div>
                       );
                     }
+                    if (block.type === "steam") {
+                      return (
+                        <div key={i} className="longdesc-steam-wrap">
+                          <div className="longdesc-steam-card">
+                            <div className="longdesc-steam-card-header">
+                              <div>
+                                <p className="longdesc-steam-card-title">
+                                  {block.title || "Steam Store Preview"}
+                                </p>
+                                {block.subtitle && (
+                                  <p className="longdesc-steam-card-subtitle">
+                                    {renderText(block.subtitle)}
+                                  </p>
+                                )}
+                              </div>
+                              <span className="longdesc-steam-card-badge">Steam</span>
+                            </div>
+                            {block.description && (
+                              <p className="longdesc-steam-card-description">
+                                {renderText(block.description)}
+                              </p>
+                            )}
+                            {block.image && (
+                              <div className="longdesc-steam-card-image-wrap">
+                                <img
+                                  src={block.image}
+                                  alt={block.imageAlt || "Steam preview"}
+                                  className="longdesc-steam-card-image"
+                                />
+                              </div>
+                            )}
+                            <a
+                              href={block.src}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="longdesc-steam-card-link"
+                            >
+                              Open Steam page
+                            </a>
+                            <p className="longdesc-steam-card-note">
+                              Steam blocks direct iframe embeds, so this preview card links to the store page.
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    }
+                    if (block.type === "steam-widget") {
+                      const steamSrc = block.src || `https://store.steampowered.com/widget/${block.appid}/`;
+                      return (
+                        <div key={i} className="longdesc-steam-widget-wrap">
+                          <iframe
+                            className="longdesc-steam-iframe"
+                            src={steamSrc}
+                            title={block.title || "Steam widget"}
+                            frameBorder="0"
+                            width={block.width || 646}
+                            height={block.height || 190}
+                            allowFullScreen
+                          />
+                        </div>
+                      );
+                    }
                     return null;
                   })
                 ) : (

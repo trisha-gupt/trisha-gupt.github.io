@@ -512,6 +512,115 @@
   border: 1px solid var(--border-color);
 }
 
+.longdesc-steam-wrap {
+  margin: 1rem 0 0;
+}
+
+.longdesc-steam-card {
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.longdesc-steam-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.longdesc-steam-card-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.longdesc-steam-card-subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.longdesc-steam-card-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #171a21;
+  color: #fff;
+}
+
+.longdesc-steam-card-description {
+  margin: 0 0 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.longdesc-steam-card-image-wrap {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.longdesc-steam-card-image {
+  width: 100%;
+  max-width: 620px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.longdesc-steam-card-link {
+  display: inline-block;
+  padding: 0.9rem 1.25rem;
+  background: #171a21;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.longdesc-steam-card-link:hover {
+  opacity: 0.93;
+}
+
+.longdesc-steam-widget-wrap {
+  margin: 1rem 0 0;
+  background: var(--bg-primary);
+  border-radius: 16px;
+  padding: 0.75rem;
+}
+
+.longdesc-steam-iframe,
+.steam-widget {
+  width: 100%;
+  max-width: 760px;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  background: var(--bg-primary);
+  display: block;
+}
+
+.longdesc-steam-card-note {
+  margin: 0.85rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
 .longdesc-images-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
