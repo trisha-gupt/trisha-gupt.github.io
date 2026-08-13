@@ -43,7 +43,6 @@ function toYouTubeEmbed(url) {
     return url;
   }
 }
-
 function toMiroEmbed(url) {
   if (!url) return url;
   const u = String(url).trim();
@@ -103,8 +102,8 @@ function renderBlock(block, key, handleMediaExpand) {
       const tagItems = Array.isArray(block.tags)
         ? block.tags
         : Array.isArray(block.items)
-        ? block.items
-        : [];
+          ? block.items
+          : [];
 
       return (
         <div key={key} className="longdesc-tags">
@@ -165,6 +164,30 @@ function renderBlock(block, key, handleMediaExpand) {
                 />
               )}
             </button>
+          ))}
+        </div>
+      );
+    }
+    case "image-row": {
+      const items = Array.isArray(block.items) ? block.items : [];
+      return (
+        <div key={key} className="longdesc-images-row">
+          {items.map((img, idx) => (
+            <div key={idx} className="longdesc-images-row-item">
+              <button
+                type="button"
+                className="expandable-media-preview"
+                onClick={() =>
+                  handleMediaExpand({ type: "image", src: img.src })
+                }
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt || ""}
+                  className="longdesc-image expandable-media"
+                />
+              </button>
+            </div>
           ))}
         </div>
       );
@@ -237,7 +260,7 @@ const ProjectDetail = () => {
           <button
             type="button"
             className="itch-button"
-            onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}
+            onClick={() => navigate("/", { state: { scrollTo: "projects" } })}
           >
             Back to projects
           </button>
@@ -438,8 +461,8 @@ const ProjectDetail = () => {
                       const tagItems = Array.isArray(block.tags)
                         ? block.tags
                         : Array.isArray(block.items)
-                        ? block.items
-                        : [];
+                          ? block.items
+                          : [];
 
                       return (
                         <div key={i} className="longdesc-tags">
@@ -615,7 +638,9 @@ const ProjectDetail = () => {
                                   </p>
                                 )}
                               </div>
-                              <span className="longdesc-steam-card-badge">Steam</span>
+                              <span className="longdesc-steam-card-badge">
+                                Steam
+                              </span>
                             </div>
                             {block.description && (
                               <p className="longdesc-steam-card-description">
@@ -640,14 +665,17 @@ const ProjectDetail = () => {
                               Open Steam page
                             </a>
                             <p className="longdesc-steam-card-note">
-                              Steam blocks direct iframe embeds, so this preview card links to the store page.
+                              Steam blocks direct iframe embeds, so this preview
+                              card links to the store page.
                             </p>
                           </div>
                         </div>
                       );
                     }
                     if (block.type === "steam-widget") {
-                      const steamSrc = block.src || `https://store.steampowered.com/widget/${block.appid}/`;
+                      const steamSrc =
+                        block.src ||
+                        `https://store.steampowered.com/widget/${block.appid}/`;
                       return (
                         <div key={i} className="longdesc-steam-widget-wrap">
                           <iframe
@@ -676,7 +704,7 @@ const ProjectDetail = () => {
                     className="itch-button project-detail-back"
                     onClick={(e) => {
                       e.preventDefault();
-                      navigate('/', { state: { scrollTo: 'projects' } });
+                      navigate("/", { state: { scrollTo: "projects" } });
                     }}
                   >
                     ← Back to projects

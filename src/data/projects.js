@@ -58,6 +58,13 @@ import sombreDenialLevelDesign from "../assets/games-pictures/sombre-prototype/D
 
 //DinoDuckMayhem Assets - Cover
 import ddmCoverPhoto from "../assets/games-pictures/Internship/Mayhem_cover.webm"; /* CONVERT */
+//DDM - Player Retention
+import ddmPlayerRetention from "../assets/games-pictures/Internship/DDM-images/Player_retention_curve.png";
+import ddmNarrativeBook from "../assets/games-pictures/Internship/DDM-images/Narrative Design book.jpg";
+import ddmNarrativeStructure from "../assets/games-pictures/Internship/DDM-images/Narrative_structure.png";
+import ddmDucklingImplementation from "../assets/games-pictures/Internship/DDM-images/Screenshot_Duckling_implementation.png";
+import ddmDucklingBalancing from "../assets/games-pictures/Internship/DDM-images/Screenshot_Duckling_balancing.png";
+import ddmDuckosaurusGames from "../assets/games-pictures/Internship/DDM-images/DuckoaurusGames.svg";
 
 // shopper's havoc assets
 import shoppershavocGameplayLoop from "../assets/games-pictures/shoppers-havoc/shoppers-havoc-gameplay-loop.png";
@@ -106,14 +113,13 @@ const projects = [
                 "I was in charge of a big part of the ",
                 {
                   accent: true,
-                  text: "Design changes proposals and Narrative Design",
+                  text: "Design changes and Narrative Design",
                 },
-                " (through code), and making sure the game was ",
+                " including making sure the game was ",
                 {
                   accent: true,
                   text: " fun to play",
                 },
-                ". This involved a couple of iterations for the camera and controller.",
               ],
             },
           ],
@@ -127,6 +133,344 @@ const projects = [
         width: 646,
         height: 190,
       },
+
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "My main tasks involved the following :-",
+      },
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "tag",
+              tags: [
+                "Player Retention Studies",
+                "Data-Driven Design Proposals",
+                "Narrative Design",
+                "Design Implementation",
+                "UI Layouts",
+                "Bug Fixes",
+                "QA Testing",
+                "Game Balancing",
+              ],
+            },
+          ],
+          [
+            {
+              type: "paragraph",
+              text: [
+                "The team needed game designers on the project (Dino Duck Mayhem) since they had been experiencing a ",
+                { accent: true, text: "drop" },
+                " in",
+                { accent: true, text: " player retention" },
+                ". My vision was to understand their ",
+                { accent: true, text: "core desgin pillars " },
+                "and create a game that would keep players ",
+                { accent: true, text: "engaged " },
+                "throughout multiple runs.",
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Engagement Analysis",
+      },
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: [
+                "One of my",
+                { text: " challenges" },
+                " was to find out when players started losing interest in the game, and how should we approach",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "And so, I decide on going through multiple ",
+                { text: "playthroughs " },
+                "of twitch streamers playing DDM (Dino-Duck-Mayhem) and compare it to other survivor like games, for example, Vampire survivor.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "I had created a retention curve comparing an average vampire survivor player, and a DDM player. It is important to note that player's reactions and retention varies on a multitude of factors, and so, I looked into players who were familiar with vampire survivor and others who were casual players to understand core differences.",
+            },
+            {
+              type: "paragraph",
+              text: "From this information, I wrote down suggestions that DDM could implement and noted them down on the miro board below -",
+            },
+          ],
+          [
+            {
+              type: "image",
+              src: [ddmPlayerRetention],
+            },
+          ],
+        ],
+      },
+      {
+        type: "miro",
+        src: "https://miro.com/app/board/uXjVG--uNas=/?share_link_id=977362096960",
+      },
+      {
+        type: "heading",
+        text: "Narrative Exploration",
+      },
+
+      {
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: [
+                "Through a meeting with the supervisor, we came to the conclusion that the game would benefit from a ",
+                { text: "narrative element." },
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "Learning proper practice for narrative design was an enjoyable process. I hold a special interest for narrative design, and so, I was held ",
+                "responsible ",
+                "for all the ",
+                { text: "narrative choices." },
+                ' My supervisor had given me a book to reference by "Hanna Nicklin" who approaches narrative design though a structured methodology mostly involving ',
+                { text: "documents and forms" },
+                ".",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "Some ",
+                { text: "challenges" },
+                " I faced involved adding a story over a pre-existing game and linking the gameplay elements to fit the story without adding too many new ones.",
+              ],
+            },
+            {
+              type: "tag",
+              tags: [
+                "Creating Room for Story",
+                "Linking existing Gameplay to Story",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "To tackle these problems, the way I approached it was to make sure we were constantly on the ",
+                { text: "same page" },
+                " - Within the Dev scrums, I would ask feedback for the story and made sure to have a few brainstorm meetings with the team",
+              ],
+            },
+            {
+              type: "tag",
+              tags: ["Brainstorm Meetings", "Consistent Feedback"],
+            },
+          ],
+          [
+            {
+              type: "image",
+              src: [ddmNarrativeBook],
+            },
+          ],
+        ],
+      },
+
+      // Why Narrative? Section
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "Why Narrative ?",
+      },
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: [
+                "The game in general needed some elements to ",
+                { text: "tie it together " },
+                "for it to be a more ",
+                { text: "cohesive " },
+                "experience. Currently, The game has 4 levels however there was no level design difference within them which ended up in it feeling like there were different skins rather than it having any significant impact in gameplay. ",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "Moreover, they wanted the players to feel an attachment towards the ",
+                { text: "ducklings " },
+                "they collect since they hold certain advantages for the players.",
+              ],
+            },
+          ],
+          [
+            {
+              type: "heading",
+              text: "",
+            },
+            {
+              type: "tag",
+              tags: [
+                "Attachment to Ducklings",
+                "Complex Character",
+                "Level Progression",
+                "Cohesiveness",
+                "Engagement",
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "Basic Narrative Structure",
+      },
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "image",
+              src: [ddmNarrativeStructure],
+            },
+          ],
+          [
+            {
+              type: "paragraph",
+              text: [
+                "The basic structure that I had decided, after going through multiple sessions of brainstorming was to add ",
+                { text: "comic strips" },
+                " at the start and end of every level - it would tell the story through comics (less time spent in creating new 3D models). This also makes it so there isn't any narrative break in the middle of gameplay.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "The players will be able to collect",
+                { text: " artifacts" },
+                " throughout the run (marked with red sticky notes). These artifacts would have discriptions which aid in world building.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "The artifact collection is completely optional for the players. It will not stop them from progressing into the next level, the only drawback would be they get an ",
+                { text: "incomplete " },
+                "version of the comic strips with a few panels missing. The idea behind it is to entice curiosity and go back for a re-run.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                { text: "Ducklings" },
+                " are a crutial part of gameplay, they need to have some personality to create an emotional bond with the players. They will have ",
+                { text: "text bites " },
+                "based on the element of the duckling",
+              ],
+            },
+            {
+              type: "tag",
+              tags: [
+                "Scene Building Through Comic Strips",
+                "Artifact Collection Mid-Run",
+                "Duckling Bites to Give Personality",
+              ],
+            },
+          ],
+        ],
+      },
+      //Miro for Narrative Design
+      {
+        type: "heading",
+        variant: "secondary",
+        text: "Miro For Narrative",
+      },
+
+      {
+        type: "miro",
+        src: "https://miro.com/app/board/uXjVG0zdHpM=/",
+      },
+      //Launch / Alpha release tasks
+      {
+        type: "heading",
+        text: "Alpha Release Tasks",
+      },
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: [
+                "Soon after my narrative documentation was finished, I was put onto the alpha release tasks which included ",
+                { text: "using a tool" },
+                " made by the developers to ",
+                { text: "implement ducklings" },
+                " along with some ",
+                { text: "bug fixing" },
+                " tickets which took priority over the duckling implementation.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "The picture on the right is a screenshot of the tool used to implement new ducklings into the game along with the duckling stats that I also needed to balance after implementation.",
+            },
+          ],
+          [
+            {
+              type: "image-row",
+              items: [
+                { src: ddmDucklingImplementation },
+                { src: ddmDucklingBalancing },
+              ],
+            },
+          ],
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Post Mortem",
+      },
+      {
+        type: "columns",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: "Looking back at my internship, I had a huge learning curve from when I started. It taught me how to work within a team for a bigger studio and getting the opportunity to strenghen my skills in coding/ narrative writing.",
+            },
+            {
+              type: "paragraph",
+              text: [
+                "One of my biggest setbacks was getting used to a new software - Godot - which took me about two weeks to start being comfortable with .gd scripts and godot UI interphase.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: [
+                "However once I was able to push through the setbacks, I was able to gain a lot more comfort within the team and am so grateful to recieve the support I needed from my supervisor and the dev team through which I was able to contribute effectively for their title Dino-Duck-Mayhem."
+              ],
+            },
+          ],
+          [{ type: "image", src: [ddmDuckosaurusGames] }],
+        ],
+      },
     ],
     technologies: ["Godot", "Miro", "Source Tree", "Git"],
     status: "completed",
@@ -136,6 +480,7 @@ const projects = [
     githubLink: "#",
     playLink: "#",
   },
+  //SECOND PROJECT
   {
     id: 2,
     title: "SOMBRE",
@@ -997,10 +1342,12 @@ const projects = [
               ],
             },
           ],
-          [{
-            type: "miro",
-            src: "https://miro.com/app/board/uXjVJe7zrh8=/"
-          }],
+          [
+            {
+              type: "miro",
+              src: "https://miro.com/app/board/uXjVJe7zrh8=/",
+            },
+          ],
         ],
       },
 
