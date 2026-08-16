@@ -42,8 +42,8 @@ const Hero = () => {
             <p className="hero-description">
               Hello! I'm Trisha - Based in Belgium. I specialize in game{" "}
               <span className="text-accent">design and development</span>.
-              Passionate about creating experiences that spark emotions and tell
-              meaningful stories to players.
+              Creating experiences that spark emotions and tell meaningful
+              stories to players.
             </p>
             <div className="hero-buttons">
               <button
@@ -69,13 +69,22 @@ const Hero = () => {
               <button
                 className="btn btn-secondary"
                 onClick={() => {
-                  // Open in new tab
-                  window.open("/Trisha_CV2026.pdf", "_blank");
+                  const pdfUrl = "/Trisha_CV2026.pdf";
 
-                  // Also trigger a download
+                  const newTab = window.open(
+                    pdfUrl,
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
+                  if (newTab) {
+                    newTab.opener = null;
+                  }
+
                   const link = document.createElement("a");
-                  link.href = "/Trisha_CV2026.pdf";
+                  link.href = pdfUrl;
                   link.download = "Trisha_CV2026.pdf";
+                  link.target = "_blank";
+                  link.rel = "noopener noreferrer";
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
