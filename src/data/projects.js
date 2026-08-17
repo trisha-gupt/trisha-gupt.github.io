@@ -28,7 +28,6 @@ import sombreTeleportGif from "../assets/games-pictures/sombre-prototype/telepor
 import sombreBombGif from "../assets/games-pictures/sombre-prototype/Bomb_shadow_prototype.gif";
 import sombreProgressGif from "../assets/games-pictures/sombre-prototype/shadow_game_progress.gif";
 import sombreTrailer from "../assets/games-pictures/sombre-prototype/sombre-trailer-compressed.mp4";
-
 // Level breakdown gifs - Area 1
 import sombrePitGif from "../assets/games-pictures/sombre-prototype/sombre-WebM-files/the_pit_gif.webm"; /* CONVERTED */
 import sombreArea1IntroSparkle from "../assets/games-pictures/sombre-prototype/Area_1_intro-sparkle-surface.gif";
@@ -55,6 +54,9 @@ import sombreDepressionMood from "../assets/games-pictures/sombre-prototype/somb
 import sombreRageMood from "../assets/games-pictures/sombre-prototype/sombre-Images/anger_mood.png";
 import sombreAccetanceMood from "../assets/games-pictures/sombre-prototype/sombre-Images/acceptance_mood.png";
 import sombreDenialLevelDesign from "../assets/games-pictures/sombre-prototype/Denial_level_design.png";
+
+//Bud's Oasis
+import BOcommunity_award from "../assets/games-pictures/buds-oasis/Community_Award.jpg";
 
 //DinoDuckMayhem Assets - Cover
 import ddmCoverPhoto from "../assets/games-pictures/Internship/Mayhem_cover.webm"; /* CONVERT */
@@ -464,7 +466,7 @@ const projects = [
             {
               type: "paragraph",
               text: [
-                "However once I was able to push through the setbacks, I was able to gain a lot more comfort within the team and am so grateful to recieve the support I needed from my supervisor and the dev team through which I was able to contribute effectively for their title Dino-Duck-Mayhem."
+                "However once I was able to push through the setbacks, I was able to gain a lot more comfort within the team and am so grateful to recieve the support I needed from my supervisor and the dev team through which I was able to contribute effectively for their title Dino-Duck-Mayhem.",
               ],
             },
           ],
@@ -474,6 +476,7 @@ const projects = [
     ],
     technologies: ["Godot", "Miro", "Source Tree", "Git"],
     status: "completed",
+    duration: "4 months",
     thumbnail: ddmCoverPhoto,
     teamSize: "4 people",
     demoLink: "#",
@@ -1390,6 +1393,7 @@ const projects = [
     ],
     technologies: ["Unity", "Miro", "HacknPlan"],
     status: "completed",
+    duration: "4 months",
     // image: "/assets/games-pictures/concept_art_first_lvl.png",
     image: sombrecoverPhoto,
     thumbnail: sombreThumbnailGif,
@@ -1401,6 +1405,9 @@ const projects = [
       //{ type: 'video', src: sombreTrailer, alt: 'SOMBRE trailer' },
     ],
   },
+
+  //BUDS OASIS - PROJECT 3
+
   {
     id: 3,
     title: "BUD'S OASIS",
@@ -1417,13 +1424,23 @@ const projects = [
           [
             {
               type: "paragraph",
-              text: "Developed during the Franco-Belge Game Jam, this project earned the Community Award and was later livestreamed on Twitch.",
+              text: [
+                "Developed during the ",
+                { text: "Franco-Belge Game Jam" },
+                ", this project earned the Community Award and was later livestreamed on Twitch.",
+              ],
             },
           ],
           [
             {
               type: "paragraph",
-              text: "This was a 48 hour game jam project that was created with people from 4 different schools who were put together on random. The theme of the game jam was sustainability and we had a brainstorming session about a couch co - op game.",
+              text: [
+                "This was a ",
+                { text: "48 hour" },
+                " game jam project that was created with people from 4 different schools who were put together on random. The theme of the game jam was ",
+                { text: "sustainability " },
+                "and we had a brainstorming session about a couch co - op game.",
+              ],
             },
           ],
         ],
@@ -1439,9 +1456,28 @@ const projects = [
 
       { type: "heading", text: "Achievement" },
       {
-        type: "paragraph",
-        text: "This project won the community award as the game which was the most fun to play.",
+        type: "columns",
+        variant: "text-right",
+        items: [
+          [
+            {
+              type: "paragraph",
+              text: "This project won the community award as the game which was the most fun to play out of the 40 participants that had joined the jam and 6 other teams",
+            },
+            {
+              type: "paragraph",
+              text: "It was a wonderful experience getting to know people I had never met before and have the opportunity to work with them. I happened to have a wonderful team of programmers and artists who left me with far more confidence than I arrived with",
+            },
+          ],
+          [
+            {
+              type: "image",
+              src: [BOcommunity_award],
+            },
+          ],
+        ],
       },
+
       /*       { type: 'paragraph', text: "BUD'S OASIS is a friendly competitive/cooperative couch game created during a 48-hour game jam with people from 4 different schools who were put together. You also have the option to play this solo but it's always recommended to play with friends, it's simply much more fun that way. " },
       {type: 'paragraph', text: "You (and your friends) are in charge of maintaining the last remaining life form on earth. You have to fend off the evil robots that are out there to destroy the tree by picking up the flowers that grow around it and throwing them. Once you've collected enough flowers you will be able to plant a seed with it which will make more flowers of the same color grow around the area, but be careful! This also increased the spawn rate of the enemies."}, */
       {
@@ -1480,6 +1516,7 @@ const projects = [
     ],
     technologies: ["Blender", "Unity"],
     status: "Community Award Winner",
+    duration: "48 hours",
     // image: "/assets/games-pictures/buds_oasis.jpeg",
     image: budsOasisPhoto,
     thumbnail: budsOasisThumbnail,
@@ -1604,6 +1641,7 @@ const projects = [
     image: shoppershavocPhoto,
     thumbnail: shoppershavocThumbnail,
     status: "Independent",
+    duration: "1 week",
     teamSize: "Individual",
     demoLink: "#",
     githubLink: "#",
