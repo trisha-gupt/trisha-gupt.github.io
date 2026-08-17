@@ -318,11 +318,11 @@ const ProjectDetail = () => {
             <span>{(game.technologies || []).join("  •  ")}</span>
           </div>
           <div className="project-detail-summary-item">
-            <span className="project-detail-meta-label">Status</span>
+            <span className="project-detail-meta-label">Duration</span>
             <span
-              className={`project-status ${(game.status || "").toLowerCase().replace(/\s+/g, "-")}`}
+              className={`project-duration ${(game.duration || game.status || "").toLowerCase().replace(/\s+/g, "-")}`}
             >
-              {game.status}
+              {game.duration || game.status}
             </span>
           </div>
         </div>

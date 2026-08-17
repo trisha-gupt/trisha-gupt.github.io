@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import '../styles/Projects.css';
-import projects from '../data/projects';
+import React, { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import "../styles/Projects.css";
+import projects from "../data/projects";
 
 // Convert various YouTube URL formats into an embeddable URL.
 // Supports: watch?v=VIDEO_ID, youtu.be/VIDEO_ID, embed URLs, and time params like t=1m30s or t=90
 function parseYouTubeTime(t) {
   if (!t) return 0;
-  const s = String(t).replace(/^t=/, '');
+  const s = String(t).replace(/^t=/, "");
   if (/^\d+$/.test(s)) return parseInt(s, 10) || 0;
   const m = s.match(/(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
   if (!m) return 0;
@@ -21,20 +21,24 @@ function toYouTubeEmbed(url) {
   if (!url) return url;
   const u = String(url).trim();
   try {
-    if (u.includes('youtube.com/embed/')) return u;
+    if (u.includes("youtube.com/embed/")) return u;
     const watch = u.match(/[?&]v=([A-Za-z0-9_-]{11})/);
     if (watch) {
       const id = watch[1];
       const tMatch = u.match(/[?&](?:t|start)=([^&]+)/);
       const start = tMatch ? parseYouTubeTime(tMatch[1]) : null;
-      return start ? `https://www.youtube.com/embed/${id}?start=${start}` : `https://www.youtube.com/embed/${id}`;
+      return start
+        ? `https://www.youtube.com/embed/${id}?start=${start}`
+        : `https://www.youtube.com/embed/${id}`;
     }
     const short = u.match(/youtu\.be\/([A-Za-z0-9_-]{11})/);
     if (short) {
       const id = short[1];
       const tMatch = u.match(/[?&](?:t|start)=([^&]+)/);
       const start = tMatch ? parseYouTubeTime(tMatch[1]) : null;
-      return start ? `https://www.youtube.com/embed/${id}?start=${start}` : `https://www.youtube.com/embed/${id}`;
+      return start
+        ? `https://www.youtube.com/embed/${id}?start=${start}`
+        : `https://www.youtube.com/embed/${id}`;
     }
     return u;
   } catch (e) {
@@ -47,26 +51,29 @@ const Projects = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const target = (location && location.state && location.state.scrollTo) || location.hash;
+    const target =
+      (location && location.state && location.state.scrollTo) || location.hash;
     if (!target) return;
-    const shouldScroll = target === 'projects' || String(target).includes('projects');
+    const shouldScroll =
+      target === "projects" || String(target).includes("projects");
     if (!shouldScroll) return;
     // Temporarily disable any CSS smooth-scrolling to force an immediate jump
     const prevBehavior = document.documentElement.style.scrollBehavior;
-    document.documentElement.style.scrollBehavior = 'auto';
+    document.documentElement.style.scrollBehavior = "auto";
     const t = setTimeout(() => {
-      const el = document.getElementById('projects');
+      const el = document.getElementById("projects");
       if (el) el.scrollIntoView();
       // restore previous behavior
-      document.documentElement.style.scrollBehavior = prevBehavior || '';
+      document.documentElement.style.scrollBehavior = prevBehavior || "";
     }, 50);
     return () => {
       clearTimeout(t);
-      document.documentElement.style.scrollBehavior = prevBehavior || '';
+      document.documentElement.style.scrollBehavior = prevBehavior || "";
     };
   }, [location]);
 
-  const isVideoSrc = (src) => typeof src === 'string' && /\.(mp4|webm|ogg)$/i.test(src);
+  const isVideoSrc = (src) =>
+    typeof src === "string" && /\.(mp4|webm|ogg)$/i.test(src);
 
   const openProject = (id) => {
     navigate(`/project/${id}`);
@@ -80,7 +87,7 @@ const Projects = () => {
       <div className="project-media">
         {mediaArray.map((m, idx) => {
           if (!m) return null;
-          if (m.type === 'gif' || m.type === 'image') {
+          if (m.type === "gif" || m.type === "image") {
             const sources = Array.isArray(m.src) ? m.src : [m.src];
             return (
               <div key={idx} className="project-media-group">
@@ -95,7 +102,7 @@ const Projects = () => {
               </div>
             );
           }
-          if (m.type === 'video') {
+          if (m.type === "video") {
             return (
               <video
                 key={idx}
@@ -108,7 +115,7 @@ const Projects = () => {
               />
             );
           }
-          if (m.type === 'youtube') {
+          if (m.type === "youtube") {
             return (
               <iframe
                 key={idx}
@@ -132,14 +139,15 @@ const Projects = () => {
       <div className="projects-container">
         <h2 className="section-title">My Games</h2>
         <p className="section-subtitle">
-          Explore some of the games I've designed and been a part of the development process!
+          Explore some of the games I've designed and been a part of the
+          development process!
         </p>
 
         <div className="projects-grid">
           {games.map((game) => (
             <div
               key={game.id}
-              className={`project-card ${ (game.media || game.longDescription) ? 'clickable' : '' }`}
+              className={`project-card ${game.media || game.longDescription ? "clickable" : ""}`}
               onClick={() => {
                 if (game.media || game.longDescription) {
                   openProject(game.id);
@@ -169,7 +177,9 @@ const Projects = () => {
                     <p className="project-role">{game.role}</p>
                   </div>
                   <div className="project-header-actions">
-                    <span className={`project-status ${(game.status || '').toLowerCase().replace(/\s+/g, '-')}`}>
+                    <span
+                      className={`project-status ${(game.status || "").toLowerCase().replace(/\s+/g, "-")}`}
+                    >
                       {game.status}
                     </span>
                   </div>
@@ -184,7 +194,9 @@ const Projects = () => {
                   <h4>Technologies:</h4>
                   <div className="tech-tags">
                     {(game.technologies || []).map((tech, index) => (
-                      <span key={index} className="tech-tag">{tech}</span>
+                      <span key={index} className="tech-tag">
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -199,7 +211,7 @@ const Projects = () => {
                 </div> */}
 
                 {/* Itch.io button (shows if playLink is provided) */}
-                {game.playLink && game.playLink !== '#' && (
+                {game.playLink && game.playLink !== "#" && (
                   <div className="project-links">
                     <a
                       href={game.playLink}
@@ -215,7 +227,6 @@ const Projects = () => {
 
                 {/* If you want a disabled-looking button when no URL, you can render it with game.playLink === '#' */}
               </div>
-
             </div>
           ))}
         </div>
