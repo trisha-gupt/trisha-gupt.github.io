@@ -1,46 +1,59 @@
-import React from 'react';
-import '../styles/About.css';
-import profilePhoto from '../assets/profile_photo.jpg';
+import React from "react";
+import "../styles/About.css";
+import profilePhoto from "../assets/profile_photo.jpg";
 
 const About = () => {
   const skillCategories = [
     {
-      title: 'Game Design',
-      items: ['Level Design', 'Character, Camera, Controller', 'Prototype Programming', 'Playtesting'],
+      title: "Game Design",
+      items: [
+        "Level Design",
+        "Character, Camera, Controller",
+        "Prototype Programming",
+        "Playtesting",
+      ],
     },
     {
-      title: 'Programming',
-      items: ['Unity C# basics', 'Prototyping', 'Version Control (Git, P4V)'],
+      title: "Programming",
+      items: ["Unity C# basics", "Prototyping", "Version Control (Git, P4V)"],
     },
     {
-      title: '3D Art & Design',
-      items: ['3D Modelling', 'Unwrapping', 'Texturing', 'Stylised 2D/ 3D Game Art'],
+      title: "3D Art & Design",
+      items: [
+        "3D Modelling",
+        "Unwrapping",
+        "Texturing",
+        "Stylised 2D/ 3D Game Art",
+      ],
     },
   ];
 
   const experiences = [
     {
-      label: 'Game Design and Programming intern at Pixel-Nexus',
-      detail: 'Worked with Godot engine and contributed to designing and implementing features for their title Dino Duck Mayhem'
+      label: "Game Design and Programming intern at Pixel-Nexus",
+      detail:
+        "Worked with Godot engine and contributed to designing and implementing features for their title Dino Duck Mayhem",
     },
     {
-      label: 'Team Lead & Game Designer',
-      detail: "Sombre — learnt team management skills and created a narrative puzzle game in Unity",
+      label: "Team Lead & Game Designer",
+      detail:
+        "Sombre — learnt team management skills and created a narrative puzzle game in Unity",
     },
     {
-      label: 'Game-Jam Winner',
+      label: "Game-Jam Winner",
       detail: "Franco-Belge Game Jam Community Award for Bud's Oasis",
     },
     {
-      label: 'DAE @ Howest',
-      detail: 'Independent Game Production student specialising in game design & Stylized art',
-    }
+      label: "DAE @ Howest",
+      detail:
+        "Independent Game Production student specialising in game design & Stylized art",
+    },
   ];
 
   const quickStats = [
-    { value: '6', label: 'Games Made' },
-    { value: '4', label: 'Years of exp' },
-    { value: '5', label: 'Game Jams & Pitches' },
+    { value: "6", label: "Games Made" },
+    { value: "4", label: "Years of Experience" },
+    { value: "5", label: "Game Jams & Pitches" },
   ];
 
   return (
@@ -55,13 +68,21 @@ const About = () => {
           <div className="about-text">
             <div className="bio-card">
               <p>
-                Hey, I&apos;m Trisha Gupta! I&apos;m a Game Designer based in Belgium who studied Independent Game Production at Howest&apos;s Digital Arts and Entertainment program. I&apos;ve gained experience in game design, game art and programming for prototypes which gave me a strong foundation in building and playtesting games from the ground up.
+                Hey, I&apos;m Trisha Gupta! I&apos;m a Game Designer based in
+                Belgium who studied Independent Game Production at Howest&apos;s
+                Digital Arts and Entertainment program. I&apos;ve gained
+                experience in game design, game art and programming for
+                prototypes which gave me a strong foundation in building and
+                playtesting games from the ground up.
               </p>
               <p>
-                I mostly design games in Unity, however I am also experienced with Blender, Maya, and Substance Painter for basic modeling and texturing.
+                I mostly design games in Unity, however I am also experienced
+                with Blender, Maya, and Substance Painter for basic modeling and
+                texturing.
               </p>
               <p>
-                Currently, I&apos;m finishing up my internship at Pixel-Nexus whilst learning new skills and working on personal projects.
+                Currently, I&apos;m finishing up my internship at Pixel-Nexus
+                whilst learning new skills and working on personal projects.
               </p>
               <div className="bio-highlights">
                 <span>Game Design Experience</span>
@@ -73,14 +94,14 @@ const About = () => {
             <div className="accent-card">
               <h5>Currently</h5>
               <p>
-                Finshed my internship at Pixel-Nexus and working on personal projects while improving my technical and creative skills through making new games every two weeks.
+                Finshed my internship at Pixel-Nexus and working on personal
+                projects while improving my technical and creative skills
+                through making new games every two weeks.
               </p>
             </div>
-
           </div>
 
           <aside className="about-visual" aria-label="Profile snapshot">
-
             <div className="experience-section">
               <h3>Experience Highlights</h3>
               <ul className="experience-timeline">
@@ -88,14 +109,15 @@ const About = () => {
                   <li key={experience.label}>
                     <div className="experience-marker" aria-hidden="true" />
                     <div className="experience-content">
-                      <span className="experience-label">{experience.label}</span>
+                      <span className="experience-label">
+                        {experience.label}
+                      </span>
                       <p>{experience.detail}</p>
                     </div>
                   </li>
                 ))}
               </ul>
             </div>
-
           </aside>
         </div>
       </div>

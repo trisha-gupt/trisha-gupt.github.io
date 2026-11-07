@@ -69,7 +69,7 @@ const Hero = () => {
               <button
                 className="btn btn-secondary"
                 onClick={() => {
-                  const pdfUrl = "/Trisha_CV2026.pdf";
+                  const pdfUrl = "/CV_Trisha_2026.pdf";
 
                   const newTab = window.open(
                     pdfUrl,
@@ -82,7 +82,7 @@ const Hero = () => {
 
                   const link = document.createElement("a");
                   link.href = pdfUrl;
-                  link.download = "Trisha_CV2026.pdf";
+                  link.download = "CV_Trisha_2026.pdf";
                   link.target = "_blank";
                   link.rel = "noopener noreferrer";
                   document.body.appendChild(link);
